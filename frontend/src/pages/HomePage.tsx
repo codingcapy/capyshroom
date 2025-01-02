@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function HomePage() {
     return (
         <div>
@@ -17,12 +19,12 @@ export default function HomePage() {
                     <input
                         type="text"
                         placeholder="First Name"
-                        className="border mr-2 w-[100%] bg-purple-100"
+                        className="border mr-2 w-[100%] bg-[#E6E0E9] p-1 pb-5 border-b-gray-400 border-b-2"
                     />
                     <input
                         type="text"
                         placeholder="Last Name"
-                        className="border ml-2 w-[100%] bg-purple-100"
+                        className="border ml-2 w-[100%] bg-[#E6E0E9] p-1 pb-5 border-b-gray-400 border-b-2"
                     />
                 </div>
                 <label htmlFor="" className="my-5">
@@ -31,11 +33,14 @@ export default function HomePage() {
                 <input
                     type="email"
                     placeholder="email"
-                    className="border w-[100%] bg-purple-100"
+                    className="border w-[100%] bg-[#E6E0E9] p-1 pb-5 border-b-gray-400 border-b-2"
                 />
-                <button className="px-5 py-2 bg-purple-300 rounded-2xl my-5 text-white w-[100px] mx-auto">
+                <Link
+                    to="/rsvp"
+                    className="px-5 py-2 bg-[#65558F] rounded-full my-5 text-white w-[100px] mx-auto"
+                >
                     Next
-                </button>
+                </Link>
             </form>
         </div>
     );
