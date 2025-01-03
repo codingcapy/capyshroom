@@ -16,6 +16,7 @@ import RsvpPage from "./pages/RsvpPage";
 import DietaryPage from "./pages/DietaryPage";
 import GuestsPage from "./pages/GuestsPage";
 import ConfirmationPage from "./pages/ConfirmationPage";
+import DeclinePage from "./pages/DeclinePage";
 
 export function Router() {
     const router = createBrowserRouter(
@@ -26,6 +27,7 @@ export function Router() {
                 <Route path="/dietary" element={<DietaryPage />} />
                 <Route path="/guests" element={<GuestsPage />} />
                 <Route path="/confirmation" element={<ConfirmationPage />} />
+                <Route path="/thankyou" element={<DeclinePage />} />
                 <Route path="/*" element={<HomePage />} />
             </Route>
         )

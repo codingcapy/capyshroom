@@ -1,9 +1,12 @@
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import DOMAIN from "../services/endpoint";
+import useInviteeStore from "../store/InviteeStore";
 
 export default function HomePage() {
     const navigate = useNavigate();
+    const { invitee, setInvitee, currentInviteeId, setCurrentInviteeId } =
+        useInviteeStore((state) => state);
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -17,6 +20,7 @@ export default function HomePage() {
                 email,
             });
             if (res.data?.success) {
+                setInvitee(res.data.content);
                 navigate("/rsvp");
             } else {
                 throw new Error("Project ID not found in response");
@@ -25,6 +29,7 @@ export default function HomePage() {
             console.log(err);
         }
     }
+
     return (
         <div>
             <div>

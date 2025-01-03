@@ -1,6 +1,31 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import useInviteeStore from "../store/InviteeStore";
+import axios from "axios";
+import DOMAIN from "../services/endpoint";
 
 export default function Popup(props: any) {
+    const navigate = useNavigate();
+    const { invitee, setInvitee, currentInviteeId, setCurrentInviteeId } =
+        useInviteeStore((state) => state);
+
+    async function handleSubmit2(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        try {
+            const invitee_id = invitee.invitee_id;
+            const res = await axios.patch(`${DOMAIN}/api/invitees/submitted`, {
+                invitee_id,
+            });
+            if (res.data?.success) {
+                setInvitee(res.data.content);
+                navigate("/confirmation");
+            } else {
+                throw new Error("Project ID not found in response");
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
     return (
         <div>
             <div className="absolute top-0 left-0 w-[100%] h-[100%] bg-black opacity-50"></div>
@@ -14,18 +39,19 @@ export default function Popup(props: any) {
                     resubmit your response at any time.
                 </div>
                 <div className="py-20">
-                    <button
-                        onClick={() => props.setShowPopup(false)}
-                        className="px-5 py-2 mr-4 bg-[#ECE6F0] text-[#65558F] rounded-full"
-                    >
-                        Review
-                    </button>
-                    <NavLink
-                        to="/confirmation"
-                        className="px-5 py-2 ml-4 bg-[#65558F] text-white rounded-full"
-                    >
-                        Submit your RSVP
-                    </NavLink>
+                    <form onSubmit={handleSubmit2} className="flex flex-col">
+                        <div className="flex mx-auto">
+                            <div
+                                onClick={() => props.setShowPopup(false)}
+                                className="px-5 py-2 mr-4 bg-[#ECE6F0] text-[#65558F] rounded-full cursor-pointer"
+                            >
+                                Review
+                            </div>
+                            <button className="px-5 py-2 ml-4 bg-[#65558F] text-white rounded-full">
+                                Submit your RSVP
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
