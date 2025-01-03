@@ -1,6 +1,9 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 export default function RsvpPage() {
+    const navigate = useNavigate();
+    async function handleSubmit() {}
+
     return (
         <div>
             <div className="font-bold my-5">Responding for [name here]</div>

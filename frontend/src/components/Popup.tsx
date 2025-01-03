@@ -4,7 +4,7 @@ export default function Popup(props: any) {
     return (
         <div>
             <div className="absolute top-0 left-0 w-[100%] h-[100%] bg-black opacity-50"></div>
-            <div className="absolute top-[20%] left-[5%] w-[90%] md:w-[40%] h-[50%] bg-white">
+            <div className="absolute top-[20%] left-[5%] md:left-[30%] w-[90%] md:w-[40%] h-[50%] bg-white">
                 <div className="text-center font-bold py-10 md:text-6xl">
                     Almost done!
                 </div>

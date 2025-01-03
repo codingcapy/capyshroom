@@ -2,14 +2,9 @@ import express from "express";
 import type { Request, Response } from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import http from "http";
 import { readFileSync } from "fs";
 import path from "path";
-
-export type BasePage = {
-    base64ImageString: string;
-    name: string;
-};
+import invitees from "./routes/invitees";
 
 dotenv.config();
 const app = express();
@@ -34,6 +29,9 @@ const htmlContent = readFileSync(
 app.get("/", (req: Request, res: Response) => {
     res.status(200).send(htmlContent);
 });
+
+app.use("/api/invitees", invitees);
+
 app.listen(port, () => {
     console.log(`Server listening on port: ${port}`);
 });
