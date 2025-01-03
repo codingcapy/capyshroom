@@ -162,13 +162,13 @@ export async function sendFirstEmail(req: Request, res: Response) {
                     port: 465,
                     secure: true,
                     auth: {
-                        user: "stephology@gmail.com",
+                        user: "spkim0921@gmail.com",
                         pass: process.env.EMAIL_PASSWORD,
                     },
                 });
 
                 const mail_configs = {
-                    from: "stephology@gmail.com",
+                    from: "spkim0921@gmail.com",
                     to: invitee.email?.toString(),
                     subject: "Steph & Paul & Eggbaras",
                     html: `<!DOCTYPE html>
