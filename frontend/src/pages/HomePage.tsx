@@ -31,7 +31,7 @@ export default function HomePage() {
     }
 
     return (
-        <div>
+        <main className="flex-1 mx-auto text-center tracking-[0.5px]">
             <div>
                 We’re getting married and you’re invited! Come listen to us tell
                 each other repeatedly how
@@ -48,32 +48,32 @@ export default function HomePage() {
                     <input
                         type="text"
                         placeholder="First Name"
-                        className="border mr-2 w-[100%] bg-[#E6E0E9] p-1 pb-5 border-b-gray-400 border-b-2"
+                        className="border mr-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
                         name="firstname"
                         required
                     />
                     <input
                         type="text"
                         placeholder="Last Name"
-                        className="border ml-2 w-[100%] bg-[#E6E0E9] p-1 pb-5 border-b-gray-400 border-b-2"
+                        className="border ml-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
                         name="lastname"
                         required
                     />
                 </div>
                 <label htmlFor="" className="my-5">
-                    A copy of your response wilil be sent to:
+                    A copy of your response will be sent to:
                 </label>
                 <input
                     type="email"
-                    placeholder="email"
-                    className="border w-[100%] bg-[#E6E0E9] p-1 pb-5 border-b-gray-400 border-b-2"
+                    placeholder="Email"
+                    className="border w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
                     name="email"
                     required
                 />
-                <button className="px-5 py-2 bg-[#65558F] rounded-full my-5 text-white w-[100px] mx-auto">
-                    Next
+                <button className="px-7 py-2 my-5 w-[200px] mx-auto border-2 border-[#637CC6] font-bold text-2xl text-center">
+                    NEXT
                 </button>
             </form>
-        </div>
+        </main>
     );
 }

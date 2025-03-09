@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Shorelines";
+    src: url(../fonts/SHORELINES.OTF);
+}
+
+
+.main-font {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header-font {
+    font-family: "Shorelines";
+}
