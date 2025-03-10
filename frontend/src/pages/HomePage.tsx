@@ -2,6 +2,8 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import DOMAIN from "../services/endpoint";
 import useInviteeStore from "../store/InviteeStore";
+import weddingImg from "/wedding_img.png";
+import imgTitle from "/image_title.png";
 
 export default function HomePage() {
     const navigate = useNavigate();
@@ -74,6 +76,8 @@ export default function HomePage() {
                     NEXT
                 </button>
             </form>
+            <img src={weddingImg} alt="" className="hidden" />
+            <img src={imgTitle} alt="" className="hidden" />
         </main>
     );
 }
