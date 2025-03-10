@@ -172,37 +172,41 @@ export async function sendFirstEmail(req: Request, res: Response) {
                     to: invitee.email?.toString(),
                     subject: "Steph & Paul & Eggbaras",
                     html: `<!DOCTYPE html>
-        <html lang="en">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Steph & Paul & Eggbaras</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <!-- partial:index.partial.html -->
-    <div class="flex flex-col mx-auto bg-[#FFF7EE] max-w-[500px] p-2 mt-5 rounded-full">
-        <div class="mx-auto border-2 border-[#637CC6] p-2 rounded-full">
-            <div class="mx-auto border border-[#637CC6] pt-10 pb-20 px-20 rounded-full text-[#637CC6] text-center">
+<body style="background-color: #FFF7EE; margin: 0; padding: 0; font-family: Arial, sans-serif; text-align: center;">
+
+    <div style="max-width: 500px; margin: 20px auto; background-color: #FFF7EE; padding: 16px; border-radius: 5000px;">
+        <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 16px; border-radius: 5000px;">
+            <div
+                style="margin: 0 auto; border: 1px solid #637CC6; padding: 40px 80px; border-radius: 5000px; color: #637CC6; text-align: center;">
                 <img src="https://capyshroom-production.up.railway.app/wedding_img.svg" alt=""
-                    class="w-[200px] mx-auto">
-                <div class="pt-5">YOU ARE INVITED</div>
-                <div>to share in the wedding of</div>
-                <img src="https://capyshroom-production.up.railway.app/image_title.svg" alt="" class="w-[300px] py-10">
-                <div>MONDAY, SEPTEMBER 20, 2025</div>
-                <div class="pb-5">at two in the afternoon</div>
-                <div>ST. AUGUSTINE BY THE SEA</div>
-                <div>Honolulu, Hawaii, USA</div>
-                <div class="py-5">reception and dinner</div>
-                <div>MOANA SURFRIDER</div>
-                <div>Honolulu, Hawaii, USA</div>
-                <div class="bg-[#637CC6] text-[#FFF7EE] py-2 my-5 rounded-lg w-[200px] mx-auto">RSVP</div>
-                <div class="font-bold">More info on our website</div>
+                    style="width: 200px; display: block; margin: 0 auto;">
+                <div style="padding-top: 20px; font-size: 18px; font-weight: bold;">YOU ARE INVITED</div>
+                <div style="font-size: 16px;">to share in the wedding of</div>
+                <img src="https://capyshroom-production.up.railway.app/image_title.svg" alt=""
+                    style="width: 300px; padding: 40px 0; display: block; margin: 0 auto;">
+                <div style="font-size: 16px;">MONDAY, SEPTEMBER 20, 2025</div>
+                <div style="padding-bottom: 20px; font-size: 16px;">at two in the afternoon</div>
+                <div style="font-size: 16px; font-weight: bold;">ST. AUGUSTINE BY THE SEA</div>
+                <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
+                <div style="padding: 20px 0; font-size: 16px; font-weight: bold;">reception and dinner</div>
+                <div style="font-size: 16px; font-weight: bold;">MOANA SURFRIDER</div>
+                <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
+                <div
+                    style="background-color: #637CC6; color: #FFF7EE; padding: 10px; margin: 20px auto; border-radius: 8px; width: 200px; text-align: center; font-weight: bold;">
+                    RSVP
+                </div>
+                <div style="font-size: 16px; font-weight: bold;">More info on our website</div>
             </div>
         </div>
     </div>
-    <!-- partial -->
+
 </body>
 
 </html>`,
