@@ -194,7 +194,8 @@ export async function sendFirstEmail(req: Request, res: Response) {
                 <div style="padding-bottom: 20px; font-size: 16px;">at two in the afternoon</div>
                 <div style="font-size: 16px; font-weight: bold;">ST. AUGUSTINE BY THE SEA</div>
                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
-                <div style="padding: 20px 0; font-size: 16px; font-weight: bold;">reception and dinner</div>
+                <img src="https://capyshroom-production.up.railway.app/subtitle.png" alt="Reception & Dinner"
+                    style="width: 300px; padding: 40px 0; display: block; margin: 0 auto;">
                 <div style="font-size: 16px; font-weight: bold;">MOANA SURFRIDER</div>
                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
                 <div
