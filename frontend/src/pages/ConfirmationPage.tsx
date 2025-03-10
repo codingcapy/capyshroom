@@ -17,12 +17,12 @@ export default function ConfirmationPage() {
             <div className="font-bold text-center py-5 text-2xl">
                 What’s next?
             </div>
-            <div>
+            <div className="px-2 text-center">
                 Take a look at <span className="font-bold">our site</span> to
                 learn a little more about us, and get suggestions/tips on your
                 trip to Hawaii!
             </div>
-            <div className="px-5 py-2 my-10 border-2 border-[#637CC6] w-[300px] mx-auto text-center font-bold hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
+            <div className="px-5 py-2 my-10 border-2 border-[#637CC6] sm:w-[300px] mx-auto text-center font-bold hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
                 <a
                     href="https://en.wikipedia.org/wiki/Capybara"
                     target="_blank"

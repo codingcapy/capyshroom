@@ -62,7 +62,7 @@ export default function RsvpPage() {
                         onSubmit={handleSubmit}
                         className="flex flex-col 2xl:w-[800px] mx-auto"
                     >
-                        <div className="text-center">
+                        <div className="text-center px-2">
                             Will you be able to join us at our wedding? We
                             understand if you cannot make it! Please reply no
                             later than{" "}

@@ -42,9 +42,9 @@ export default function HomePage() {
             </div>
             <form
                 onSubmit={handleSubmit}
-                className="flex flex-col mx-auto w-[300px] md:w-[400px]"
+                className="flex flex-col mx-auto sm:w-[300px] md:w-[400px]"
             >
-                <div className="flex mx-auto">
+                <div className="sm:flex mx-auto">
                     <input
                         type="text"
                         placeholder="First Name"
