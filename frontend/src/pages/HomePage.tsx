@@ -31,7 +31,7 @@ export default function HomePage() {
     }
 
     return (
-        <main className="flex-1 mx-auto text-center tracking-[0.5px]">
+        <main className="flex-1 mx-auto text-center tracking-[0.5px] pt-5">
             <div>
                 We’re getting married and you’re invited! Come listen to us tell
                 each other repeatedly how
@@ -70,7 +70,7 @@ export default function HomePage() {
                     name="email"
                     required
                 />
-                <button className="px-7 py-2 my-5 w-[200px] mx-auto border-2 border-[#637CC6] font-bold text-2xl text-center">
+                <button className="px-7 py-2 my-5 w-[200px] mx-auto border-2 border-[#637CC6] font-bold text-2xl text-center hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
                     NEXT
                 </button>
             </form>

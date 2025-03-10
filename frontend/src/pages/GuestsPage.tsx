@@ -34,10 +34,10 @@ export default function GuestsPage() {
     }
 
     return (
-        <div>
+        <div className="mx-auto">
             {invitee ? (
                 <div>
-                    <div className="font-bold my-5">
+                    <div className="font-bold my-5 text-center text-2xl">
                         Responding for {invitee.first_name}
                     </div>
                     <div className="mt-10 mb-5">
@@ -47,16 +47,10 @@ export default function GuestsPage() {
                         onSubmit={handleSubmit}
                         className="flex flex-col w-[300px] mx-auto"
                     >
-                        <label
-                            htmlFor="guests"
-                            className="text-left text-sm text-gray-500"
-                        >
-                            Select
-                        </label>
                         <select
                             name="guests"
                             id="guests"
-                            className="mx-auto border"
+                            className="mx-auto border p-5"
                         >
                             <option value="0">Just me myself and I</option>
                             <option value="1">+1</option>
@@ -65,16 +59,16 @@ export default function GuestsPage() {
                             <option value="4">+4</option>
                             <option value="5">+5</option>
                         </select>
-                        <div className="py-10">
+                        <div className="pt-16 mx-auto">
                             <NavLink
                                 to="/dietary"
-                                className="px-5 py-2 mr-2 bg-[#65558F] text-white rounded-full"
+                                className="px-5 py-2 mr-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300"
                             >
                                 Go Back
                             </NavLink>
                             <button
                                 onClick={() => setShowPopup(true)}
-                                className="px-5 py-2 ml-2 bg-[#65558F] text-white rounded-full"
+                                className="px-5 py-2 ml-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300"
                             >
                                 Next
                             </button>
@@ -82,11 +76,11 @@ export default function GuestsPage() {
                     </form>
 
                     <div>
-                        <div className="absolute bottom-[22%] left-[50%] pt-44 pb-3 text-center">
+                        <div className="absolute bottom-[10%] left-[50%] pt-44 pb-3 text-center">
                             3/3
                         </div>
-                        <div className="absolute bottom-[20%] left-10 md:left-[10%] w-[80%] bg-[#d9d9d9] h-2"></div>
-                        <div className="absolute bottom-[20%] left-10 md:left-[10%] w-[80%] bg-[#65558F] h-2"></div>
+                        <div className="absolute bottom-[15%] left-10 md:left-[10%] w-[80%] bg-[#d9d9d9] h-2"></div>
+                        <div className="absolute bottom-[15%] left-10 md:left-[10%] w-[80%] bg-[#65558F] h-2"></div>
                     </div>
                     {showPopup && <Popup setShowPopup={setShowPopup} />}
                 </div>
