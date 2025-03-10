@@ -172,34 +172,40 @@ export async function sendFirstEmail(req: Request, res: Response) {
                     to: invitee.email?.toString(),
                     subject: "Steph & Paul & Eggbaras",
                     html: `<!DOCTYPE html>
-        <html lang="en" >
-        <head>
-          <meta charset="UTF-8">
-          <title>Steph & Paul & Eggbaras</title>
-          <script src="https://cdn.tailwindcss.com"></script>
-        </head>
-        <body>
-        <!-- partial:index.partial.html -->
-        <div style="font-family: Helvetica,Arial,sans-serif;min-width:1000px;overflow:auto;line-height:2">
-          <div style="margin:50px auto;width:70%;padding:20px 0">
-            <div style="border-bottom:1px solid #eee">
-              <a href="" style="font-size:1.4em;color: #00466a;text-decoration:none;font-weight:600">CapyChat</a>
+        <html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Steph & Paul & Eggbaras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="flex flex-col mx-auto bg-[#FFF7EE] max-w-[500px] p-2 mt-5 rounded-full">
+        <div class="mx-auto border-2 border-[#637CC6] p-2 rounded-full">
+            <div class="mx-auto border border-[#637CC6] pt-10 pb-20 px-20 rounded-full text-[#637CC6] text-center">
+                <img src="https://capyshroom-production.up.railway.app/wedding_img.svg" alt=""
+                    class="w-[200px] mx-auto">
+                <div class="pt-5">YOU ARE INVITED</div>
+                <div>to share in the wedding of</div>
+                <img src="https://capyshroom-production.up.railway.app/image_title.svg" alt="" class="w-[300px] py-10">
+                <div>MONDAY, SEPTEMBER 20, 2025</div>
+                <div class="pb-5">at two in the afternoon</div>
+                <div>ST. AUGUSTINE BY THE SEA</div>
+                <div>Honolulu, Hawaii, USA</div>
+                <div class="py-5">reception and dinner</div>
+                <div>MOANA SURFRIDER</div>
+                <div>Honolulu, Hawaii, USA</div>
+                <div class="bg-[#637CC6] text-[#FFF7EE] py-2 my-5 rounded-lg w-[200px] mx-auto">RSVP</div>
+                <div class="font-bold">More info on our website</div>
             </div>
-            <p style="font-size:1.1em">Hi ${invitee.first_name},</p>
-            <p>EGGBARAS</p>
-            <h2 style="background: #00466a;margin: 0 auto;width: max-content;padding: 0 10px;color: #fff;border-radius: 4px;">1234</h2>
-            <p>ARE</p>
-            <p style="font-size:0.9em;">BARAS,<br />CapyChat</p>
-            <hr style="border:none;border-top:1px solid #eee" />
-            <div style="float:right;padding:8px 0;color:#aaa;font-size:0.8em;line-height:1;font-weight:300">
-              <p>TOO</p>
-            </div>
-          </div>
         </div>
-        <!-- partial -->
-          
-        </body>
-        </html>`,
+    </div>
+    <!-- partial -->
+</body>
+
+</html>`,
                 };
                 transporter.sendMail(mail_configs, function (error, info) {
                     if (error) {
