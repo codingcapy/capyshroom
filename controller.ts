@@ -170,7 +170,7 @@ export async function sendFirstEmail(req: Request, res: Response) {
                 const mail_configs = {
                     from: "spkim0921@gmail.com",
                     to: invitee.email?.toString(),
-                    subject: "Steph & Paul & Eggbaras",
+                    subject: "🎉You're in! Get Ready for Endless Joy!",
                     html: `<!DOCTYPE html>
 <html lang="en">
 
