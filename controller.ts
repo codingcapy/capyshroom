@@ -179,7 +179,7 @@ export async function sendFirstEmail(req: Request, res: Response) {
     <title>🎉You're in! Get Ready for Endless Joy!</title>
 </head>
 
-<body style="background-color: #FFF7EE; margin: 0; padding: 0; font-family: Arial, sans-serif; text-align: center;">
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; text-align: center;">
     <div style="max-width: 500px; margin: 20px auto; background-color: #FFF7EE; padding: 16px; border-radius: 5000px;">
         <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 16px; border-radius: 5000px;">
             <div
