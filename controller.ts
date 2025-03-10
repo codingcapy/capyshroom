@@ -176,20 +176,19 @@ export async function sendFirstEmail(req: Request, res: Response) {
 
 <head>
     <meta charset="UTF-8">
-    <title>Steph & Paul & Eggbaras</title>
+    <title>🎉You're in! Get Ready for Endless Joy!</title>
 </head>
 
 <body style="background-color: #FFF7EE; margin: 0; padding: 0; font-family: Arial, sans-serif; text-align: center;">
-
     <div style="max-width: 500px; margin: 20px auto; background-color: #FFF7EE; padding: 16px; border-radius: 5000px;">
         <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 16px; border-radius: 5000px;">
             <div
                 style="margin: 0 auto; border: 1px solid #637CC6; padding: 40px 80px; border-radius: 5000px; color: #637CC6; text-align: center;">
-                <img src="https://capyshroom-production.up.railway.app/wedding_img.png" alt=""
+                <img src="https://capyshroom-production.up.railway.app/wedding_img.png" alt="Wedding Image"
                     style="width: 200px; display: block; margin: 0 auto;">
                 <div style="padding-top: 20px; font-size: 18px; font-weight: bold;">YOU ARE INVITED</div>
                 <div style="font-size: 16px;">to share in the wedding of</div>
-                <img src="https://capyshroom-production.up.railway.app/image_title.png" alt=""
+                <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
                     style="width: 300px; padding: 40px 0; display: block; margin: 0 auto;">
                 <div style="font-size: 16px;">MONDAY, SEPTEMBER 20, 2025</div>
                 <div style="padding-bottom: 20px; font-size: 16px;">at two in the afternoon</div>
@@ -200,13 +199,13 @@ export async function sendFirstEmail(req: Request, res: Response) {
                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
                 <div
                     style="background-color: #637CC6; color: #FFF7EE; padding: 10px; margin: 20px auto; border-radius: 8px; width: 200px; text-align: center; font-weight: bold;">
-                    RSVP
+                    <a href="https://capyshroom-production.up.railway.app"
+                        style="text-decoration: none; color:#FFF7EE;">RSVP</a>
                 </div>
                 <div style="font-size: 16px; font-weight: bold;">More info on our website</div>
             </div>
         </div>
     </div>
-
 </body>
 
 </html>`,
