@@ -79,13 +79,6 @@ export default function RsvpPage() {
                             NO, I REGRETFULLY DECLINE
                         </button>
                     </form>
-                    <div>
-                        <div className="absolute bottom-[10%] left-[50%] pt-44 pb-3 text-center">
-                            1/3
-                        </div>
-                        <div className="absolute bottom-[15%] left-10 md:left-[10%] w-[80%] bg-[#d9d9d9] h-2"></div>
-                        <div className="absolute bottom-[15%] left-10 md:left-[10%] w-[27%] bg-[#65558F] h-2"></div>
-                    </div>
                 </div>
             ) : (
                 <div>

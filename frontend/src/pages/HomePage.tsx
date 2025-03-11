@@ -52,14 +52,14 @@ export default function HomePage() {
                     <input
                         type="text"
                         placeholder="First Name"
-                        className="border mr-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                        className="border md:mr-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
                         name="firstname"
                         required
                     />
                     <input
                         type="text"
                         placeholder="Last Name"
-                        className="border ml-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                        className="border md:ml-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
                         name="lastname"
                         required
                     />

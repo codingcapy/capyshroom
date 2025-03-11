@@ -3,6 +3,8 @@ import useInviteeStore from "../store/InviteeStore";
 import axios from "axios";
 import DOMAIN from "../services/endpoint";
 import { useState } from "react";
+import ship from "/icon_loadingbar_ship.svg";
+import loadingBar1 from "/wedding_loadingbar1.svg";
 
 export default function DietaryPage() {
     const navigate = useNavigate();
@@ -34,16 +36,18 @@ export default function DietaryPage() {
     }
 
     return (
-        <div className="mx-auto">
+        <div className="">
             {invitee ? (
                 <div>
-                    <div className="font-bold my-5 text-center text-2xl">
+                    <div className="font-bold my-5 text-center md:text-2xl">
                         Responding for {invitee.first_name}
                     </div>
-                    <div>
+                    <div className="text-center text-sm md:text-base">
                         Do you have any dietary restrictions and/or allergies?
                     </div>
-                    <div>Please list below, otherwise leave blank.</div>
+                    <div className="text-center text-sm md:text-base">
+                        Please list below, otherwise leave blank.
+                    </div>
                     <form onSubmit={handleSubmit} className="flex flex-col">
                         <textarea
                             name=""
@@ -65,11 +69,19 @@ export default function DietaryPage() {
                         </div>
                     </form>
                     <div>
-                        <div className="absolute bottom-[10%] left-[50%] pt-44 pb-3 text-center">
-                            2/3
+                        <div className="mr-[150px] sm:mr-[350px] lg:mr-[500px]">
+                            <img
+                                src={ship}
+                                alt="ship"
+                                className="w-[30px] md:w-auto mx-auto mt-5 mb-[-2px] md:mb-[-5px]"
+                            />
                         </div>
-                        <div className="absolute bottom-[15%] left-10 md:left-[10%] w-[80%] bg-[#d9d9d9] h-2"></div>
-                        <div className="absolute bottom-[15%] left-10 md:left-[10%] w-[54%] bg-[#65558F] h-2"></div>
+                        <img
+                            src={loadingBar1}
+                            alt=""
+                            className="w-auto mx-auto"
+                        />
+                        <div className="text-center">1/3</div>
                     </div>
                 </div>
             ) : (

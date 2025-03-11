@@ -4,6 +4,8 @@ import { useState } from "react";
 import useInviteeStore from "../store/InviteeStore";
 import axios from "axios";
 import DOMAIN from "../services/endpoint";
+import ship from "/icon_loadingbar_ship.svg";
+import loadingBar2 from "/wedding_loadingbar2.svg";
 
 export default function GuestsPage() {
     const navigate = useNavigate();
@@ -37,20 +39,20 @@ export default function GuestsPage() {
         <div className="mx-auto">
             {invitee ? (
                 <div>
-                    <div className="font-bold my-5 text-center text-2xl">
+                    <div className="font-bold my-5 text-center md:text-2xl">
                         Responding for {invitee.first_name}
                     </div>
-                    <div className="mt-10 mb-5">
+                    <div className="md:mt-10 mb-5 text-sm md:text-base text-center">
                         How many guests are you bringing?
                     </div>
                     <form
                         onSubmit={handleSubmit}
-                        className="flex flex-col w-[300px] mx-auto"
+                        className="flex flex-col md:w-[300px] mx-auto"
                     >
                         <select
                             name="guests"
                             id="guests"
-                            className="mx-auto border p-5"
+                            className="mx-auto border md:p-5 text-sm md:text-base"
                         >
                             <option value="0">Just me myself and I</option>
                             <option value="1">+1</option>
@@ -59,12 +61,11 @@ export default function GuestsPage() {
                             <option value="4">+4</option>
                             <option value="5">+5</option>
                         </select>
-                        <div className="pt-16 mx-auto">
-                            <NavLink
-                                to="/dietary"
-                                className="px-5 py-2 mr-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300"
-                            >
-                                Go Back
+                        <div className="pt-16 mx-auto flex">
+                            <NavLink to="/dietary">
+                                <div className="px-5 py-2 mr-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
+                                    Go Back
+                                </div>
                             </NavLink>
                             <button
                                 onClick={() => setShowPopup(true)}
@@ -74,13 +75,18 @@ export default function GuestsPage() {
                             </button>
                         </div>
                     </form>
-
                     <div>
-                        <div className="absolute bottom-[10%] left-[50%] pt-44 pb-3 text-center">
-                            3/3
-                        </div>
-                        <div className="absolute bottom-[15%] left-10 md:left-[10%] w-[80%] bg-[#d9d9d9] h-2"></div>
-                        <div className="absolute bottom-[15%] left-10 md:left-[10%] w-[80%] bg-[#65558F] h-2"></div>
+                        <img
+                            src={ship}
+                            alt="ship"
+                            className="w-[30px] lg:w-auto mx-auto mt-5"
+                        />
+                        <img
+                            src={loadingBar2}
+                            alt=""
+                            className="w-[65%] xl:w-auto mx-auto"
+                        />
+                        <div className="text-center">2/3</div>
                     </div>
                     {showPopup && <Popup setShowPopup={setShowPopup} />}
                 </div>

@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import useInviteeStore from "../store/InviteeStore";
+import ship from "/icon_loadingbar_ship.svg";
+import loadingBar from "/icon_loadingbar_empty.svg";
 
 export default function ConfirmationPage() {
     const { invitee, setInvitee, currentInviteeId, setCurrentInviteeId } =
@@ -30,6 +32,17 @@ export default function ConfirmationPage() {
                 >
                     MORE INFO
                 </a>
+            </div>
+            <div>
+                <div className="ml-[175px] sm:ml-[400px] md:ml-[550px] lg:ml-[600px]">
+                    <img
+                        src={ship}
+                        alt="ship"
+                        className="w-[30px] md:w-auto mx-auto mt-5 mb-[-2px] sm:mb-[-8px] md:mb-[-15px]"
+                    />
+                </div>
+                <img src={loadingBar} alt="" className="mx-auto" />
+                <div className="text-center">3/3</div>
             </div>
         </div>
     );
