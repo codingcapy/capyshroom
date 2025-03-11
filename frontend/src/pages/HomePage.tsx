@@ -5,6 +5,7 @@ import useInviteeStore from "../store/InviteeStore";
 import weddingImg from "/wedding_img.png";
 import imgTitle from "/image_title.png";
 import subtitle from "/subtitle.png";
+import doubleHappy from "/icon_email_doublehappy.png";
 
 export default function HomePage() {
     const navigate = useNavigate();
@@ -80,6 +81,7 @@ export default function HomePage() {
             <img src={weddingImg} alt="" className="hidden" />
             <img src={imgTitle} alt="" className="hidden" />
             <img src={subtitle} alt="" className="hidden" />
+            <img src={doubleHappy} alt="" className="hidden" />
         </main>
     );
 }

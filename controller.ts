@@ -204,6 +204,8 @@ export async function sendFirstEmail(req: Request, res: Response) {
                         style="text-decoration: none; color:#FFF7EE;">RSVP</a>
                 </div>
                 <div style="font-size: 16px; font-weight: bold;">More info on our website</div>
+                <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
+                    style="width: 300px; padding: 40px 0; display: block; margin: 0 auto;">
             </div>
         </div>
     </div>
