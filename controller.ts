@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { db, invitees } from "./connect";
+import { db, guests, invitees } from "./connect";
 import { eq } from "drizzle-orm";
 import nodemailer from "nodemailer";
 
@@ -126,6 +126,51 @@ export async function updateGuests(req: Request, res: Response) {
         res.status(500).json({
             success: false,
             message: "Error updating guests",
+        });
+    }
+}
+
+export async function createGuests(req: Request, res: Response) {
+    const invitee_id = Number.parseInt(req.body.invitee_id);
+    const firstname = req.body.firstname;
+    const lastname = req.body.lastname;
+    const dietary = req.body.dietary;
+    if (firstname.length > 200) {
+        return res.json({
+            success: false,
+            message: "first name max char limit is 200",
+        });
+    }
+    if (lastname.length > 200) {
+        return res.json({
+            success: false,
+            message: "last name max char limit is 200",
+        });
+    }
+    const now = new Date();
+    const timestamp = now.toISOString();
+    try {
+        const [InsertedNewGuest] = await db
+            .insert(guests)
+            .values({
+                invitee_id,
+                firstname,
+                lastname,
+                dietary: dietary,
+                created_at: timestamp,
+            })
+            .returning();
+
+        res.status(200).json({
+            success: true,
+            message: "Guest added successfully!",
+            content: InsertedNewGuest,
+        });
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({
+            success: false,
+            message: "Error creating invitee",
         });
     }
 }

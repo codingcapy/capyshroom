@@ -5,6 +5,7 @@ import cors from "cors";
 import { readFileSync } from "fs";
 import path from "path";
 import invitees from "./routes/invitees";
+import guests from "./routes/guests";
 
 dotenv.config();
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.static(frontendPath));
 
 // API routes
 app.use("/api/invitees", invitees);
+app.use("/api/guests", guests);
 
 // Catch-all route to serve React app for non-API requests
 app.get("*", (req: Request, res: Response) => {

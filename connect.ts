@@ -30,3 +30,12 @@ export const invitees = pgTable("invitees", {
     created_at: varchar("created_at"),
     submitted: boolean("submitted").default(false),
 });
+
+export const guests = pgTable("guests", {
+    guest_id: serial("guest_id").primaryKey(),
+    invitee_id: integer("invitee_id").primaryKey(),
+    firstname: varchar("firstname"),
+    lastname: varchar("lastname"),
+    dietary: varchar("dietary").default(""),
+    created_at: varchar("created_at"),
+});
