@@ -12,6 +12,7 @@ export default function GuestsPage() {
     const [showPopup, setShowPopup] = useState(false);
     const { invitee, setInvitee, currentInviteeId, setCurrentInviteeId } =
         useInviteeStore((state) => state);
+    const [guests, setGuests] = useState(0);
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -38,7 +39,7 @@ export default function GuestsPage() {
     return (
         <div className="mx-auto">
             {invitee ? (
-                <div>
+                <div className="flex flex-col">
                     <div className="font-bold my-5 text-center md:text-2xl">
                         Responding for {invitee.first_name}
                     </div>
@@ -53,28 +54,120 @@ export default function GuestsPage() {
                             name="guests"
                             id="guests"
                             className="mx-auto border md:p-5 text-sm md:text-base"
+                            onChange={(e) => setGuests(Number(e.target.value))}
                         >
                             <option value="0">Just me myself and I</option>
                             <option value="1">+1</option>
                             <option value="2">+2</option>
                             <option value="3">+3</option>
                             <option value="4">+4</option>
-                            <option value="5">+5</option>
                         </select>
-                        <div className="pt-16 mx-auto flex">
-                            <NavLink to="/dietary">
-                                <div className="px-5 py-2 mr-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
-                                    Go Back
-                                </div>
-                            </NavLink>
-                            <button
-                                onClick={() => setShowPopup(true)}
-                                className="px-5 py-2 ml-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300"
-                            >
-                                Next
-                            </button>
-                        </div>
                     </form>
+                    {guests > 0 && (
+                        <div className="py-10 md:flex justify-between">
+                            <div>What are your guests’ names?</div>
+                            <div>
+                                Dietary restrictions and/or food allergies?
+                            </div>
+                        </div>
+                    )}
+                    {guests > 0 && (
+                        <form className="mb-10 ">
+                            <input
+                                type="text"
+                                name="firstname"
+                                placeholder="First name"
+                                className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            />
+                            <input
+                                type="text"
+                                name="lastname"
+                                placeholder="Last name"
+                                className="mr-10 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            />
+                            <input
+                                type="text"
+                                name="dietary"
+                                className="mx-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            />
+                        </form>
+                    )}
+                    {guests > 1 && (
+                        <form className="mb-10">
+                            <input
+                                type="text"
+                                name="firstname"
+                                placeholder="First name"
+                                className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            />
+                            <input
+                                type="text"
+                                name="lastname"
+                                placeholder="Last name"
+                                className="mr-10 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            />
+                            <input
+                                type="text"
+                                name="dietary"
+                                className="mx-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            />
+                        </form>
+                    )}
+                    {guests > 2 && (
+                        <form className="mb-10">
+                            <input
+                                type="text"
+                                name="firstname"
+                                placeholder="First name"
+                                className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            />
+                            <input
+                                type="text"
+                                name="lastname"
+                                placeholder="Last name"
+                                className="mr-10 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            />
+                            <input
+                                type="text"
+                                name="dietary"
+                                className="mx-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            />
+                        </form>
+                    )}
+                    {guests > 3 && (
+                        <form className="">
+                            <input
+                                type="text"
+                                name="firstname"
+                                placeholder="First name"
+                                className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            />
+                            <input
+                                type="text"
+                                name="lastname"
+                                placeholder="Last name"
+                                className="mr-10 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            />
+                            <input
+                                type="text"
+                                name="dietary"
+                                className="mx-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            />
+                        </form>
+                    )}
+                    <div className="pt-16 mx-auto flex">
+                        <NavLink to="/dietary">
+                            <div className="px-5 py-2 mr-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
+                                Go Back
+                            </div>
+                        </NavLink>
+                        <button
+                            onClick={() => setShowPopup(true)}
+                            className="px-5 py-2 ml-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300"
+                        >
+                            Next
+                        </button>
+                    </div>
                     <div>
                         <img
                             src={ship}
