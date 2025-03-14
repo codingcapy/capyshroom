@@ -36,6 +36,56 @@ export default function GuestsPage() {
         }
     }
 
+    async function handleMultiSubmit() {
+        try {
+            const invitee_id = invitee.invitee_id;
+            const forms = document.querySelectorAll("form");
+            const formDataArray: {
+                firstname?: string;
+                lastname?: string;
+                dietary?: string;
+            }[] = [];
+
+            forms.forEach((form) => {
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                formDataArray.push(data);
+            });
+
+            const guestsData = formDataArray.map((data) => ({
+                invitee_id,
+                firstname: data.firstname || "",
+                lastname: data.lastname || "",
+                dietary: data.dietary || "",
+            }));
+
+            // Step 1: Update the guest count
+            const resInvitee = await axios.patch(
+                `${DOMAIN}/api/invitees/guests`,
+                {
+                    invitee_id,
+                    guests: guestsData.length,
+                }
+            );
+
+            if (!resInvitee.data?.success) {
+                throw new Error("Failed to update guests count.");
+            }
+
+            // Step 2: Submit each guest's details
+            const guestPromises = guestsData.map((guest) =>
+                axios.post(`${DOMAIN}/api/guests`, guest)
+            );
+
+            await Promise.all(guestPromises);
+
+            // Show success popup
+            setShowPopup(true);
+        } catch (err) {
+            console.error("Error submitting guests:", err);
+        }
+    }
+
     return (
         <div className="mx-auto">
             {invitee ? (
@@ -162,7 +212,7 @@ export default function GuestsPage() {
                             </div>
                         </NavLink>
                         <button
-                            onClick={() => setShowPopup(true)}
+                            onClick={handleMultiSubmit}
                             className="px-5 py-2 ml-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300"
                         >
                             Next
