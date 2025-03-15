@@ -39,7 +39,7 @@ export default function GuestsPage() {
     async function handleMultiSubmit() {
         try {
             const invitee_id = invitee.invitee_id;
-            const forms = document.querySelectorAll("form");
+            const forms = document.querySelectorAll("guestform");
             const formDataArray: {
                 firstname?: string;
                 lastname?: string;
@@ -98,7 +98,7 @@ export default function GuestsPage() {
                     </div>
                     <form
                         onSubmit={handleSubmit}
-                        className="flex flex-col md:w-[300px] mx-auto"
+                        className="mainform flex flex-col md:w-[300px] mx-auto"
                     >
                         <select
                             name="guests"
@@ -114,7 +114,7 @@ export default function GuestsPage() {
                         </select>
                     </form>
                     {guests > 0 && (
-                        <div className="py-10 md:flex justify-between">
+                        <div className="guestform py-10 md:flex justify-between">
                             <div>What are your guests’ names?</div>
                             <div>
                                 Dietary restrictions and/or food allergies?
@@ -122,7 +122,7 @@ export default function GuestsPage() {
                         </div>
                     )}
                     {guests > 0 && (
-                        <form className="mb-10 ">
+                        <form className="guestform mb-10 ">
                             <input
                                 type="text"
                                 name="firstname"
@@ -143,7 +143,7 @@ export default function GuestsPage() {
                         </form>
                     )}
                     {guests > 1 && (
-                        <form className="mb-10">
+                        <form className="guestform mb-10">
                             <input
                                 type="text"
                                 name="firstname"
@@ -164,7 +164,7 @@ export default function GuestsPage() {
                         </form>
                     )}
                     {guests > 2 && (
-                        <form className="mb-10">
+                        <form className="guestform mb-10">
                             <input
                                 type="text"
                                 name="firstname"
@@ -185,7 +185,7 @@ export default function GuestsPage() {
                         </form>
                     )}
                     {guests > 3 && (
-                        <form className="">
+                        <form className="guestform">
                             <input
                                 type="text"
                                 name="firstname"

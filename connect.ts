@@ -33,7 +33,7 @@ export const invitees = pgTable("invitees", {
 
 export const guests = pgTable("guests", {
     guest_id: serial("guest_id").primaryKey(),
-    invitee_id: integer("invitee_id").primaryKey(),
+    invitee_id: integer("invitee_id"),
     firstname: varchar("firstname"),
     lastname: varchar("lastname"),
     dietary: varchar("dietary").default(""),
