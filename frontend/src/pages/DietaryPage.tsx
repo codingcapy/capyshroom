@@ -85,10 +85,12 @@ export default function DietaryPage() {
                     </div>
                 </div>
             ) : (
-                <div>
+                <div className="py-5">
                     <div>Whoops! Something went wrong :(</div>
-                    <div className="x-5 py-2 my-2 bg-[#65558F] text-white rounded-full w-[100px] mx-auto">
-                        <NavLink to="/">Go Back</NavLink>
+                    <div className="px-5 py-2 my-2 border-2 border-[#637CC6] w-[150px] flex flex-col mx-auto">
+                        <NavLink to="/" className="text-center">
+                            Go Back
+                        </NavLink>
                     </div>
                 </div>
             )}

@@ -14,42 +14,45 @@ export default function GuestsPage() {
         useInviteeStore((state) => state);
     const [guests, setGuests] = useState(0);
 
-    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        e.preventDefault();
-        try {
-            const invitee_id = invitee.invitee_id;
-            const guests = Number.parseInt(
-                (e.target as HTMLFormElement).guests.value
-            );
-            const res = await axios.patch(`${DOMAIN}/api/invitees/guests`, {
-                invitee_id,
-                guests,
-            });
-            if (res.data?.success) {
-                setInvitee(res.data.content);
-                setShowPopup(true);
-            } else {
-                throw new Error("Project ID not found in response");
-            }
-        } catch (err) {
-            console.log(err);
-        }
-    }
+    // async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    //     e.preventDefault();
+    //     try {
+    //         const invitee_id = invitee.invitee_id;
+    //         const guests = Number.parseInt(
+    //             (e.target as HTMLFormElement).guests.value
+    //         );
+    //         const res = await axios.patch(`${DOMAIN}/api/invitees/guests`, {
+    //             invitee_id,
+    //             guests,
+    //         });
+    //         if (res.data?.success) {
+    //             setInvitee(res.data.content);
+    //             setShowPopup(true);
+    //         } else {
+    //             throw new Error("Project ID not found in response");
+    //         }
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // }
 
     async function handleMultiSubmit() {
+        console.log("this function ran");
         try {
             const invitee_id = invitee.invitee_id;
-            const forms = document.querySelectorAll("guestform");
+            const forms = document.querySelectorAll("form");
             const formDataArray: {
                 firstname?: string;
                 lastname?: string;
                 dietary?: string;
             }[] = [];
 
-            forms.forEach((form) => {
-                const formData = new FormData(form);
-                const data = Object.fromEntries(formData.entries());
-                formDataArray.push(data);
+            forms.forEach((form, index) => {
+                if (index > 0) {
+                    const formData = new FormData(form);
+                    const data = Object.fromEntries(formData.entries());
+                    formDataArray.push(data);
+                }
             });
 
             const guestsData = formDataArray.map((data) => ({
@@ -96,10 +99,7 @@ export default function GuestsPage() {
                     <div className="md:mt-10 mb-5 text-sm md:text-base text-center">
                         How many guests are you bringing?
                     </div>
-                    <form
-                        onSubmit={handleSubmit}
-                        className="mainform flex flex-col md:w-[300px] mx-auto"
-                    >
+                    <form className="mainform flex flex-col md:w-[300px] mx-auto">
                         <select
                             name="guests"
                             id="guests"
@@ -234,10 +234,12 @@ export default function GuestsPage() {
                     {showPopup && <Popup setShowPopup={setShowPopup} />}
                 </div>
             ) : (
-                <div>
+                <div className="py-5">
                     <div>Whoops! Something went wrong :(</div>
-                    <div className="x-5 py-2 my-2 bg-[#65558F] text-white rounded-full w-[100px] mx-auto">
-                        <NavLink to="/">Go Back</NavLink>
+                    <div className="px-5 py-2 my-2 border-2 border-[#637CC6] w-[150px] flex flex-col mx-auto">
+                        <NavLink to="/" className="text-center">
+                            Go Back
+                        </NavLink>
                     </div>
                 </div>
             )}
