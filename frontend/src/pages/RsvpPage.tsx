@@ -3,6 +3,7 @@ import useInviteeStore from "../store/InviteeStore";
 import axios from "axios";
 import DOMAIN from "../services/endpoint";
 import { useState } from "react";
+import Header from "../components/Header";
 
 export default function RsvpPage() {
     const navigate = useNavigate();
@@ -52,44 +53,52 @@ export default function RsvpPage() {
     }
 
     return (
-        <div className="mx-auto">
-            {invitee ? (
-                <div>
-                    <div className="font-bold my-5 text-center text-2xl">
-                        Responding for {invitee.first_name}
-                    </div>
-                    <form
-                        onSubmit={handleSubmit}
-                        className="flex flex-col 2xl:w-[800px] mx-auto"
-                    >
-                        <div className="text-center px-2">
-                            Will you be able to join us at our wedding? We
-                            understand if you cannot make it! Please reply no
-                            later than{" "}
-                            <span className="font-bold">April 1st, 2025</span>.
-                            If you do not reply by April 1st, please bring a
-                            chair and sandwich.
+        <>
+            <Header />
+            <div className="mx-auto">
+                {invitee ? (
+                    <div>
+                        <div className="font-bold my-5 text-center text-2xl">
+                            Responding for {invitee.first_name}
                         </div>
-                        <button className="px-5 py-2 my-2 border-2 border-[#637CC6] font-bold mx-auto mt-10 hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
-                            YESSSS, HAWAII  😎🌴
-                        </button>
-                    </form>
-                    <form onSubmit={handleSubmit2} className="flex flex-col">
-                        <button className="px-5 py-2 my-2 border-2 border-[#637CC6] font-bold mx-auto hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
-                            NO, I REGRETFULLY DECLINE
-                        </button>
-                    </form>
-                </div>
-            ) : (
-                <div className="py-5">
-                    <div>Whoops! Something went wrong :(</div>
-                    <div className="px-5 py-2 my-2 border-2 border-[#637CC6] w-[150px] flex flex-col mx-auto">
-                        <NavLink to="/" className="text-center">
-                            Go Back
-                        </NavLink>
+                        <form
+                            onSubmit={handleSubmit}
+                            className="flex flex-col 2xl:w-[800px] mx-auto"
+                        >
+                            <div className="text-center px-2">
+                                Will you be able to join us at our wedding? We
+                                understand if you cannot make it! Please reply
+                                no later than{" "}
+                                <span className="font-bold">
+                                    April 1st, 2025
+                                </span>
+                                . If you do not reply by April 1st, please bring
+                                a chair and sandwich.
+                            </div>
+                            <button className="px-5 py-2 my-2 border-2 border-[#637CC6] font-bold mx-auto mt-10 hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
+                                YESSSS, HAWAII  😎🌴
+                            </button>
+                        </form>
+                        <form
+                            onSubmit={handleSubmit2}
+                            className="flex flex-col"
+                        >
+                            <button className="px-5 py-2 my-2 border-2 border-[#637CC6] font-bold mx-auto hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
+                                NO, I REGRETFULLY DECLINE
+                            </button>
+                        </form>
                     </div>
-                </div>
-            )}
-        </div>
+                ) : (
+                    <div className="py-5">
+                        <div>Whoops! Something went wrong :(</div>
+                        <div className="px-5 py-2 my-2 border-2 border-[#637CC6] w-[150px] flex flex-col mx-auto">
+                            <NavLink to="/" className="text-center">
+                                Go Back
+                            </NavLink>
+                        </div>
+                    </div>
+                )}
+            </div>
+        </>
     );
 }

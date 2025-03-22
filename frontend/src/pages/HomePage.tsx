@@ -6,6 +6,7 @@ import weddingImg from "/wedding_img.png";
 import imgTitle from "/image_title.png";
 import subtitle from "/subtitle.png";
 import doubleHappy from "/icon_email_doublehappy.png";
+import Header from "../components/Header";
 
 export default function HomePage() {
     const navigate = useNavigate();
@@ -35,53 +36,56 @@ export default function HomePage() {
     }
 
     return (
-        <main className="flex-1 mx-auto text-center tracking-[0.5px] pt-5">
-            <div>
-                We’re getting married and you’re invited! Come listen to us tell
-                each other repeatedly how
-            </div>
-            <div>much we love each other, for two hours, IN HAWAII!!</div>
-            <div className="my-5 font-bold text-2xl">
-                Enter your name and email to RSVP.
-            </div>
-            <form
-                onSubmit={handleSubmit}
-                className="flex flex-col mx-auto sm:w-[300px] md:w-[400px]"
-            >
-                <div className="sm:flex mx-auto">
-                    <input
-                        type="text"
-                        placeholder="First Name"
-                        className="border md:mr-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
-                        name="firstname"
-                        required
-                    />
-                    <input
-                        type="text"
-                        placeholder="Last Name"
-                        className="border md:ml-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
-                        name="lastname"
-                        required
-                    />
+        <>
+            <Header />
+            <main className="flex-1 mx-auto text-center tracking-[0.5px] pt-5">
+                <div>
+                    We’re getting married and you’re invited! Come listen to us
+                    tell each other repeatedly how
                 </div>
-                <label htmlFor="" className="my-5">
-                    A copy of your response will be sent to:
-                </label>
-                <input
-                    type="email"
-                    placeholder="Email"
-                    className="border w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
-                    name="email"
-                    required
-                />
-                <button className="px-7 py-2 my-5 w-[200px] mx-auto border-2 border-[#637CC6] font-bold text-2xl text-center hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
-                    NEXT
-                </button>
-            </form>
-            <img src={weddingImg} alt="" className="hidden" />
-            <img src={imgTitle} alt="" className="hidden" />
-            <img src={subtitle} alt="" className="hidden" />
-            <img src={doubleHappy} alt="" className="hidden" />
-        </main>
+                <div>much we love each other, for two hours, IN HAWAII!!</div>
+                <div className="my-5 font-bold min-[1537px]:text-2xl">
+                    Enter your name and email to RSVP.
+                </div>
+                <form
+                    onSubmit={handleSubmit}
+                    className="flex flex-col mx-auto sm:w-[300px] md:w-[400px]"
+                >
+                    <div className="sm:flex mx-auto">
+                        <input
+                            type="text"
+                            placeholder="First Name"
+                            className="border md:mr-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            name="firstname"
+                            required
+                        />
+                        <input
+                            type="text"
+                            placeholder="Last Name"
+                            className="border md:ml-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            name="lastname"
+                            required
+                        />
+                    </div>
+                    <label htmlFor="" className="my-5">
+                        A copy of your response will be sent to:
+                    </label>
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        className="border w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                        name="email"
+                        required
+                    />
+                    <button className="px-7 py-2 my-5 w-[200px] mx-auto border-2 border-[#637CC6] font-bold min[1537px]:text-2xl text-center hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
+                        NEXT
+                    </button>
+                </form>
+                <img src={weddingImg} alt="" className="hidden" />
+                <img src={imgTitle} alt="" className="hidden" />
+                <img src={subtitle} alt="" className="hidden" />
+                <img src={doubleHappy} alt="" className="hidden" />
+            </main>
+        </>
     );
 }

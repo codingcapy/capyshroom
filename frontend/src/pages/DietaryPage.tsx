@@ -5,6 +5,7 @@ import DOMAIN from "../services/endpoint";
 import { useState } from "react";
 import ship from "/icon_loadingbar_ship.svg";
 import loadingBar1 from "/wedding_loadingbar1.svg";
+import Header from "../components/Header";
 
 export default function DietaryPage() {
     const navigate = useNavigate();
@@ -37,6 +38,7 @@ export default function DietaryPage() {
 
     return (
         <div className="">
+            <Header />
             {invitee ? (
                 <div>
                     <div className="font-bold my-5 text-center md:text-2xl">
