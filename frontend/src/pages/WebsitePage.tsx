@@ -1,17 +1,21 @@
 import weddingImg from "/wedding_img.png";
 import Header from "../components/Header";
 import itinary from "/website_itinerary.svg";
+import timeline from "/website_timeline.svg";
+import travel from "/icon_travel.svg";
+import activities from "/icon_activities.svg";
+import toTopIcon from "/icon_to_top.svg";
 
 export default function WebsitePage() {
     return (
         <div>
             <img src={weddingImg} alt="" className="mx-auto pt-10" />
-            <div className="w-[600px] mx-auto">
+            <div className="md:w-[600px] mx-auto">
                 <Header />
             </div>
             <p className="text-center italic pt-5 pb-10">8888 days to go!</p>
             <div className="flex flex-col max-w-[1000px] mx-auto">
-                <div className="flex mx-auto font-bold">
+                <div className="md:flex mx-auto font-bold">
                     <div className="px-5">Our Story</div>
                     <div className="px-5">Itinerary</div>
                     <div className="px-5">Travel</div>
@@ -115,7 +119,141 @@ export default function WebsitePage() {
                 <div className="header-font text-center text-2xl">
                     itinerary
                 </div>
+                <div className="p-5 text-center">
+                    <p className="italic">Monday, September 29, 2025</p>
+                    <p className="pt-5 italic">Ceremony at:</p>
+                    <p className="font-bold py-2">St. Augustine by the Sea</p>
+                    <p>130 ʻŌhua Ave, Honolulu, HI 96815</p>
+                    <p className="pt-10 italic">Reception at:</p>
+                    <p className="font-bold py-2">Moana Surfrider</p>
+                    <p>2365 Kalākaua Ave, Honolulu, HI 96815</p>
+                </div>
+                <div className="flex justify-between text-center pt-5">
+                    <div>
+                        <div className="font-bold">THE WEDDING DAY</div>
+                        <div>
+                            St. Augustine by the Sea, Reception at Moana
+                            Surfrider
+                        </div>
+                    </div>
+                    <div>
+                        <div className="font-bold">
+                            THE DAY AFTER (OPTIONAL)
+                        </div>
+                        <div>Hike Makapu’u point</div>
+                    </div>
+                </div>
+                <img src={timeline} alt="" />
+                <img src={travel} alt="" className="mx-auto" />
+                <p className="header-font text-center py-10 text-2xl">travel</p>
+                <div>
+                    <div className="text-xl font-bold pb-2">
+                        Preparing for your trip
+                    </div>
+                    <div>
+                        Hawaii is hot all year round (duh it’s a tropical
+                        island). Late September is on average 22°C to 32°C with
+                        a low chance of heavy rain, so dress accordingly!{" "}
+                    </div>
+                    <div className="py-5">
+                        <span className="font-bold italic">Important</span>: For
+                        guests without Canadian citizenship, entering the US
+                        requires an ESTA visa which you can apply for here. It
+                        takes up to 72 hours to receive the visa.{" "}
+                    </div>
+                    <div>
+                        If you have applied for an ESTA in the past, the visa is
+                        generally valid for 2 years, or until your passport
+                        expires. Please check if your existing ESTA is still
+                        valid.
+                    </div>
+                    <div className="font-bold italic underline">
+                        Without an ESTA, non-Canadians cannot enter the US.{" "}
+                    </div>
+                    <div className="text-xl font-bold pt-10">
+                        Where to stay?
+                    </div>
+                    <div className="pt-2">
+                        AirBnB tends to be a more budget friendly option than
+                        hotels, so we recommend checking out AirBnB listings if
+                        you’re looking for reasonably priced accommodations.{" "}
+                    </div>
+                    <div className="text-xl font-bold pt-10">
+                        How to get to the venue?
+                    </div>
+                    <p className="py-2">
+                        St. Augustine by the Sea is within walking distance of
+                        most of the Waikiki area. If you are coming from outside
+                        of Waikiki, there is the #13 bus that stops outside the
+                        church.
+                    </p>
+                    <p>
+                        The reception is being held at Moana Surfrider, which is
+                        also within walking distance of the Waikiki area. There
+                        is paid parking available on-site
+                    </p>
+                </div>
+                <img src={activities} alt="" className="mx-auto" />
+                <p className="header-font text-center py-10 text-2xl">
+                    things to do
+                </p>
+                <p>
+                    Not sure what to do or where to go? Here are some of our
+                    favourite things to see, experience, and eat around the
+                    island
+                </p>
+                <div className="text-xl font-bold pt-10 pb-2">Learning</div>
+                <ul className="pl-5">
+                    <li className="list-disc">
+                        <span className="font-bold">
+                            Polynesian Cultural Center
+                        </span>
+                        : Interested in learning more about native Hawaiian
+                        culture? Here you can learn about the history of Hawaii
+                        and its indigenous peoples.
+                    </li>
+                    <li className="list-disc">
+                        <span className="font-bold">Pearl Harbor Museum</span>:
+                        Learn more about the pivotal moment the US joined WWII.
+                        The museum commemorates the attack on Pearl Harbor and
+                        U.S.’s entry into the war. Entry to the museum is free,
+                        but not the USS Arizona Memorial.
+                    </li>
+                </ul>
+                <div className="text-xl font-bold pt-10">Hiking</div>
+                <p className="py-5">
+                    There are plenty of trails throughout the island. Our
+                    favourite trails are:
+                </p>
+                <ul className="pl-5">
+                    <li className="list-disc">
+                        <span className="font-bold">
+                            Makapu’u Lighthouse Point
+                        </span>{" "}
+                        (Difficulty: Easy. Paved trail, amazing ocean views.
+                        We’re heading here the day after the wedding, come join
+                        us if you’re interested!)
+                    </li>
+                    <li className="list-disc">
+                        <span className="font-bold">Diamond Head</span>{" "}
+                        (Difficulty: Medium. Amazing view of the city)
+                    </li>
+                    <li className="list-disc">
+                        <span className="font-bold">Moana Falls</span>{" "}
+                        (Difficulty: Easy. Watch out for mosquitos)
+                    </li>
+                    <li className="list-disc">
+                        <span className="font-bold">Koko Head</span>{" "}
+                        (Difficulty: HARD! Not for the faint. Navy seals train
+                        here)
+                    </li>
+                </ul>
             </div>
+            <img
+                src={toTopIcon}
+                alt=""
+                className="fixed w-[25px] bottom-5 right-5 2xl:w-auto 2xl:bottom-10 2xl:right-10"
+            />
         </div>
     );
 }
