@@ -17,14 +17,25 @@ export default function WebsitePage() {
             <p className="text-center italic pt-5 pb-10">8888 days to go!</p>
             <div className="flex flex-col max-w-[1000px] mx-auto">
                 <div className="md:flex mx-auto font-bold">
-                    <div className="px-5">Our Story</div>
-                    <div className="px-5">Itinerary</div>
-                    <div className="px-5">Travel</div>
-                    <div className="px-5">Things to do</div>
-                    <div className="px-5">Photo Gallery</div>
-                    <div className="px-5">RSVP</div>
+                    <div
+                        onClick={() =>
+                            document
+                                .getElementById("story")
+                                ?.scrollIntoView({ behavior: "smooth" })
+                        }
+                        className="px-5 cursor-pointer"
+                    >
+                        Our Story
+                    </div>
+                    <div className="px-5 cursor-pointer">Itinerary</div>
+                    <div className="px-5 cursor-pointer">Travel</div>
+                    <div className="px-5 cursor-pointer">Things to do</div>
+                    <div className="px-5 cursor-pointer">Photo Gallery</div>
+                    <div className="px-5 cursor-pointer">RSVP</div>
                 </div>
-                <div className="text-xl font-bold py-5">Our Story</div>
+                <div className="text-xl font-bold py-5" id="story">
+                    Our Story
+                </div>
                 <p>
                     <span className="font-bold">Her</span>: December 2020, I
                     just deleted and remade my Tinder account because I managed
