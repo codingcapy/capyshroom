@@ -5,6 +5,7 @@ import timeline from "/website_timeline.svg";
 import travel from "/icon_travel.svg";
 import activities from "/icon_activities.svg";
 import toTopIcon from "/icon_to_top.svg";
+import eat from "/website_eat.svg";
 
 export default function WebsitePage() {
     return (
@@ -202,32 +203,36 @@ export default function WebsitePage() {
                     favourite things to see, experience, and eat around the
                     island
                 </p>
-                <div className="text-xl font-bold pt-10 pb-2">Learning</div>
+                <div className="text-2xl font-bold pt-10 pb-2 italic">
+                    Learning
+                </div>
                 <ul className="pl-5">
                     <li className="list-disc">
-                        <span className="font-bold">
-                            Polynesian Cultural Center
+                        <span className="font-bold underline">
+                            Bishop Museum
                         </span>
                         : Interested in learning more about native Hawaiian
                         culture? Here you can learn about the history of Hawaii
                         and its indigenous peoples.
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold">Pearl Harbor Museum</span>:
-                        Learn more about the pivotal moment the US joined WWII.
-                        The museum commemorates the attack on Pearl Harbor and
-                        U.S.’s entry into the war. Entry to the museum is free,
-                        but not the USS Arizona Memorial.
+                        <span className="font-bold underline">
+                            Pearl Harbor Museum
+                        </span>
+                        : Learn more about the pivotal moment the US joined
+                        WWII. The museum commemorates the attack on Pearl Harbor
+                        and U.S.’s entry into the war. Entry to the museum is
+                        free, but not the USS Arizona Memorial.
                     </li>
                 </ul>
-                <div className="text-xl font-bold pt-10">Hiking</div>
+                <div className="text-2xl font-bold pt-10 italic">Hiking</div>
                 <p className="py-5">
                     There are plenty of trails throughout the island. Our
                     favourite trails are:
                 </p>
                 <ul className="pl-5">
                     <li className="list-disc">
-                        <span className="font-bold">
+                        <span className="font-bold underline">
                             Makapu’u Lighthouse Point
                         </span>{" "}
                         (Difficulty: Easy. Paved trail, amazing ocean views.
@@ -235,25 +240,128 @@ export default function WebsitePage() {
                         us if you’re interested!)
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold">Diamond Head</span>{" "}
+                        <span className="font-bold underline">
+                            Diamond Head
+                        </span>{" "}
                         (Difficulty: Medium. Amazing view of the city)
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold">Moana Falls</span>{" "}
+                        <span className="font-bold underline">Moana Falls</span>{" "}
                         (Difficulty: Easy. Watch out for mosquitos)
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold">Koko Head</span>{" "}
+                        <span className="font-bold underline">Koko Head</span>{" "}
                         (Difficulty: HARD! Not for the faint. Navy seals train
                         here)
                     </li>
                 </ul>
+                <div className="text-2xl font-bold pt-10 italic">Surfing</div>
+                <div className="pt-5">
+                    We highly recommend surfing while in Hawaii! We suggest
+                    lessons to learn the basics. There are many surf schools
+                    around the island, but we had a great experience at{" "}
+                    <span className="font-bold underline">Stoke Drift</span>. If
+                    you’re lucky, you might even spot a turtle in the water!
+                </div>
+                <div className="text-2xl font-bold pt-10 italic">
+                    Catamaran sail
+                </div>
+                <div className="pt-5">
+                    For those who want to see the island from a different angle!
+                    For the best ambiance, we recommend booking a sail for the
+                    end of the day. We had a great experience with{" "}
+                    <span className="font-bold underline">
+                        Catamaran Kepoikai
+                    </span>
+                    .
+                </div>
+                <div className="text-2xl font-bold pt-10 italic">
+                    Swim & Beach
+                </div>
+                <div className="pt-5">
+                    Cool down and relax on the beach instead
+                </div>
+                <ul className="pl-5">
+                    <li className="list-disc">
+                        <span className="font-bold underline">
+                            Waikiki Beach
+                        </span>{" "}
+                        (Most iconic beach on the island, with views of Diamond
+                        Head. Very touristy if that’s your thing.)
+                    </li>
+                    <li className="list-disc">
+                        <span className="font-bold underline">Hanauma Bay</span>{" "}
+                        (DProtected marine life conservation area for snorkeling
+                        )
+                    </li>
+                </ul>
+                <div className="text-2xl font-bold pt-10 italic">Shopping</div>
+                <ul className="pl-5 pt-5">
+                    <li className="list-disc">
+                        <span className="font-bold underline">
+                            Ala Moana Mall
+                        </span>{" "}
+                        (The largest open-air shopping mall in the country! )
+                    </li>
+                    <li className="list-disc">
+                        <span className="font-bold underline">
+                            Kalākaua Ave
+                        </span>{" "}
+                        (Long street in the heart of Waikiki’s tourist area.
+                        Lots of shops and restaurants to check out.)
+                    </li>
+                </ul>
+                <img src={eat} alt="" className="mx-auto" />
             </div>
             <img
                 src={toTopIcon}
                 alt=""
                 className="fixed w-[25px] bottom-5 right-5 2xl:w-auto 2xl:bottom-10 2xl:right-10"
             />
+            <div className="header-font text-center text-2xl">
+                eat and drink
+            </div>
+            <div className="flex flex-col max-w-[1000px] mx-auto pt-10 pb-32">
+                <div>
+                    Hawaiian cuisine is very diverse and reflects the different
+                    cultures that live on the island. It’s a fusion of
+                    Polynesian, Asian, and North American cuisine. Here are a
+                    few of our favourite spots around the island to eat at!
+                </div>
+                <ul className="pl-5 pt-5">
+                    <li className="list-disc">
+                        <span className="font-bold underline">Maguro Spot</span>{" "}
+                        (Corner store serving up fresh Japanese-style poke)
+                    </li>
+                    <li className="list-disc">
+                        <span className="font-bold underline">
+                            Eggs n Things
+                        </span>{" "}
+                        (Serving fluffy pancakes and loco mocos all day. There
+                        are two locations but we prefer the location at 339
+                        Saratoga Road for the ambiance.)
+                    </li>
+                    <li className="list-disc">
+                        <span className="font-bold underline">
+                            Waiola Shaved Ice
+                        </span>{" "}
+                        (Counter-served corner store serving all kinds of shaved
+                        ice )
+                    </li>
+                    <li className="list-disc">
+                        <span className="font-bold underline">Lūʻau</span> (A
+                        traditional Hawaiian dinner feast with fire shows and
+                        traditional dance and music. There are many locations
+                        that offer lūʻ’aus)
+                    </li>
+                    <li className="list-disc">
+                        <span className="font-bold underline">
+                            Koko Head Cafe
+                        </span>{" "}
+                        (Cozy cafe location serving asian fusion brunch)
+                    </li>
+                </ul>
+            </div>
         </div>
     );
 }
