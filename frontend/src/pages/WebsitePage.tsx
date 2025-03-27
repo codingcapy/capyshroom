@@ -10,7 +10,7 @@ import eat from "/website_eat.svg";
 export default function WebsitePage() {
     return (
         <div>
-            <img src={weddingImg} alt="" className="mx-auto pt-10" />
+            <img src={weddingImg} alt="" className="mx-auto pt-10" id="top" />
             <div className="md:w-[600px] mx-auto">
                 <Header />
             </div>
@@ -27,9 +27,36 @@ export default function WebsitePage() {
                     >
                         Our Story
                     </div>
-                    <div className="px-5 cursor-pointer">Itinerary</div>
-                    <div className="px-5 cursor-pointer">Travel</div>
-                    <div className="px-5 cursor-pointer">Things to do</div>
+                    <div
+                        onClick={() =>
+                            document
+                                .getElementById("itinerary")
+                                ?.scrollIntoView({ behavior: "smooth" })
+                        }
+                        className="px-5 cursor-pointer"
+                    >
+                        Itinerary
+                    </div>
+                    <div
+                        onClick={() =>
+                            document
+                                .getElementById("travel")
+                                ?.scrollIntoView({ behavior: "smooth" })
+                        }
+                        className="px-5 cursor-pointer"
+                    >
+                        Travel
+                    </div>
+                    <div
+                        onClick={() =>
+                            document
+                                .getElementById("things")
+                                ?.scrollIntoView({ behavior: "smooth" })
+                        }
+                        className="px-5 cursor-pointer"
+                    >
+                        Things to do
+                    </div>
                     <div className="px-5 cursor-pointer">Photo Gallery</div>
                     <div className="px-5 cursor-pointer">RSVP</div>
                 </div>
@@ -127,7 +154,7 @@ export default function WebsitePage() {
                 <p className="pb-10">
                     Japan next year, to the capybara hotel in Shizuoka.
                 </p>
-                <img src={itinary} alt="" className="mx-auto" />
+                <img src={itinary} alt="" className="mx-auto" id="itinerary" />
                 <div className="header-font text-center text-2xl">
                     itinerary
                 </div>
@@ -156,8 +183,10 @@ export default function WebsitePage() {
                     </div>
                 </div>
                 <img src={timeline} alt="" />
-                <img src={travel} alt="" className="mx-auto" />
-                <p className="header-font text-center py-10 text-2xl">travel</p>
+                <img src={travel} alt="" className="mx-auto" id="travel" />
+                <p className="travel header-font text-center py-10 text-2xl">
+                    travel
+                </p>
                 <div>
                     <div className="text-xl font-bold pb-2">
                         Preparing for your trip
@@ -205,8 +234,8 @@ export default function WebsitePage() {
                         is paid parking available on-site
                     </p>
                 </div>
-                <img src={activities} alt="" className="mx-auto" />
-                <p className="header-font text-center py-10 text-2xl">
+                <img src={activities} alt="" className="mx-auto" id="things" />
+                <p className=" header-font text-center py-10 text-2xl">
                     things to do
                 </p>
                 <p>
@@ -306,7 +335,9 @@ export default function WebsitePage() {
                         )
                     </li>
                 </ul>
-                <div className="text-2xl font-bold pt-10 italic">Shopping</div>
+                <div className="shopping text-2xl font-bold pt-10 italic">
+                    Shopping
+                </div>
                 <ul className="pl-5 pt-5">
                     <li className="list-disc">
                         <span className="font-bold underline">
@@ -328,8 +359,13 @@ export default function WebsitePage() {
                 src={toTopIcon}
                 alt=""
                 className="fixed w-[25px] bottom-5 right-5 2xl:w-auto 2xl:bottom-10 2xl:right-10"
+                onClick={() =>
+                    document
+                        .getElementById("top")
+                        ?.scrollIntoView({ behavior: "smooth" })
+                }
             />
-            <div className="header-font text-center text-2xl">
+            <div className=" eat header-font text-center text-2xl">
                 eat and drink
             </div>
             <div className="flex flex-col max-w-[1000px] mx-auto pt-10 pb-32">
