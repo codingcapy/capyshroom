@@ -196,17 +196,27 @@ export default function WebsitePage() {
                         island). Late September is on average 22°C to 32°C with
                         a low chance of heavy rain, so dress accordingly!{" "}
                     </div>
-                    <div className="py-5">
-                        <span className="font-bold italic">Important</span>: For
-                        guests without Canadian citizenship, entering the US
-                        requires an ESTA visa which you can apply for here. It
-                        takes up to 72 hours to receive the visa.{" "}
+
+                    <div className="text-xl font-bold pt-10">
+                        Visa requirements
                     </div>
-                    <div>
-                        If you have applied for an ESTA in the past, the visa is
-                        generally valid for 2 years, or until your passport
-                        expires. Please check if your existing ESTA is still
-                        valid.
+                    <div className="py-5">
+                        There are no requirements for Canadians entering the
+                        U.S. unless you plan to stay longer than 30 days.
+                    </div>
+                    <div className="pb-5">
+                        For guests <span className="underline">without</span>{" "}
+                        Canadian or American citizenship, entering the U.S.
+                        requires a visa. The visa type depends on which passport
+                        you hold. Please check the{" "}
+                        <a
+                            href="https://travel.state.gov/content/travel/en/us-visas/tourism-visit/visitor.html"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
+                            U.S. department of State website
+                        </a>{" "}
+                        for the type of visa you will need to travel.{" "}
                     </div>
                     <div className="font-bold italic underline">
                         Without an ESTA, non-Canadians cannot enter the US.{" "}
@@ -214,24 +224,64 @@ export default function WebsitePage() {
                     <div className="text-xl font-bold pt-10">
                         Where to stay?
                     </div>
-                    <div className="pt-2">
-                        AirBnB tends to be a more budget friendly option than
-                        hotels, so we recommend checking out AirBnB listings if
-                        you’re looking for reasonably priced accommodations.{" "}
+                    <div className="pt-5">
+                        <a
+                            href="https://airbnb.com/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
+                            AirBnB
+                        </a>{" "}
+                        is the most budget friendly option on the island, but
+                        there are plenty of hotels too. A quick search or{" "}
+                        <a
+                            href="https://hotels.com/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
+                            Hotels.com
+                        </a>{" "}
+                        or{" "}
+                        <a
+                            href="https://expedia.com/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
+                            Expedia.ca
+                        </a>{" "}
+                        will show you many hotel options.
+                    </div>
+                    <div className="pt-5">
+                        Booking in the Waikiki neighbourhood is the most
+                        convenient since it’s close to shops, beaches, and
+                        tourist activities.{" "}
                     </div>
                     <div className="text-xl font-bold pt-10">
                         How to get to the venue?
                     </div>
                     <p className="py-2">
-                        St. Augustine by the Sea is within walking distance of
-                        most of the Waikiki area. If you are coming from outside
-                        of Waikiki, there is the #13 bus that stops outside the
-                        church.
+                        <a
+                            href="https://staugustinebythesea.com/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
+                            St. Augustine by the Sea
+                        </a>{" "}
+                        is within walking distance of most of the Waikiki area.
+                        If you are coming from outside of Waikiki, there is the
+                        #13 bus that stops outside the church.
                     </p>
                     <p>
-                        The reception is being held at Moana Surfrider, which is
-                        also within walking distance of the Waikiki area. There
-                        is paid parking available on-site
+                        The reception is being held at{" "}
+                        <a
+                            href="https://www.marriott.com/en-us/hotels/hnlwi-moana-surfrider-a-westin-resort-and-spa-waikiki-beach/overview/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
+                            Moana Surfrider
+                        </a>
+                        , which is also within walking distance of the Waikiki
+                        area. There is paid parking available on-site
                     </p>
                 </div>
                 <img src={activities} alt="" className="mx-auto" id="things" />
@@ -248,17 +298,25 @@ export default function WebsitePage() {
                 </div>
                 <ul className="pl-5">
                     <li className="list-disc">
-                        <span className="font-bold underline">
+                        <a
+                            href="https://www.bishopmuseum.org/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
                             Bishop Museum
-                        </span>
+                        </a>
                         : Interested in learning more about native Hawaiian
                         culture? Here you can learn about the history of Hawaii
                         and its indigenous peoples.
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold underline">
+                        <a
+                            href="https://www.nps.gov/perl/index.htm"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
                             Pearl Harbor Museum
-                        </span>
+                        </a>
                         : Learn more about the pivotal moment the US joined
                         WWII. The museum commemorates the attack on Pearl Harbor
                         and U.S.’s entry into the war. Entry to the museum is
@@ -272,36 +330,64 @@ export default function WebsitePage() {
                 </p>
                 <ul className="pl-5">
                     <li className="list-disc">
-                        <span className="font-bold underline">
+                        <a
+                            href="https://dlnr.hawaii.gov/dsp/hiking/oahu/makapuu-point-lighthouse-trail/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
                             Makapu’u Lighthouse Point
-                        </span>{" "}
+                        </a>{" "}
                         (Difficulty: Easy. Paved trail, amazing ocean views.
                         We’re heading here the day after the wedding, come join
                         us if you’re interested!)
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold underline">
+                        <a
+                            href="https://dlnr.hawaii.gov/dsp/hiking/oahu/diamond-head-summit-trail/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
                             Diamond Head
-                        </span>{" "}
+                        </a>{" "}
                         (Difficulty: Medium. Amazing view of the city)
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold underline">Moana Falls</span>{" "}
+                        <a
+                            href="https://www.alltrails.com/trail/hawaii/oahu/manoa-falls-trail"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
+                            Manoa Falls
+                        </a>{" "}
                         (Difficulty: Easy. Watch out for mosquitos)
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold underline">Koko Head</span>{" "}
+                        <a
+                            href="https://www.alltrails.com/trail/hawaii/oahu/koko-head-crater-trail"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
+                            Koko Head
+                        </a>{" "}
                         (Difficulty: HARD! Not for the faint. Navy seals train
                         here)
                     </li>
                 </ul>
+
                 <div className="text-2xl font-bold pt-10 italic">Surfing</div>
                 <div className="pt-5">
                     We highly recommend surfing while in Hawaii! We suggest
                     lessons to learn the basics. There are many surf schools
                     around the island, but we had a great experience at{" "}
-                    <span className="font-bold underline">Stoke Drift</span>. If
-                    you’re lucky, you might even spot a turtle in the water!
+                    <a
+                        href="https://stokedrift.com/"
+                        className="font-bold underline"
+                        target="_blank"
+                    >
+                        Stoke Drift
+                    </a>
+                    . If you’re lucky, you might even spot a turtle in the
+                    water!
                 </div>
                 <div className="text-2xl font-bold pt-10 italic">
                     Catamaran sail
@@ -310,9 +396,13 @@ export default function WebsitePage() {
                     For those who want to see the island from a different angle!
                     For the best ambiance, we recommend booking a sail for the
                     end of the day. We had a great experience with{" "}
-                    <span className="font-bold underline">
+                    <a
+                        href="https://www.kepoikai.com/"
+                        className="font-bold underline"
+                        target="_blank"
+                    >
                         Catamaran Kepoikai
-                    </span>
+                    </a>
                     .
                 </div>
                 <div className="text-2xl font-bold pt-10 italic">
@@ -323,14 +413,24 @@ export default function WebsitePage() {
                 </div>
                 <ul className="pl-5">
                     <li className="list-disc">
-                        <span className="font-bold underline">
+                        <a
+                            href="https://www.gohawaii.com/islands/oahu/things-to-do/beaches/waikiki-beach"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
                             Waikiki Beach
-                        </span>{" "}
+                        </a>{" "}
                         (Most iconic beach on the island, with views of Diamond
                         Head. Very touristy if that’s your thing.)
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold underline">Hanauma Bay</span>{" "}
+                        <a
+                            href="https://hanaumabaystatepark.com/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
+                            Hanauma Bay
+                        </a>{" "}
                         (DProtected marine life conservation area for snorkeling
                         )
                     </li>
@@ -340,15 +440,23 @@ export default function WebsitePage() {
                 </div>
                 <ul className="pl-5 pt-5">
                     <li className="list-disc">
-                        <span className="font-bold underline">
+                        <a
+                            href="https://www.alamoanacenter.com/en/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
                             Ala Moana Mall
-                        </span>{" "}
+                        </a>{" "}
                         (The largest open-air shopping mall in the country! )
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold underline">
+                        <a
+                            href="https://www.hawaiiactivities.com/travelguide/kalakaua-avenue/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
                             Kalākaua Ave
-                        </span>{" "}
+                        </a>{" "}
                         (Long street in the heart of Waikiki’s tourist area.
                         Lots of shops and restaurants to check out.)
                     </li>
@@ -377,34 +485,58 @@ export default function WebsitePage() {
                 </div>
                 <ul className="pl-5 pt-5">
                     <li className="list-disc">
-                        <span className="font-bold underline">Maguro Spot</span>{" "}
+                        <a
+                            href="https://magurospot.com/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
+                            Maguro Spot
+                        </a>{" "}
                         (Corner store serving up fresh Japanese-style poke)
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold underline">
+                        <a
+                            href="https://eggsnthings.com/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
                             Eggs n Things
-                        </span>{" "}
+                        </a>{" "}
                         (Serving fluffy pancakes and loco mocos all day. There
                         are two locations but we prefer the location at 339
                         Saratoga Road for the ambiance.)
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold underline">
+                        <a
+                            href="https://www.waiolashaveice.co/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
                             Waiola Shaved Ice
-                        </span>{" "}
+                        </a>{" "}
                         (Counter-served corner store serving all kinds of shaved
                         ice )
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold underline">Lūʻau</span> (A
-                        traditional Hawaiian dinner feast with fire shows and
+                        <a
+                            href="https://www.gohawaii.com/hawaiian-culture/luau"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
+                            Lūʻau
+                        </a>{" "}
+                        (A traditional Hawaiian dinner feast with fire shows and
                         traditional dance and music. There are many locations
                         that offer lūʻ’aus)
                     </li>
                     <li className="list-disc">
-                        <span className="font-bold underline">
+                        <a
+                            href="https://www.kokoheadcafe.com/"
+                            className="font-bold underline"
+                            target="_blank"
+                        >
                             Koko Head Cafe
-                        </span>{" "}
+                        </a>{" "}
                         (Cozy cafe location serving asian fusion brunch)
                     </li>
                 </ul>
