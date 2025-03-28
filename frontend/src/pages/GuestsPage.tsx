@@ -133,17 +133,20 @@ export default function GuestsPage() {
                                     name="firstname"
                                     placeholder="First name"
                                     className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    required
                                 />
                                 <input
                                     type="text"
                                     name="lastname"
                                     placeholder="Last name"
                                     className="mr-10 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    required
                                 />
                                 <input
                                     type="text"
                                     name="dietary"
                                     className="mx-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    required
                                 />
                             </form>
                         )}
@@ -154,17 +157,20 @@ export default function GuestsPage() {
                                     name="firstname"
                                     placeholder="First name"
                                     className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    required
                                 />
                                 <input
                                     type="text"
                                     name="lastname"
                                     placeholder="Last name"
                                     className="mr-10 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    required
                                 />
                                 <input
                                     type="text"
                                     name="dietary"
                                     className="mx-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    required
                                 />
                             </form>
                         )}
@@ -175,17 +181,20 @@ export default function GuestsPage() {
                                     name="firstname"
                                     placeholder="First name"
                                     className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    required
                                 />
                                 <input
                                     type="text"
                                     name="lastname"
                                     placeholder="Last name"
                                     className="mr-10 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    required
                                 />
                                 <input
                                     type="text"
                                     name="dietary"
                                     className="mx-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    required
                                 />
                             </form>
                         )}
@@ -196,17 +205,20 @@ export default function GuestsPage() {
                                     name="firstname"
                                     placeholder="First name"
                                     className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    required
                                 />
                                 <input
                                     type="text"
                                     name="lastname"
                                     placeholder="Last name"
                                     className="mr-10 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    required
                                 />
                                 <input
                                     type="text"
                                     name="dietary"
                                     className="mx-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    required
                                 />
                             </form>
                         )}

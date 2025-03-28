@@ -3,6 +3,7 @@ import useInviteeStore from "../store/InviteeStore";
 import ship from "/icon_loadingbar_ship.svg";
 import loadingBar from "/icon_loadingbar_empty.svg";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 export default function ConfirmationPage() {
     const { invitee, setInvitee, currentInviteeId, setCurrentInviteeId } =
@@ -28,13 +29,7 @@ export default function ConfirmationPage() {
                     your trip to Hawaii!
                 </div>
                 <div className="px-5 py-2 my-10 border-2 border-[#637CC6] sm:w-[300px] mx-auto text-center font-bold hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
-                    <a
-                        href="https://en.wikipedia.org/wiki/Capybara"
-                        target="_blank"
-                        className=""
-                    >
-                        MORE INFO
-                    </a>
+                    <Link to={"/stephandpaul"}>MORE INFO</Link>
                 </div>
                 <div>
                     <div className="ml-[175px] sm:ml-[400px] md:ml-[550px] lg:ml-[600px]">

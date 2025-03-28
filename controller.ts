@@ -215,7 +215,8 @@ export async function sendFirstEmail(req: Request, res: Response) {
                 const mail_configs = {
                     from: "spkim0921@gmail.com",
                     to: invitee.email?.toString(),
-                    subject: "🎉You're in! Get Ready for Endless Joy!",
+                    subject:
+                        "👩‍❤️‍👨 Steph & Paul are getting married AND YOU’RE INVITED!",
                     html: `<!DOCTYPE html>
 <html lang="en">
 
