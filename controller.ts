@@ -221,7 +221,7 @@ export async function sendFirstEmail(req: Request, res: Response) {
 
 <head>
     <meta charset="UTF-8">
-    <title>🎉You're in! Get Ready for Endless Joy!</title>
+    <title>👩‍❤️‍👨 Steph & Paul are getting married AND YOU’RE INVITED!</title>
 </head>
 
 <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; text-align: center;">
@@ -235,7 +235,7 @@ export async function sendFirstEmail(req: Request, res: Response) {
                 <div style="font-size: 16px;">to share in the wedding of</div>
                 <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
                     style="width: 300px; padding: 40px 0; display: block; margin: 0 auto;">
-                <div style="font-size: 16px;">MONDAY, SEPTEMBER 20, 2025</div>
+                <div style="font-size: 16px;">MONDAY, SEPTEMBER 29, 2025</div>
                 <div style="padding-bottom: 20px; font-size: 16px;">at two in the afternoon</div>
                 <div style="font-size: 16px; font-weight: bold;">ST. AUGUSTINE BY THE SEA</div>
                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>

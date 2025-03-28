@@ -70,10 +70,10 @@ export default function RsvpPage() {
                                 understand if you cannot make it! Please reply
                                 no later than{" "}
                                 <span className="font-bold">
-                                    April 1st, 2025
+                                    April 30th, 2025
                                 </span>
-                                . If you do not reply by April 1st, please bring
-                                a chair and sandwich.
+                                . If you do not reply by April 30th, please
+                                bring a chair and sandwich.
                             </div>
                             <button className="px-5 py-2 my-2 border-2 border-[#637CC6] font-bold mx-auto mt-10 hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
                                 YESSSS, HAWAII  😎🌴
