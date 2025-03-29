@@ -14,9 +14,11 @@ export default function WebsitePage() {
             <div className="md:w-[600px] mx-auto">
                 <Header />
             </div>
-            <p className="text-center italic pt-5 pb-10">8888 days to go!</p>
+            <p className="text-center italic pt-5 pb-10 text-lg">
+                8888 days to go!
+            </p>
             <div className="flex flex-col max-w-[1000px] mx-auto">
-                <div className="md:flex mx-auto font-bold">
+                <div className="md:flex mx-auto font-bold text-lg pb-10">
                     <div
                         onClick={() =>
                             document
@@ -61,51 +63,18 @@ export default function WebsitePage() {
                     <div className="px-5 cursor-pointer">RSVP</div>
                 </div>
                 <div className="text-xl font-bold py-5" id="story">
-                    Our Story
+                    Hello!
                 </div>
                 <p>
-                    <span className="font-bold">Her</span>: December 2020, I
-                    just deleted and remade my Tinder account because I managed
-                    to left-swipe all the single men of Vancouver, and there
-                    were no more profiles left. Tinder boosts new profiles to
-                    the top of the list, so a new “Paul” popped up on my feed.
-                    He had decent photos along with the obligatory
-                    man-in-bathroom-mirror-with-toilet-reflection selfie. His
-                    bio didn’t have much except for his Instagram handle, which
-                    I obviously immediately stalked. His Instagram photos
-                    confirmed that he wasn’t a scammer nor a weirdo. A few weeks
-                    later in January, I received a notification that we matched.
-                    We had a brief but fun chat about food, including where to
-                    find ostrich eggs in Vancouver (you can’t find them in
-                    Vancouver). But after talking for a day, the conversation
-                    abruptly stopped and he never responded to me! I figured he
-                    lost interest and found someone else to talk to. Normally I
-                    delete dead conversations, but because our fun chat ended so
-                    abruptly, I thought maybe there’s a slim chance he’ll reply,
-                    so I left it. Fast forward to April and suddenly I get a
-                    message from him, apologizing and saying he took a break
-                    from the app! The rest is history. My hunch was right, if I
-                    had deleted our conversation, I wouldn’t be here writing
-                    this.{" "}
+                    Welcome to our wedding site! Here you’ll find all the info
+                    you need for the big day, including the schedule, and
+                    suggestions for what to do, see, and eat on the island!{" "}
                 </p>
-                <p className="py-10">
-                    <span className="font-bold">Him</span>: On a fateful evening
-                    sometime back in December 2020, I was sitting in my couch,
-                    minding my own business on Tinder and came across this girl
-                    who was holding a baby. I thought “is this her baby?”
-                    because I get curious when someone is holding a baby as
-                    picture on their Tinder profile. Then I see that she wrote
-                    “By the way, this is not my baby”. She also wrote “I don’t
-                    know how to hold a baby”. So I swiped and we matched. I sent
-                    her a message saying “I don’t know how to hold a baby
-                    either!” and she replied “I think you’re supposed to hold it
-                    either like an egg or a football”. Upon reading that, I
-                    immediately knew she was the one. And what does someone do
-                    when they knew she is the one? They get COVID depression and
-                    hide in their cave for months. Until she wrote “If you’re no
-                    longer interested you can tell me like an adult”, which
-                    jolted me back and continued our journey to the present day.
-                </p>
+                <div className="flex items-center justify-center gap-0 py-10">
+                    <div className="rounded-full h-[4px] w-[4px] bg-[#637CC6]"></div>
+                    <div className="h-[1px] w-[400px] bg-[#637CC6]"></div>
+                    <div className="rounded-full h-[4px] w-[4px] bg-[#637CC6]"></div>
+                </div>
                 <div className="text-xl font-bold py-5 italic">
                     How did you first meet?
                 </div>
@@ -154,11 +123,16 @@ export default function WebsitePage() {
                 <p className="pb-10">
                     Japan next year, to the capybara hotel in Shizuoka.
                 </p>
-                <img src={itinary} alt="" className="mx-auto" id="itinerary" />
-                <div className="header-font text-center text-2xl">
+                <img
+                    src={itinary}
+                    alt=""
+                    className="mx-auto w-[120px] pt-40 pb-5"
+                    id="itinerary"
+                />
+                <div className="header-font text-center text-2xl pb-5">
                     itinerary
                 </div>
-                <div className="p-5 text-center">
+                <div className="p-5 text-center pb-20">
                     <p className="italic">Monday, September 29, 2025</p>
                     <p className="pt-5 italic">Ceremony at:</p>
                     <p className="font-bold py-2">St. Augustine by the Sea</p>
@@ -183,15 +157,20 @@ export default function WebsitePage() {
                     </div>
                 </div>
                 <img src={timeline} alt="" />
-                <img src={travel} alt="" className="mx-auto" id="travel" />
-                <p className="travel header-font text-center py-10 text-2xl">
+                <img
+                    src={travel}
+                    alt=""
+                    className="mx-auto w-[120px] py-5 pt-40"
+                    id="travel"
+                />
+                <p className="travel header-font text-center py-5 text-2xl">
                     travel
                 </p>
                 <div>
                     <div className="text-xl font-bold pb-2">
                         Preparing for your trip
                     </div>
-                    <div>
+                    <div className="pb-10">
                         Hawaii is hot all year round (duh it’s a tropical
                         island). Late September is on average 22°C to 32°C with
                         a low chance of heavy rain, so dress accordingly!{" "}
@@ -218,7 +197,7 @@ export default function WebsitePage() {
                         </a>{" "}
                         for the type of visa you will need to travel.{" "}
                     </div>
-                    <div className="font-bold italic underline">
+                    <div className="font-bold italic underline pb-10">
                         Without an ESTA, non-Canadians cannot enter the US.{" "}
                     </div>
                     <div className="text-xl font-bold pt-10">
@@ -251,7 +230,7 @@ export default function WebsitePage() {
                         </a>{" "}
                         will show you many hotel options.
                     </div>
-                    <div className="pt-5">
+                    <div className="pt-5 pb-10">
                         Booking in the Waikiki neighbourhood is the most
                         convenient since it’s close to shops, beaches, and
                         tourist activities.{" "}
@@ -284,7 +263,12 @@ export default function WebsitePage() {
                         area. There is paid parking available on-site
                     </p>
                 </div>
-                <img src={activities} alt="" className="mx-auto" id="things" />
+                <img
+                    src={activities}
+                    alt=""
+                    className="mx-auto w-[120px] py-0 pt-40"
+                    id="things"
+                />
                 <p className=" header-font text-center py-10 text-2xl">
                     things to do
                 </p>
@@ -296,7 +280,7 @@ export default function WebsitePage() {
                 <div className="text-2xl font-bold pt-10 pb-2 italic">
                     Learning
                 </div>
-                <ul className="pl-5">
+                <ul className="pl-5 pb-10">
                     <li className="list-disc">
                         <a
                             href="https://www.bishopmuseum.org/"
@@ -328,7 +312,7 @@ export default function WebsitePage() {
                     There are plenty of trails throughout the island. Our
                     favourite trails are:
                 </p>
-                <ul className="pl-5">
+                <ul className="pl-5 pb-10">
                     <li className="list-disc">
                         <a
                             href="https://dlnr.hawaii.gov/dsp/hiking/oahu/makapuu-point-lighthouse-trail/"
@@ -375,7 +359,7 @@ export default function WebsitePage() {
                 </ul>
 
                 <div className="text-2xl font-bold pt-10 italic">Surfing</div>
-                <div className="pt-5">
+                <div className="pt-5 pb-10">
                     We highly recommend surfing while in Hawaii! We suggest
                     lessons to learn the basics. There are many surf schools
                     around the island, but we had a great experience at{" "}
@@ -392,7 +376,7 @@ export default function WebsitePage() {
                 <div className="text-2xl font-bold pt-10 italic">
                     Catamaran sail
                 </div>
-                <div className="pt-5">
+                <div className="pt-5 pb-10">
                     For those who want to see the island from a different angle!
                     For the best ambiance, we recommend booking a sail for the
                     end of the day. We had a great experience with{" "}
@@ -411,7 +395,7 @@ export default function WebsitePage() {
                 <div className="pt-5">
                     Cool down and relax on the beach instead
                 </div>
-                <ul className="pl-5">
+                <ul className="pl-5 pb-10">
                     <li className="list-disc">
                         <a
                             href="https://www.gohawaii.com/islands/oahu/things-to-do/beaches/waikiki-beach"
@@ -461,22 +445,22 @@ export default function WebsitePage() {
                         Lots of shops and restaurants to check out.)
                     </li>
                 </ul>
-                <img src={eat} alt="" className="mx-auto" />
+                <img src={eat} alt="" className="mx-auto w-[120px] pt-60" />
             </div>
             <img
                 src={toTopIcon}
                 alt=""
-                className="fixed w-[25px] bottom-5 right-5 2xl:w-auto 2xl:bottom-10 2xl:right-10"
+                className="fixed w-[25px] bottom-5 right-5 2xl:w-[50px] 2xl:bottom-10 2xl:right-10"
                 onClick={() =>
                     document
                         .getElementById("top")
                         ?.scrollIntoView({ behavior: "smooth" })
                 }
             />
-            <div className=" eat header-font text-center text-2xl">
+            <div className=" eat header-font text-center text-2xl pt-10">
                 eat and drink
             </div>
-            <div className="flex flex-col max-w-[1000px] mx-auto pt-10 pb-32">
+            <div className="flex flex-col max-w-[1000px] mx-auto pt-10">
                 <div>
                     Hawaiian cuisine is very diverse and reflects the different
                     cultures that live on the island. It’s a fusion of
@@ -529,7 +513,7 @@ export default function WebsitePage() {
                         traditional dance and music. There are many locations
                         that offer lūʻ’aus)
                     </li>
-                    <li className="list-disc">
+                    <li className="list-disc pb-40">
                         <a
                             href="https://www.kokoheadcafe.com/"
                             className="font-bold underline"
