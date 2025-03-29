@@ -62,7 +62,16 @@ export default function WebsitePage() {
                     >
                         Things to do
                     </div>
-                    <div className="px-5 cursor-pointer">Photo Gallery</div>
+                    <div
+                        onClick={() =>
+                            document
+                                .getElementById("photos")
+                                ?.scrollIntoView({ behavior: "smooth" })
+                        }
+                        className="px-5 cursor-pointer"
+                    >
+                        Photo Gallery
+                    </div>
                     <div className="px-5 cursor-pointer">RSVP</div>
                 </div>
                 <div className="text-xl font-bold py-5" id="story">
@@ -283,7 +292,7 @@ export default function WebsitePage() {
                 <img
                     src={activities}
                     alt=""
-                    className="mx-auto w-[120px] py-0 pt-40"
+                    className="mx-auto w-[100px] py-0 pt-40"
                     id="things"
                 />
                 <p className=" header-font text-center py-10 text-2xl">
@@ -541,12 +550,19 @@ export default function WebsitePage() {
                     </li>
                 </ul>
             </div>
-            <img src={photos} alt="" className="mx-auto w-[100px] pt-30" />
+            <img
+                src={photos}
+                alt=""
+                className="mx-auto w-[100px] pt-30"
+                id="photos"
+            />
             <div className=" photos header-font text-center text-2xl pt-10">
                 photo gallery
             </div>
             <div className="flex flex-col max-w-[1000px] mx-auto pt-10 pb-60">
-                <div>Coming soon!</div>
+                <div className="align-content: text-center">
+                    Coming soon ʕ•ᴥ•ʔ
+                </div>
             </div>
         </div>
     );
