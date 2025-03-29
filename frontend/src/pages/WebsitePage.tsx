@@ -6,6 +6,9 @@ import travel from "/icon_travel.svg";
 import activities from "/icon_activities.svg";
 import toTopIcon from "/icon_to_top.svg";
 import eat from "/website_eat.svg";
+import photos from "/image_photos.svg";
+import React from "react";
+import GoogleMap from "../components/GoogleMap";
 
 export default function WebsitePage() {
     return (
@@ -135,13 +138,15 @@ export default function WebsitePage() {
                 <div className="p-5 text-center pb-20">
                     <p className="italic">Monday, September 29, 2025</p>
                     <p className="pt-5 italic">Ceremony at:</p>
-                    <p className="font-bold py-2">St. Augustine by the Sea</p>
-                    <p>130 ʻŌhua Ave, Honolulu, HI 96815</p>
+                    <p className="font-bold py-0">St. Augustine by the Sea</p>
+                    <p className="pt-0">130 ʻŌhua Ave, Honolulu, HI 96815</p>
                     <p className="pt-10 italic">Reception at:</p>
-                    <p className="font-bold py-2">Moana Surfrider</p>
-                    <p>2365 Kalākaua Ave, Honolulu, HI 96815</p>
+                    <p className="font-bold py-0">Moana Surfrider</p>
+                    <p className="pt-0">
+                        2365 Kalākaua Ave, Honolulu, HI 96815
+                    </p>
                 </div>
-                <div className="flex justify-between text-center pt-5">
+                <div className="flex justify-between text-center py-5">
                     <div>
                         <div className="font-bold">THE WEDDING DAY</div>
                         <div>
@@ -171,7 +176,7 @@ export default function WebsitePage() {
                         Preparing for your trip
                     </div>
                     <div className="pb-10">
-                        Hawaii is hot all year round (duh it’s a tropical
+                        Hawaiʻi is hot all year round (duh it’s a tropical
                         island). Late September is on average 22°C to 32°C with
                         a low chance of heavy rain, so dress accordingly!{" "}
                     </div>
@@ -231,7 +236,7 @@ export default function WebsitePage() {
                         will show you many hotel options.
                     </div>
                     <div className="pt-5 pb-10">
-                        Booking in the Waikiki neighbourhood is the most
+                        Booking in the Waikīkī neighbourhood is the most
                         convenient since it’s close to shops, beaches, and
                         tourist activities.{" "}
                     </div>
@@ -246,10 +251,17 @@ export default function WebsitePage() {
                         >
                             St. Augustine by the Sea
                         </a>{" "}
-                        is within walking distance of most of the Waikiki area.
-                        If you are coming from outside of Waikiki, there is the
-                        #13 bus that stops outside the church.
+                        is within walking distance of most of the Waikīkī area.
+                        Access to the church is located through the Brown Gate
+                        in the Church Parking Lot. Free parking is located
+                        through the black iron gates before the brown two story
+                        building on Ohua Avenue, behind the church.
                     </p>
+                    <div>
+                        <main className="p-4 pb-10">
+                            <GoogleMap mapSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3717.944117963187!2d-157.8230905!3d21.2736795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c007277363c0cb5%3A0xf722baa0bc4ce421!2sSt.%20Augustine%20by%20the%20Sea!5e0!3m2!1sen!2sca!4v1743219927198!5m2!1sen!2sca&output=embed&hl=en" />{" "}
+                        </main>
+                    </div>
                     <p>
                         The reception is being held at{" "}
                         <a
@@ -259,9 +271,14 @@ export default function WebsitePage() {
                         >
                             Moana Surfrider
                         </a>
-                        , which is also within walking distance of the Waikiki
+                        , which is also within walking distance of the Waikīkī
                         area. There is paid parking available on-site
                     </p>
+                    <div>
+                        <main className="p-4 pb-10">
+                            <GoogleMap mapSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3717.871594128856!2d-157.8266319!3d21.276549799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c007276865a25cf%3A0x98f7cfcfac6fec49!2sMoana%20Surfrider%2C%20A%20Westin%20Resort%20%26%20Spa%2C%20Waikiki%20Beach!5e0!3m2!1sen!2sca!4v1743220602041!5m2!1sen!2sca&output=embed&hl=en" />{" "}
+                        </main>
+                    </div>
                 </div>
                 <img
                     src={activities}
@@ -290,8 +307,8 @@ export default function WebsitePage() {
                             Bishop Museum
                         </a>
                         : Interested in learning more about native Hawaiian
-                        culture? Here you can learn about the history of Hawaii
-                        and its indigenous peoples.
+                        culture? Here you can learn about the history of the
+                        islands and its indigenous peoples.
                     </li>
                     <li className="list-disc">
                         <a
@@ -301,10 +318,10 @@ export default function WebsitePage() {
                         >
                             Pearl Harbor Museum
                         </a>
-                        : Learn more about the pivotal moment the US joined
-                        WWII. The museum commemorates the attack on Pearl Harbor
-                        and U.S.’s entry into the war. Entry to the museum is
-                        free, but not the USS Arizona Memorial.
+                        : Learn more about the U.S.’s role in WWII. The museum
+                        commemorates the attack on Pearl Harbor and U.S.’s entry
+                        into the war. Entry to the museum is free, but not the
+                        USS Arizona Memorial.
                     </li>
                 </ul>
                 <div className="text-2xl font-bold pt-10 italic">Hiking</div>
@@ -341,7 +358,7 @@ export default function WebsitePage() {
                             className="font-bold underline"
                             target="_blank"
                         >
-                            Manoa Falls
+                            Mānoa Falls
                         </a>{" "}
                         (Difficulty: Easy. Watch out for mosquitos)
                     </li>
@@ -360,7 +377,7 @@ export default function WebsitePage() {
 
                 <div className="text-2xl font-bold pt-10 italic">Surfing</div>
                 <div className="pt-5 pb-10">
-                    We highly recommend surfing while in Hawaii! We suggest
+                    We highly recommend surfing while in Hawaiʻi! We suggest
                     lessons to learn the basics. There are many surf schools
                     around the island, but we had a great experience at{" "}
                     <a
@@ -402,10 +419,10 @@ export default function WebsitePage() {
                             className="font-bold underline"
                             target="_blank"
                         >
-                            Waikiki Beach
-                        </a>{" "}
-                        (Most iconic beach on the island, with views of Diamond
-                        Head. Very touristy if that’s your thing.)
+                            Waikīkī Beach
+                        </a>
+                        : Most iconic beach on the island, with views of Diamond
+                        Head. Very touristy if that’s your thing.
                     </li>
                     <li className="list-disc">
                         <a
@@ -414,9 +431,8 @@ export default function WebsitePage() {
                             target="_blank"
                         >
                             Hanauma Bay
-                        </a>{" "}
-                        (DProtected marine life conservation area for snorkeling
-                        )
+                        </a>
+                        : Protected marine life conservation area for snorkeling
                     </li>
                 </ul>
                 <div className="shopping text-2xl font-bold pt-10 italic">
@@ -430,8 +446,8 @@ export default function WebsitePage() {
                             target="_blank"
                         >
                             Ala Moana Mall
-                        </a>{" "}
-                        (The largest open-air shopping mall in the country! )
+                        </a>
+                        : The largest open-air shopping mall in the country!
                     </li>
                     <li className="list-disc">
                         <a
@@ -440,9 +456,9 @@ export default function WebsitePage() {
                             target="_blank"
                         >
                             Kalākaua Ave
-                        </a>{" "}
-                        (Long street in the heart of Waikiki’s tourist area.
-                        Lots of shops and restaurants to check out.)
+                        </a>
+                        : Long street in the heart of Waikīkī ’s tourist area.
+                        Lots of shops and restaurants to check out.
                     </li>
                 </ul>
                 <img src={eat} alt="" className="mx-auto w-[120px] pt-60" />
@@ -475,8 +491,8 @@ export default function WebsitePage() {
                             target="_blank"
                         >
                             Maguro Spot
-                        </a>{" "}
-                        (Corner store serving up fresh Japanese-style poke)
+                        </a>
+                        : Corner store serving up fresh Japanese-style poke
                     </li>
                     <li className="list-disc">
                         <a
@@ -485,10 +501,10 @@ export default function WebsitePage() {
                             target="_blank"
                         >
                             Eggs n Things
-                        </a>{" "}
-                        (Serving fluffy pancakes and loco mocos all day. There
+                        </a>
+                        : Serving fluffy pancakes and loco mocos all day. There
                         are two locations but we prefer the location at 339
-                        Saratoga Road for the ambiance.)
+                        Saratoga Road for the ambiance.
                     </li>
                     <li className="list-disc">
                         <a
@@ -497,9 +513,9 @@ export default function WebsitePage() {
                             target="_blank"
                         >
                             Waiola Shaved Ice
-                        </a>{" "}
-                        (Counter-served corner store serving all kinds of shaved
-                        ice )
+                        </a>
+                        : Counter-served corner store serving all kinds of
+                        shaved ice
                     </li>
                     <li className="list-disc">
                         <a
@@ -508,10 +524,10 @@ export default function WebsitePage() {
                             target="_blank"
                         >
                             Lūʻau
-                        </a>{" "}
-                        (A traditional Hawaiian dinner feast with fire shows and
-                        traditional dance and music. There are many locations
-                        that offer lūʻ’aus)
+                        </a>
+                        : A traditional Hawaiian dinner feast with fire shows
+                        and traditional dance and music. There are many
+                        locations that offer lūʻ’aus
                     </li>
                     <li className="list-disc pb-40">
                         <a
@@ -520,10 +536,17 @@ export default function WebsitePage() {
                             target="_blank"
                         >
                             Koko Head Cafe
-                        </a>{" "}
-                        (Cozy cafe location serving asian fusion brunch)
+                        </a>
+                        : Cozy cafe location serving asian fusion brunch
                     </li>
                 </ul>
+            </div>
+            <img src={photos} alt="" className="mx-auto w-[100px] pt-30" />
+            <div className=" photos header-font text-center text-2xl pt-10">
+                photo gallery
+            </div>
+            <div className="flex flex-col max-w-[1000px] mx-auto pt-10 pb-60">
+                <div>Coming soon!</div>
             </div>
         </div>
     );
