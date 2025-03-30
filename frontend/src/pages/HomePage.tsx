@@ -55,14 +55,14 @@ export default function HomePage() {
                         <input
                             type="text"
                             placeholder="First Name"
-                            className="border md:mr-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            className="border md:mr-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                             name="firstname"
                             required
                         />
                         <input
                             type="text"
                             placeholder="Last Name"
-                            className="border md:ml-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                            className="border md:ml-2 w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                             name="lastname"
                             required
                         />
@@ -73,11 +73,15 @@ export default function HomePage() {
                     <input
                         type="email"
                         placeholder="Email"
-                        className="border w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                        className="border w-[100%] bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                         name="email"
                         required
                     />
-                    <button className="px-7 py-2 my-5 w-[200px] mx-auto border-2 border-[#637CC6] font-bold min[1537px]:text-2xl text-center hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
+                    <button
+                        className="w-[200px] px-5 py-2 my-2 font-bold mx-auto mt-10  text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300"
+                        id="borderbutton"
+                    >
+                        {" "}
                         NEXT
                     </button>
                 </form>

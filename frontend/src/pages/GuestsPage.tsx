@@ -99,19 +99,19 @@ export default function GuestsPage() {
                         <div className="font-bold my-5 text-center md:text-2xl">
                             Responding for {invitee.first_name}
                         </div>
-                        <div className="md:mt-10 mb-5 text-sm md:text-base text-center">
+                        <div className="md:mt-0 mb-5 text-sm md:text-base text-center">
                             How many guests are you bringing?
                         </div>
-                        <form className="mainform flex flex-col md:w-[300px] mx-auto">
+                        <form className="mainform flex flex-col md:w-[300px] mx-auto mb-20">
                             <select
                                 name="guests"
                                 id="guests"
-                                className="mx-auto border md:p-5 text-sm md:text-base"
+                                className="mx-auto border md:p-3 text-sm md:text-base"
                                 onChange={(e) =>
                                     setGuests(Number(e.target.value))
                                 }
                             >
-                                <option value="0">Just me myself and I</option>
+                                <option value="0">Just me myself and I </option>
                                 <option value="1">+1</option>
                                 <option value="2">+2</option>
                                 <option value="3">+3</option>
@@ -132,20 +132,24 @@ export default function GuestsPage() {
                                     type="text"
                                     name="firstname"
                                     placeholder="First name"
-                                    className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
                                 <input
                                     type="text"
                                     name="lastname"
                                     placeholder="Last name"
-                                    className="mr-10 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    className="mr-20 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
                                 <input
                                     type="text"
                                     name="dietary"
-                                    className="mx-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    placeholder="Dietary requirements?"
+                                    className="w-[250px] mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
                             </form>
@@ -156,20 +160,24 @@ export default function GuestsPage() {
                                     type="text"
                                     name="firstname"
                                     placeholder="First name"
-                                    className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
                                 <input
                                     type="text"
                                     name="lastname"
                                     placeholder="Last name"
-                                    className="mr-10 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    className="mr-20 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
                                 <input
                                     type="text"
                                     name="dietary"
-                                    className="mx-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    placeholder="Dietary requirements?"
+                                    className="w-[250px] mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
                             </form>
@@ -180,20 +188,24 @@ export default function GuestsPage() {
                                     type="text"
                                     name="firstname"
                                     placeholder="First name"
-                                    className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
                                 <input
                                     type="text"
                                     name="lastname"
                                     placeholder="Last name"
-                                    className="mr-10 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    className="mr-20 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
                                 <input
                                     type="text"
                                     name="dietary"
-                                    className="mx-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    placeholder="Dietary requirements?"
+                                    className="w-[250px] mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
                             </form>
@@ -204,33 +216,42 @@ export default function GuestsPage() {
                                     type="text"
                                     name="firstname"
                                     placeholder="First name"
-                                    className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
                                 <input
                                     type="text"
                                     name="lastname"
                                     placeholder="Last name"
-                                    className="mr-10 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    className="mr-20 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
                                 <input
                                     type="text"
                                     name="dietary"
-                                    className="mx-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2"
+                                    placeholder="Dietary requirements?"
+                                    className="w-[250px] mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
                             </form>
                         )}
-                        <div className="pt-16 mx-auto flex">
+                        <div className="pt-4 mx-auto flex">
                             <NavLink to="/dietary">
-                                <div className="px-5 py-2 mr-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
+                                <div
+                                    className="w-[175px] mr-2 p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200 text-center"
+                                    id="borderbutton"
+                                >
                                     Go Back
                                 </div>
                             </NavLink>
                             <button
                                 onClick={handleMultiSubmit}
-                                className="px-5 py-2 ml-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300"
+                                className="w-[175px] py-2 my-0 font-bold mx-2  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                id="borderbutton"
                             >
                                 Next
                             </button>

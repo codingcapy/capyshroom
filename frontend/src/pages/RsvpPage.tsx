@@ -75,7 +75,11 @@ export default function RsvpPage() {
                                 . If you do not reply by April 30th, please
                                 bring a chair and sandwich.
                             </div>
-                            <button className="px-5 py-2 my-2 border-2 border-[#637CC6] font-bold mx-auto mt-10 hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
+                            <button
+                                className="px-5 py-2 my-2 font-bold mx-auto mt-10  text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                id="borderbutton"
+                            >
+                                {" "}
                                 YESSSS, HAWAII  😎🌴
                             </button>
                         </form>
@@ -83,7 +87,11 @@ export default function RsvpPage() {
                             onSubmit={handleSubmit2}
                             className="flex flex-col"
                         >
-                            <button className="px-5 py-2 my-2 border-2 border-[#637CC6] font-bold mx-auto hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
+                            <button
+                                className="px-5 py-2 my-2 font-bold mx-auto mt-10  text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                id="borderbutton"
+                            >
+                                {" "}
                                 NO, I REGRETFULLY DECLINE
                             </button>
                         </form>

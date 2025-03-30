@@ -12,9 +12,7 @@ export default function DietaryPage() {
     const { invitee, setInvitee, currentInviteeId, setCurrentInviteeId } =
         useInviteeStore((state) => state);
     console.log(invitee);
-    const [dietaryContent, setDietaryContent] = useState(
-        invitee ? invitee.dietary : ""
-    );
+    const [dietaryContent, setDietaryContent] = useState("");
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -48,24 +46,29 @@ export default function DietaryPage() {
                         Do you have any dietary restrictions and/or allergies?
                     </div>
                     <div className="text-center text-sm md:text-base">
-                        Please list below, otherwise leave blank.
+                        Please list below, otherwise proceed next.
                     </div>
                     <form onSubmit={handleSubmit} className="flex flex-col">
                         <textarea
                             name=""
                             id=""
                             value={dietaryContent}
+                            placeholder="Enter dietary requirements"
                             onChange={(e) => setDietaryContent(e.target.value)}
-                            className="bg-[#FFFBF6] m-5 md:w-[500px] h-[100px] border-b-[#637CC6] border-dotted border-b-2 mx-auto"
+                            className="bg-[#FFFBF6] m-5 md:w-[500px] h-[58px] border-b-[#637CC6] border-dotted border-b-2 mx-auto"
                         ></textarea>
                         <div className="flex mx-auto">
                             <NavLink
                                 to="/rsvp"
-                                className="px-5 py-2 mr-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300"
+                                className="w-[175px] px-5 py-2 my-2 font-bold mx-2 mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                id="borderbutton"
                             >
                                 Go Back
                             </NavLink>
-                            <button className="px-5 py-2 ml-2 border-2 border-[#637CC6] hover:bg-[#637CC6] hover:text-[#FFFBF6] transition-all ease-in-out duration-300">
+                            <button
+                                className="w-[175px] px-5 py-2 my-2 font-bold mx-2 mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                id="borderbutton"
+                            >
                                 Next
                             </button>
                         </div>
@@ -90,7 +93,11 @@ export default function DietaryPage() {
                 <div className="py-5">
                     <div>Whoops! Something went wrong :(</div>
                     <div className="px-5 py-2 my-2 border-2 border-[#637CC6] w-[150px] flex flex-col mx-auto">
-                        <NavLink to="/" className="text-center">
+                        <NavLink
+                            to="/"
+                            className="w-[175px] px-5 py-2 my-2 font-bold mx-2 mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
+                            id="borderbutton"
+                        >
                             Go Back
                         </NavLink>
                     </div>
