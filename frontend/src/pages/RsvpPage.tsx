@@ -69,11 +69,9 @@ export default function RsvpPage() {
                                 Will you be able to join us at our wedding? We
                                 understand if you cannot make it! Please reply
                                 no later than{" "}
-                                <span className="font-bold">
-                                    April 30th, 2025
-                                </span>
-                                . If you do not reply by April 30th, please
-                                bring a chair and sandwich.
+                                <span className="font-bold">May 1st, 2025</span>
+                                . If you do not reply by May 1st, please bring a
+                                chair and sandwich.
                             </div>
                             <button
                                 className="px-5 py-2 my-2 font-bold mx-auto mt-10  text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300"

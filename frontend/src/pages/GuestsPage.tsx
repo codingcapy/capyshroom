@@ -102,7 +102,7 @@ export default function GuestsPage() {
                         <div className="md:mt-0 mb-5 text-sm md:text-base text-center">
                             How many guests are you bringing?
                         </div>
-                        <form className="mainform flex flex-col md:w-[300px] mx-auto mb-20">
+                        <form className="mainform flex flex-col md:w-[300px] mx-auto pb-20">
                             <select
                                 name="guests"
                                 id="guests"
@@ -119,7 +119,7 @@ export default function GuestsPage() {
                             </select>
                         </form>
                         {guests > 0 && (
-                            <div className="guestform py-10 md:flex justify-between">
+                            <div className="guestform md:flex justify-between pb-5">
                                 <div>What are your guests’ names?</div>
                                 <div>
                                     Dietary restrictions and/or food allergies?

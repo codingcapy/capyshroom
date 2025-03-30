@@ -46,16 +46,16 @@ export default function DietaryPage() {
                         Do you have any dietary restrictions and/or allergies?
                     </div>
                     <div className="text-center text-sm md:text-base">
-                        Please list below, otherwise proceed next.
+                        Please list below, otherwise proceed to next.
                     </div>
                     <form onSubmit={handleSubmit} className="flex flex-col">
                         <textarea
                             name=""
                             id=""
                             value={dietaryContent}
-                            placeholder="Enter dietary requirements"
+                            placeholder="Enter any dietary requirements"
                             onChange={(e) => setDietaryContent(e.target.value)}
-                            className="bg-[#FFFBF6] m-5 md:w-[500px] h-[58px] border-b-[#637CC6] border-dotted border-b-2 mx-auto"
+                            className="bg-[#FFFBF6] m-5 md:w-[500px] h-[58px] border-b-[#637CC6] border-dotted border-b-2 mx-auto focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                         ></textarea>
                         <div className="flex mx-auto">
                             <NavLink
