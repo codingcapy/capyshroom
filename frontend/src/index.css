@@ -61,4 +61,26 @@
         max-width: var(--scrollbar-width-legacy);
         max-height: var(--scrollbar-width-legacy);
     }
+
+
+    #borderbutton {
+        border: 10px solid transparent;
+        padding: 5px;
+        border-image: url(button_outlined.svg) stretch;
+        border-image-slice: 20% 5.5%;
+      }
+
+      #borderbutton-solid {
+        border: 10px solid transparent;
+        padding: 5px;
+        border-image: url(button_solid.svg) stretch;
+        border-image-slice: 20% 5.5%;
+      }
+
+      #frame {
+        border: 10px solid transparent;
+        padding: 10px;
+        border-image: url(frame.svg) stretch;
+        border-image-slice: 25% 30%;
+      }
 }
