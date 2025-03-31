@@ -34,12 +34,12 @@ export default function Popup(props: any) {
                     <div className="header-font text-center pt-16 pb-5 text-4xl xl:text-6xl">
                         Almost done!
                     </div>
-                    <div className="xl:px-5">
+                    <div className="xl:px-5 text-base">
                         Submit your RSVP to share your responses with Stephanie
                         and Paul, or take a minute to review. Come back to edit
                         and resubmit your response at any time.
                     </div>
-                    <div className="font-bold text-center py-5">
+                    <div className="font-bold text-center text-base py-5">
                         A copy of your response will be sent to:
                     </div>
                     <div className="font-bold text-center text-2xl">
