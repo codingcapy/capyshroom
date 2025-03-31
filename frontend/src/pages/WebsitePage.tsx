@@ -75,7 +75,7 @@ export default function WebsitePage() {
                     <div className="px-5 cursor-pointer">RSVP</div>
                 </div>
                 <div className="text-xl font-bold py-5" id="story">
-                    Hello!
+                    Aloha!
                 </div>
                 <p>
                     Welcome to our wedding site! Here you’ll find all the info

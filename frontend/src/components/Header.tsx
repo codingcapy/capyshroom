@@ -11,7 +11,7 @@ export default function Header() {
                 <div className="absolute left-0 bottom-[-2px] rounded-full h-[4px] w-[4px] bg-[#637CC6]"></div>
                 <div className="sm:border-r border-[#637CC6] py-2 px-10">
                     <div className="absolute right-0 bottom-[-2px] rounded-full h-[4px] w-[4px] bg-[#637CC6]"></div>
-                    <div className="absolute sm:left-[47%] md:left-[48%] bottom-[88px] rounded-full h-[4px] w-[4px] bg-[#637CC6] hidden sm:block"></div>
+                    <div className="absolute sm:left-[47%] md:left-[46.7%] bottom-[88px] rounded-full h-[4px] w-[4px] bg-[#637CC6] hidden sm:block"></div>
                     <img
                         src={iconCalendar}
                         alt=""
