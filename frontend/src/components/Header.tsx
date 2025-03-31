@@ -7,16 +7,15 @@ export default function Header() {
             <h1 className="header-font sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-5 md:mb-10">
                 Steph & Paul
             </h1>
-            <div className="relative sm:flex italic md:mt-10 tracking-widest border-b border-[#637CC6] justify-center text-sm w-[600px] mx-auto">
+            <div className="relative sm:flex italic md:mt-10 tracking-wide border-b border-[#637CC6] justify-center text-xs w-[450px] mx-auto">
                 <div className="absolute left-0 bottom-[-2px] rounded-full h-[4px] w-[4px] bg-[#637CC6]"></div>
                 <div className="sm:border-r border-[#637CC6] py-2 px-10">
                     <div className="absolute right-0 bottom-[-2px] rounded-full h-[4px] w-[4px] bg-[#637CC6]"></div>
-                    <div className="absolute sm:left-[47%] md:left-[46.4%] bottom-[110px] rounded-full h-[4px] w-[4px] bg-[#637CC6] hidden sm:block"></div>
-
+                    <div className="absolute sm:left-[47%] md:left-[48%] bottom-[88px] rounded-full h-[4px] w-[4px] bg-[#637CC6] hidden sm:block"></div>
                     <img
                         src={iconCalendar}
                         alt=""
-                        className="mx-auto w-[25px] md:w-[35px] min-[1537px]:w-auto mb-5"
+                        className="mx-auto w-[20px] md:w-[30px] min-[1537px]:w-auto mb-3"
                     />
                     <div className="text-center min-[1537px]:text-base">
                         September 29,2025
@@ -27,7 +26,7 @@ export default function Header() {
                     <img
                         src={iconItinerary}
                         alt=""
-                        className="mx-auto w-[25px] min-[1537px]:w-auto mb-5"
+                        className="mx-auto w-[20px] min-[1537px]:w-auto mb-3"
                     />
                     <div className="min-[1537px]:text-base">
                         St. Augustine by the Sea
