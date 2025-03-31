@@ -7,6 +7,7 @@ import activities from "/icon_activities.svg";
 import toTopIcon from "/icon_to_top.svg";
 import eat from "/website_eat.svg";
 import photos from "/image_photos.svg";
+import imageUnderline from "/image_underline.svg";
 import React from "react";
 import GoogleMap from "../components/GoogleMap";
 
@@ -22,57 +23,62 @@ export default function WebsitePage() {
             </p>
             <div className="flex flex-col max-w-[1000px] mx-auto">
                 <div className="md:flex mx-auto font-bold text-lg pb-10">
-                    <div
-                        onClick={() =>
-                            document
-                                .getElementById("story")
-                                ?.scrollIntoView({ behavior: "smooth" })
-                        }
-                        className="px-5 cursor-pointer"
+                    {[
+                        "Our Story",
+                        "Itinerary",
+                        "Travel",
+                        "Things to do",
+                        "Photo Gallery",
+                    ].map((text) => {
+                        // Custom ID mapping
+                        let id;
+                        if (text === "Photo Gallery") id = "photos";
+                        else if (text === "Things to do") id = "things";
+                        else id = text.toLowerCase().replace(/\s+/g, "-");
+
+                        return (
+                            <div
+                                key={text}
+                                onClick={() =>
+                                    document
+                                        .getElementById(id)
+                                        ?.scrollIntoView({ behavior: "smooth" })
+                                }
+                                className="px-5 cursor-pointer group inline-flex items-center hover:text-[#637CC6] transition-colors"
+                            >
+                                {text}
+                                {}
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                >
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        );
+                    })}
+                    <a
+                        href="https://rsvplinkhere.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-5 cursor-pointer group relative inline-flex items-center hover:text-[#637CC6] transition-colors"
                     >
-                        Our Story
-                    </div>
-                    <div
-                        onClick={() =>
-                            document
-                                .getElementById("itinerary")
-                                ?.scrollIntoView({ behavior: "smooth" })
-                        }
-                        className="px-5 cursor-pointer"
-                    >
-                        Itinerary
-                    </div>
-                    <div
-                        onClick={() =>
-                            document
-                                .getElementById("travel")
-                                ?.scrollIntoView({ behavior: "smooth" })
-                        }
-                        className="px-5 cursor-pointer"
-                    >
-                        Travel
-                    </div>
-                    <div
-                        onClick={() =>
-                            document
-                                .getElementById("things")
-                                ?.scrollIntoView({ behavior: "smooth" })
-                        }
-                        className="px-5 cursor-pointer"
-                    >
-                        Things to do
-                    </div>
-                    <div
-                        onClick={() =>
-                            document
-                                .getElementById("photos")
-                                ?.scrollIntoView({ behavior: "smooth" })
-                        }
-                        className="px-5 cursor-pointer"
-                    >
-                        Photo Gallery
-                    </div>
-                    <div className="px-5 cursor-pointer">RSVP</div>
+                        RSVP
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2"
+                            className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                        >
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
                 </div>
                 <div className="text-xl font-bold py-5" id="story">
                     Aloha!
