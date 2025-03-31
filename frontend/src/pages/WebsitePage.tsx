@@ -218,7 +218,7 @@ export default function WebsitePage() {
                         for the type of visa you will need to travel.{" "}
                     </div>
                     <div className="font-bold italic underline pb-10">
-                        Without an ESTA, non-Canadians cannot enter the US.{" "}
+                        Without a visa, non-Canadians cannot enter the US.{" "}
                     </div>
                     <div className="text-xl font-bold pt-10">
                         Where to stay?
