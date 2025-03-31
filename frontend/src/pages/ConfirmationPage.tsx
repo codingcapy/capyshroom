@@ -41,12 +41,12 @@ export default function ConfirmationPage() {
                 >
                     <Link to={"/stephandpaul"}>MORE INFO</Link>
                 </div>
-                <div className="pt-16">
+                <div className="pt-10">
                     <div className="ml-[175px] sm:ml-[400px] md:ml-[550px] lg:ml-[600px] animate-smooth-bounce">
                         <img
                             src={ship}
                             alt="ship"
-                            className="w-[30px] md:w-auto mx-auto mt-5 mb-[-2px] sm:mb-[-8px] md:mb-[-15px]"
+                            className="w-[30px] md:w-auto mx-auto mt-5 mb-[-2px] sm:mb-[-8px] md:mb-[-20px]"
                         />
                     </div>
                     <img src={loadingBar} alt="" className="mx-auto" />

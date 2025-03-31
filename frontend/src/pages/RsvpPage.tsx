@@ -96,9 +96,15 @@ export default function RsvpPage() {
                     </div>
                 ) : (
                     <div className="py-5">
-                        <div>Whoops! Something went wrong :(</div>
-                        <div className="px-5 py-2 my-2 border-2 border-[#637CC6] w-[150px] flex flex-col mx-auto">
-                            <NavLink to="/" className="text-center">
+                        <div className="text-center pt-10">
+                            You broke our site!! Just kidding.
+                        </div>
+                        <div className="w-[200px] flex flex-col mx-auto">
+                            <NavLink
+                                to="/"
+                                className="w-[175px] px-5 py-2 my-2 font-bold mx-2 mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                id="borderbutton"
+                            >
                                 Go Back
                             </NavLink>
                         </div>
