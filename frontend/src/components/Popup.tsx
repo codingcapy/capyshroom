@@ -29,7 +29,7 @@ export default function Popup(props: any) {
     return (
         <div>
             <div className="absolute top-0 left-0 w-[100%] h-[100%] bg-black opacity-75"></div>
-            <div className="absolute top-[20%] left-[5%] xl:left-[30%] w-[90%] xl:w-[40%] h-[50%] bg-[#FFF7EE] p-2">
+            <div className="absolute top-[20%] left-[5%] xl:left-[30%] w-[90%] xl:w-[40%] h-[60%] bg-[#FFF7EE] p-2">
                 <div className="border border-[#637CC6] p-5">
                     <div className="header-font text-center pt-16 pb-5 text-4xl xl:text-6xl">
                         Almost done!
@@ -60,10 +60,12 @@ export default function Popup(props: any) {
                                     Review
                                 </div>
                                 <button
-                                    className="px-5 my-2 font-bold mx-2 text-[#FFF7EE] hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                    className="my-2 font-bold mx-2 text-[#FFF7EE] hover:text-opacity-50 transition-all ease-in-out duration-300 "
                                     id="borderbutton-solid"
                                 >
-                                    Submit your RSVP
+                                    <div className="bg-[#637CC6]">
+                                        Submit your RSVP
+                                    </div>
                                 </button>
                             </div>
                         </form>

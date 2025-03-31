@@ -7,7 +7,7 @@ export default function Header() {
             <h1 className="header-font sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-5 md:mb-10">
                 Steph & Paul
             </h1>
-            <div className="relative sm:flex italic md:mt-10 tracking-widest border-b border-[#637CC6] justify-center text-sm">
+            <div className="relative sm:flex italic md:mt-10 tracking-widest border-b border-[#637CC6] justify-center text-sm w-[600px] mx-auto">
                 <div className="absolute left-0 bottom-[-2px] rounded-full h-[4px] w-[4px] bg-[#637CC6]"></div>
                 <div className="sm:border-r border-[#637CC6] py-2 px-10">
                     <div className="absolute right-0 bottom-[-2px] rounded-full h-[4px] w-[4px] bg-[#637CC6]"></div>

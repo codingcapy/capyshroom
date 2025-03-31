@@ -86,7 +86,7 @@ export default function RsvpPage() {
                             className="flex flex-col"
                         >
                             <button
-                                className="px-5 py-2 my-2 font-bold mx-auto mt-10  text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                className="px-5 py-2 my-2 font-bold mx-auto text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300"
                                 id="borderbutton"
                             >
                                 {" "}

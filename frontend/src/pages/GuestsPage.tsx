@@ -102,7 +102,7 @@ export default function GuestsPage() {
                         <div className="md:mt-0 mb-5 text-sm md:text-base text-center">
                             How many guests are you bringing?
                         </div>
-                        <form className="mainform flex flex-col md:w-[300px] mx-auto pb-20">
+                        <form className="mainform flex flex-col md:w-[300px] mx-auto pb-[56px]">
                             <select
                                 name="guests"
                                 id="guests"
@@ -238,11 +238,10 @@ export default function GuestsPage() {
                                 />
                             </form>
                         )}
-                        <div className="pt-4 mx-auto flex">
+                        <div className="mx-auto flex">
                             <NavLink to="/dietary">
                                 <div
-                                    className="w-[175px] mr-2 p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
-focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200 text-center"
+                                    className="w-[175px] px-5 py-2 my-2 font-bold mx-2 mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
                                     id="borderbutton"
                                 >
                                     Go Back
@@ -250,7 +249,7 @@ focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placehold
                             </NavLink>
                             <button
                                 onClick={handleMultiSubmit}
-                                className="w-[175px] py-2 my-0 font-bold mx-2  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                className="w-[175px] px-5 py-2 my-2 font-bold mx-2 mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
                                 id="borderbutton"
                             >
                                 Next
