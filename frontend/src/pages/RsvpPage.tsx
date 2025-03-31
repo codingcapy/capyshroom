@@ -74,7 +74,7 @@ export default function RsvpPage() {
                                 chair and sandwich.
                             </div>
                             <button
-                                className="px-5 py-2 my-2 font-bold mx-auto mt-10  text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                className="w-[259px] px-5 py-2 my-2 font-bold mx-auto mt-10  text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300"
                                 id="borderbutton"
                             >
                                 {" "}
