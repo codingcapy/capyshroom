@@ -36,7 +36,7 @@ export default function HomePage() {
     }
 
     return (
-        <>
+        <div className="p-2">
             <Header />
             <main className="flex-1 mx-auto text-center tracking-[0.5px] pt-5">
                 <div>
@@ -90,6 +90,6 @@ export default function HomePage() {
                 <img src={subtitle} alt="" className="hidden" />
                 <img src={doubleHappy} alt="" className="hidden" />
             </main>
-        </>
+        </div>
     );
 }
