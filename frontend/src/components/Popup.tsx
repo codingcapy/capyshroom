@@ -2,6 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import useInviteeStore from "../store/InviteeStore";
 import axios from "axios";
 import DOMAIN from "../services/endpoint";
+import buttonSolid from "/button_solid.svg";
 
 export default function Popup(props: any) {
     const navigate = useNavigate();
@@ -29,7 +30,7 @@ export default function Popup(props: any) {
     return (
         <div>
             <div className="absolute top-0 left-0 w-[100%] h-[100%] bg-black opacity-75"></div>
-            <div className="absolute top-[20%] left-[5%] xl:left-[30%] w-[90%] xl:w-[40%] h-[60%] bg-[#FFF7EE] p-2">
+            <div className="absolute top-[20%] left-[5%] md:left-[30%] w-[90%] md:w-[40%] h-[69%] bg-[#FFF7EE] p-2">
                 <div className="border border-[#637CC6] p-5">
                     <div className="header-font text-center pt-16 pb-5 text-4xl xl:text-6xl">
                         Almost done!
@@ -59,14 +60,18 @@ export default function Popup(props: any) {
                                 >
                                     Review
                                 </div>
-                                <button
-                                    className="my-2 font-bold mx-2 text-[#FFF7EE] hover:text-opacity-50 transition-all ease-in-out duration-300 "
-                                    id="borderbutton-solid"
-                                >
-                                    <div className="bg-[#637CC6]">
-                                        Submit your RSVP
-                                    </div>
-                                </button>
+                                <div className="relative">
+                                    <img
+                                        src={buttonSolid}
+                                        alt=""
+                                        className="w-[200px] mt-[10px]"
+                                    />
+                                    <button className="absolute top-[22px] left-[30px]">
+                                        <div className="text-[#FFF7EE] font-bold">
+                                            Submit your RSVP
+                                        </div>
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </div>
