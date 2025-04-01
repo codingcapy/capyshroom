@@ -225,23 +225,23 @@ export async function sendFirstEmail(req: Request, res: Response) {
     <title>👩‍❤️‍👨 Steph & Paul are getting married AND YOU’RE INVITED!</title>
 </head>
 
-<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; text-align: center;">
+<body style="margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;">
     <div style="max-width: 500px; margin: 20px auto; background-color: #FFF7EE; padding: 16px; border-radius: 5000px;">
         <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 16px; border-radius: 5000px;">
             <div
-                style="margin: 0 auto; border: 1px solid #637CC6; padding: 40px 80px; border-radius: 5000px; color: #637CC6; text-align: center;">
+                style="margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: center;">
                 <img src="https://capyshroom-production.up.railway.app/wedding_img.png" alt="Wedding Image"
                     style="width: 200px; display: block; margin: 0 auto;">
                 <div style="padding-top: 20px; font-size: 18px; font-weight: bold;">YOU ARE INVITED</div>
                 <div style="font-size: 16px;">to share in the wedding of</div>
                 <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
-                    style="width: 300px; padding: 40px 0; display: block; margin: 0 auto;">
+                    style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
                 <div style="font-size: 16px;">MONDAY, SEPTEMBER 29, 2025</div>
                 <div style="padding-bottom: 20px; font-size: 16px;">at two in the afternoon</div>
                 <div style="font-size: 16px; font-weight: bold;">ST. AUGUSTINE BY THE SEA</div>
                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
                 <img src="https://capyshroom-production.up.railway.app/subtitle.png" alt="Reception & Dinner"
-                    style="width: 300px; padding: 40px 0; display: block; margin: 0 auto;">
+                    style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
                 <div style="font-size: 16px; font-weight: bold;">MOANA SURFRIDER</div>
                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
                 <div
