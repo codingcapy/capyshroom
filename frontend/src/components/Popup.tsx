@@ -2,12 +2,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 import useInviteeStore from "../store/InviteeStore";
 import axios from "axios";
 import DOMAIN from "../services/endpoint";
-import buttonSolid from "/button_solid.svg";
+import buttonSolid from "/button_solid_text.png";
 
 export default function Popup(props: any) {
     const navigate = useNavigate();
-    const { invitee, setInvitee, currentInviteeId, setCurrentInviteeId } =
-        useInviteeStore((state) => state);
+    const { invitee, setInvitee } = useInviteeStore((state) => state);
 
     async function handleSubmit2(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -29,8 +28,8 @@ export default function Popup(props: any) {
 
     return (
         <div>
-            <div className="absolute top-0 left-0 w-[100%] h-[100%] bg-black opacity-75"></div>
-            <div className="absolute top-[20%] left-[5%] md:left-[30%] w-[90%] md:w-[40%] h-[69%] bg-[#FFF7EE] p-2">
+            <div className="absolute top-[-75px] left-[-75px] w-[100vw] h-screen bg-black opacity-75"></div>
+            <div className="absolute top-[20%] left-[5%] md:left-[30%] w-[90%] md:w-[40%] lg:top-[0%] h-[69%] bg-[#FFF7EE] p-2">
                 <div className="border border-[#637CC6] p-5">
                     <div className="header-font text-center pt-16 pb-5 text-4xl xl:text-6xl">
                         Almost done!
@@ -54,7 +53,7 @@ export default function Popup(props: any) {
                             <div className="flex mx-auto">
                                 <div
                                     onClick={() => props.setShowPopup(false)}
-                                    className="w-[170px] px-5 my-2 font-bold mx-2  text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300
+                                    className="w-[170px] h-[54px] px-5 my-2 font-bold mx-2  text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300
                                     cursor-pointer text-center"
                                     id="borderbutton"
                                 >
@@ -64,13 +63,9 @@ export default function Popup(props: any) {
                                     <img
                                         src={buttonSolid}
                                         alt=""
-                                        className="w-[200px] mt-[10px]"
+                                        className="w-[200px] h-[54px] mt-[10px]"
                                     />
-                                    <button className="absolute top-[22px] left-[30px]">
-                                        <div className="text-[#FFF7EE] font-bold">
-                                            Submit your RSVP
-                                        </div>
-                                    </button>
+                                    <button className="absolute top-[22px] left-[30px]"></button>
                                 </div>
                             </div>
                         </form>

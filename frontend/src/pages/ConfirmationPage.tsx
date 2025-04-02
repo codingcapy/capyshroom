@@ -40,7 +40,7 @@ export default function ConfirmationPage() {
                 >
                     <Link to={"/stephandpaul"}>MORE INFO</Link>
                 </div>
-                <div className="pt-10">
+                <div className="pt-0">
                     <div className="ml-[175px] sm:ml-[400px] md:ml-[550px] lg:ml-[600px] animate-smooth-bounce">
                         <img
                             src={ship}

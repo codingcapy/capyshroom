@@ -80,9 +80,24 @@ div.scroller {
   }
 
   #frame {
-    border: 70px solid transparent;
-    padding: 10px;
+    border: 50px solid transparent;
+    padding: 0px;
     border-image: url(frame.svg) stretch;
     border-image-slice: 37% 37%;
+    min-height: auto;
+    /* Will allow the frame to extend with content */
+    height: auto;
+  }
+
+  @media(min-width:720px) {
+    #frame {
+      border: 70px solid transparent;
+      padding: 10px;
+      border-image: url(frame.svg) stretch;
+      border-image-slice: 37% 37%;
+      min-height: auto;
+      /* Will allow the frame to extend with content */
+      height: auto;
+    }
   }
 }
