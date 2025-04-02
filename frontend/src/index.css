@@ -65,18 +65,17 @@ div.scroller {
     max-height: var(--scrollbar-width-legacy);
   }
 
-
   #borderbutton {
     border: 10px solid transparent;
     padding: 5px;
-    border-image: url(button_outlined.svg) stretch;
+    border-image: url(/button_outlined.svg) stretch;
     border-image-slice: 20% 5.5%;
   }
 
   #borderbutton-solid {
     border: 10px solid transparent;
     padding: 5px;
-    border-image: url(button_solid.svg) stretch;
+    border-image: url(/button_solid.svg) stretch;
     border-image-slice: 20% 5.5%;
   }
 
