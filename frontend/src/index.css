@@ -7,7 +7,6 @@
   src: url(../fonts/SHORELINES.OTF);
 }
 
-
 .main-font {
   font-family: Georgia, 'Times New Roman', Times, serif;
   letter-spacing: 0.2px;
@@ -15,6 +14,10 @@
 
 .header-font {
   font-family: "Shorelines";
+}
+
+html {
+  background-color: #FFF7EE;
 }
 
 ::-moz-selection {
