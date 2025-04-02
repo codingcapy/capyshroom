@@ -80,9 +80,9 @@ div.scroller {
   }
 
   #frame {
-    border: 10px solid transparent;
+    border: 70px solid transparent;
     padding: 10px;
     border-image: url(frame.svg) stretch;
-    border-image-slice: 25% 30%;
+    border-image-slice: 37% 37%;
   }
 }

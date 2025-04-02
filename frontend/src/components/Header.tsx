@@ -3,7 +3,7 @@ import iconItinerary from "/icon_itinerary.svg";
 
 export default function Header() {
     return (
-        <header className="mx-auto md:pt-12 text-center">
+        <header className="mx-auto md:pt-2 text-center">
             <h1 className="header-font sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mt-5 md:mb-10">
                 Steph & Paul
             </h1>
