@@ -9,7 +9,7 @@ export default {
       keyframes: {
         smoothBounce: {
           '0%, 100%': { transform: 'translateY(0) rotate(0deg)', easing: 'ease-in-out' },
-          '50%': { transform: 'translateY(-3px) rotate(6deg)', easing: 'ease-in-out' }, // Adjust rotation angle
+          '50%': { transform: 'translateY(-3px) rotate(10deg)', easing: 'ease-in-out' }, // Adjust rotation angle
         },
       },
       animation: {

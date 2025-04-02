@@ -37,7 +37,7 @@ export default function HomePage() {
     return (
         <div className="p-2">
             <Header />
-            <main className="flex-1 mx-auto text-center tracking-[0.5px] pt-5">
+            <main className="flex-1 mx-auto text-center text-base tracking-[0.5px] pt-5">
                 <div>
                     We’re getting married and you’re invited! Come listen to us
                     tell each other repeatedly how
