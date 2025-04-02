@@ -3,12 +3,8 @@ import { create } from "zustand";
 type inviteeStore = {
     invitee: any;
     setInvitee: (args: any) => void;
-    currentInviteeId: any;
-    setCurrentInviteeId: (args: any) => void;
-    rsvpValue: string;
-    setRsvpValue: (args: any) => void;
-    dietary: string;
-    setDietary: (args: any) => void;
+    dietaryContent: string;
+    setDietaryContent: (args: any) => void;
     guests: number;
     setGuests: (args: any) => void;
     firstName1: string;
@@ -40,12 +36,8 @@ type inviteeStore = {
 const useInviteeStore = create<inviteeStore>((set, _) => ({
     invitee: null,
     setInvitee: (args: any) => set({ invitee: args }),
-    currentInviteeId: null,
-    setCurrentInviteeId: (args: any) => set({ currentInviteeId: args }),
-    rsvpValue: "true",
-    setRsvpValue: (args: any) => set({ rsvpValue: args }),
-    dietary: "",
-    setDietary: (args: any) => set({ dietary: args }),
+    dietaryContent: "",
+    setDietaryContent: (args: any) => set({ dietaryContent: args }),
     guests: 0,
     setGuests: (args: any) => set({ guests: args }),
     firstName1: "",

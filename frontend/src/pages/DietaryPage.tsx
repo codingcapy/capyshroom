@@ -2,17 +2,14 @@ import { NavLink, useNavigate } from "react-router-dom";
 import useInviteeStore from "../store/InviteeStore";
 import axios from "axios";
 import DOMAIN from "../services/endpoint";
-import { useState } from "react";
 import ship from "/icon_loadingbar_ship.svg";
 import loadingBar1 from "/wedding_loadingbar1.svg";
 import Header from "../components/Header";
 
 export default function DietaryPage() {
     const navigate = useNavigate();
-    const { invitee, setInvitee, currentInviteeId, setCurrentInviteeId } =
+    const { invitee, setInvitee, dietaryContent, setDietaryContent } =
         useInviteeStore((state) => state);
-    console.log(invitee);
-    const [dietaryContent, setDietaryContent] = useState("");
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();

@@ -10,8 +10,7 @@ import Header from "../components/Header";
 
 export default function HomePage() {
     const navigate = useNavigate();
-    const { invitee, setInvitee, currentInviteeId, setCurrentInviteeId } =
-        useInviteeStore((state) => state);
+    const { setInvitee } = useInviteeStore((state) => state);
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();

@@ -6,8 +6,7 @@ import Header from "../components/Header";
 import { Link } from "react-router-dom";
 
 export default function ConfirmationPage() {
-    const { invitee, setInvitee, currentInviteeId, setCurrentInviteeId } =
-        useInviteeStore((state) => state);
+    const { setInvitee } = useInviteeStore((state) => state);
 
     useEffect(() => {
         setInvitee(null);

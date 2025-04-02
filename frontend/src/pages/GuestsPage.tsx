@@ -11,31 +11,35 @@ import Header from "../components/Header";
 export default function GuestsPage() {
     const navigate = useNavigate();
     const [showPopup, setShowPopup] = useState(false);
-    const { invitee, setInvitee, currentInviteeId, setCurrentInviteeId } =
-        useInviteeStore((state) => state);
-    const [guests, setGuests] = useState(0);
-
-    // async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    //     e.preventDefault();
-    //     try {
-    //         const invitee_id = invitee.invitee_id;
-    //         const guests = Number.parseInt(
-    //             (e.target as HTMLFormElement).guests.value
-    //         );
-    //         const res = await axios.patch(`${DOMAIN}/api/invitees/guests`, {
-    //             invitee_id,
-    //             guests,
-    //         });
-    //         if (res.data?.success) {
-    //             setInvitee(res.data.content);
-    //             setShowPopup(true);
-    //         } else {
-    //             throw new Error("Project ID not found in response");
-    //         }
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // }
+    const {
+        invitee,
+        guests,
+        setGuests,
+        firstName1,
+        setFirstName1,
+        lastName1,
+        setLastName1,
+        dietary1,
+        setDietary1,
+        firstName2,
+        setFirstName2,
+        lastName2,
+        setLastName2,
+        dietary2,
+        setDietary2,
+        firstName3,
+        setFirstName3,
+        lastName3,
+        setLastName3,
+        dietary3,
+        setDietary3,
+        firstName4,
+        setFirstName4,
+        lastName4,
+        setLastName4,
+        dietary4,
+        setDietary4,
+    } = useInviteeStore((state) => state);
 
     async function handleMultiSubmit() {
         console.log("this function ran");
@@ -132,6 +136,10 @@ export default function GuestsPage() {
                                     type="text"
                                     name="firstname"
                                     placeholder="First name"
+                                    value={firstName1}
+                                    onChange={(e) =>
+                                        setFirstName1(e.target.value)
+                                    }
                                     className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
@@ -140,6 +148,10 @@ export default function GuestsPage() {
                                     type="text"
                                     name="lastname"
                                     placeholder="Last name"
+                                    value={lastName1}
+                                    onChange={(e) =>
+                                        setLastName1(e.target.value)
+                                    }
                                     className="mr-20 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
@@ -148,6 +160,10 @@ export default function GuestsPage() {
                                     type="text"
                                     name="dietary"
                                     placeholder="Dietary requirements?"
+                                    value={dietary1}
+                                    onChange={(e) =>
+                                        setDietary1(e.target.value)
+                                    }
                                     className="w-[250px] mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
@@ -160,6 +176,10 @@ export default function GuestsPage() {
                                     type="text"
                                     name="firstname"
                                     placeholder="First name"
+                                    value={firstName2}
+                                    onChange={(e) =>
+                                        setFirstName2(e.target.value)
+                                    }
                                     className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
@@ -168,6 +188,10 @@ export default function GuestsPage() {
                                     type="text"
                                     name="lastname"
                                     placeholder="Last name"
+                                    value={lastName2}
+                                    onChange={(e) =>
+                                        setLastName2(e.target.value)
+                                    }
                                     className="mr-20 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
@@ -176,6 +200,10 @@ export default function GuestsPage() {
                                     type="text"
                                     name="dietary"
                                     placeholder="Dietary requirements?"
+                                    value={dietary2}
+                                    onChange={(e) =>
+                                        setDietary2(e.target.value)
+                                    }
                                     className="w-[250px] mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
@@ -188,6 +216,10 @@ export default function GuestsPage() {
                                     type="text"
                                     name="firstname"
                                     placeholder="First name"
+                                    value={firstName3}
+                                    onChange={(e) =>
+                                        setFirstName3(e.target.value)
+                                    }
                                     className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
@@ -196,6 +228,10 @@ export default function GuestsPage() {
                                     type="text"
                                     name="lastname"
                                     placeholder="Last name"
+                                    value={lastName3}
+                                    onChange={(e) =>
+                                        setLastName3(e.target.value)
+                                    }
                                     className="mr-20 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
@@ -204,6 +240,10 @@ export default function GuestsPage() {
                                     type="text"
                                     name="dietary"
                                     placeholder="Dietary requirements?"
+                                    value={dietary3}
+                                    onChange={(e) =>
+                                        setDietary3(e.target.value)
+                                    }
                                     className="w-[250px] mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
@@ -216,6 +256,10 @@ export default function GuestsPage() {
                                     type="text"
                                     name="firstname"
                                     placeholder="First name"
+                                    value={firstName4}
+                                    onChange={(e) =>
+                                        setFirstName4(e.target.value)
+                                    }
                                     className="mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
@@ -224,6 +268,10 @@ export default function GuestsPage() {
                                     type="text"
                                     name="lastname"
                                     placeholder="Last name"
+                                    value={lastName4}
+                                    onChange={(e) =>
+                                        setLastName4(e.target.value)
+                                    }
                                     className="mr-20 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
@@ -232,6 +280,10 @@ export default function GuestsPage() {
                                     type="text"
                                     name="dietary"
                                     placeholder="Dietary requirements?"
+                                    value={dietary4}
+                                    onChange={(e) =>
+                                        setDietary4(e.target.value)
+                                    }
                                     className="w-[250px] mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required

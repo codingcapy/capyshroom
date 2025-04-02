@@ -2,15 +2,11 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import useInviteeStore from "../store/InviteeStore";
 import axios from "axios";
 import DOMAIN from "../services/endpoint";
-import { useState } from "react";
 import Header from "../components/Header";
 
 export default function RsvpPage() {
     const navigate = useNavigate();
-    const { invitee, setInvitee, currentInviteeId, setCurrentInviteeId } =
-        useInviteeStore((state) => state);
-    console.log(invitee);
-    const [rsvpValue, setRsvpValue] = useState("false");
+    const { invitee, setInvitee } = useInviteeStore((state) => state);
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
