@@ -92,7 +92,19 @@ div.scroller {
     height: auto;
   }
 
-  @media(min-width:720px) {
+  @media(min-width:640px) {
+    #frame {
+      border: 35px solid transparent;
+      padding: 10px;
+      border-image: url(frame.svg) stretch;
+      border-image-slice: 37% 37%;
+      min-height: auto;
+      /* Will allow the frame to extend with content */
+      height: auto;
+    }
+  }
+
+  @media(min-width:1920px) {
     #frame {
       border: 70px solid transparent;
       padding: 10px;

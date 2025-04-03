@@ -43,7 +43,7 @@ export default function HomePage() {
                     tell each other repeatedly how
                 </div>
                 <div>much we love each other, for two hours, IN HAWAII!!</div>
-                <div className="my-5 font-bold min-[1537px]:text-2xl">
+                <div className="my-5 font-bold text-sm min-[1537px]:text-2xl">
                     Enter your name and email to RSVP.
                 </div>
                 <form
@@ -54,14 +54,14 @@ export default function HomePage() {
                         <input
                             type="text"
                             placeholder="First Name"
-                            className="border md:mr-2 w-[100%] bg-[#FFFBF6] p-1 pb-3 min-[1537px]:pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
+                            className="border sm:mr-2 w-[100%] bg-[#FFFBF6] p-1 pb-3 min-[1537px]:pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                             name="firstname"
                             required
                         />
                         <input
                             type="text"
                             placeholder="Last Name"
-                            className="border md:ml-2 w-[100%] bg-[#FFFBF6] p-1 pb-3 mt-2 md:mt-0 min-[1537px]:pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
+                            className="border sm:ml-2 w-[100%] bg-[#FFFBF6] p-1 pb-3 mt-4 sm:mt-0 min-[1537px]:pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                             name="lastname"
                             required
                         />
@@ -72,7 +72,7 @@ export default function HomePage() {
                     <input
                         type="email"
                         placeholder="Email"
-                        className="border w-[100%] bg-[#FFFBF6] p-1 pb-3 min-[1537px]:pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
+                        className="border w-[100%] bg-[#FFFBF6] p-1 pb-3 min-[1537px]:pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200 max-w-[375px] mx-auto"
                         name="email"
                         required
                     />

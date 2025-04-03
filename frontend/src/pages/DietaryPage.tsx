@@ -54,16 +54,16 @@ export default function DietaryPage() {
                             onChange={(e) => setDietaryContent(e.target.value)}
                             className="bg-[#FFFBF6] m-5 md:w-[500px] h-[58px] border-b-[#637CC6] border-dotted border-b-2 mx-auto focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                         ></textarea>
-                        <div className="flex mx-auto">
+                        <div className="flex flex-col sm:flex-row mx-auto">
                             <NavLink
                                 to="/rsvp"
-                                className="w-[175px] px-5 py-2 my-2 font-bold mx-2 mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                className="w-[175px] px-5 py-2 sm:my-2 font-bold mx-2 xxl:mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
                                 id="borderbutton"
                             >
                                 Go Back
                             </NavLink>
                             <button
-                                className="w-[175px] px-5 py-2 my-2 font-bold mx-2 mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                className="w-[175px] px-5 py-2 sm:my-2 font-bold mx-2 mt-5 xxl:mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
                                 id="borderbutton"
                             >
                                 Next
@@ -71,17 +71,17 @@ export default function DietaryPage() {
                         </div>
                     </form>
                     <div>
-                        <div className="mr-[150px] sm:mr-[350px] lg:mr-[500px] md:mb-[-10px] animate-smooth-bounce">
+                        <div className="mr-[150px] sm:mr-[350px] lg:mr-[500px] mb-[-5px] md:mb-[0px] animate-smooth-bounce">
                             <img
                                 src={ship}
                                 alt="ship"
-                                className="w-[30px] md:w-auto mx-auto mt-5 mb-[-2px] md:mb-[-5px]"
+                                className="w-[30px] md:w-[40px] xxl:w-auto mx-auto mt-5 mb-[-2px] md:mb-[-5px]"
                             />
                         </div>
                         <img
                             src={loadingBar1}
                             alt=""
-                            className="w-auto mx-auto"
+                            className="w-[50%] xxl:w-auto mx-auto"
                         />
                         <div className="text-center">1/3</div>
                     </div>

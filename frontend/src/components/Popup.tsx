@@ -2,7 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import useInviteeStore from "../store/InviteeStore";
 import axios from "axios";
 import DOMAIN from "../services/endpoint";
-import buttonSolid from "/button_solid_text.png";
+import buttonSolid from "/button_solid.svg";
 
 export default function Popup(props: any) {
     const navigate = useNavigate();
@@ -50,22 +50,24 @@ export default function Popup(props: any) {
                             onSubmit={handleSubmit2}
                             className="flex flex-col"
                         >
-                            <div className="flex mx-auto">
+                            <div className="flex mx-auto items-center">
                                 <div
                                     onClick={() => props.setShowPopup(false)}
-                                    className="w-[170px] h-[54px] px-5 my-2 font-bold mx-2  text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300
+                                    className="w-[170px] h-[54px] px-5 font-bold mx-2 text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300
                                     cursor-pointer text-center"
                                     id="borderbutton"
                                 >
                                     Review
                                 </div>
-                                <div className="relative">
+                                <div className="relative w-[200px] h-[100px]">
                                     <img
                                         src={buttonSolid}
                                         alt=""
-                                        className="w-[200px] h-[54px] mt-[10px]"
+                                        className="absolute w-[100%] h-[100%]"
                                     />
-                                    <button className="absolute top-[22px] left-[30px]"></button>
+                                    <button className="absolute w-[100%] h-[100%] text-[#FFFBF6]">
+                                        Submit RSVP
+                                    </button>
                                 </div>
                             </div>
                         </form>
