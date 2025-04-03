@@ -231,10 +231,6 @@ export async function sendFirstEmail(req: Request, res: Response) {
         <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 6px; border-radius: 5000px;">
             <div
                 style="position:relative; margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: center;">
-                <img src="https://capyshroom-production.up.railway.app/icon_star.png" alt="Wedding Image"
-                    style="position:absolute; width: 30px; left:-19px; top:48%">
-                <img src="https://capyshroom-production.up.railway.app/icon_star.png" alt="Wedding Image"
-                    style="position:absolute; width: 30px; right:-19px; top:48%">
                 <img src="https://capyshroom-production.up.railway.app/wedding_img.png" alt="Wedding Image"
                     style="width: 200px; display: block; margin: 0 auto;">
                 <div style="padding-top: 20px; font-size: 18px; ">YOU ARE INVITED</div>
@@ -251,10 +247,12 @@ export async function sendFirstEmail(req: Request, res: Response) {
                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
                 <div
                     style="position:relative; width: 200px; text-align: center; margin-left:auto;margin-right:auto; margin-top:30px; margin-bottom:30px;">
-                    <img src="https://capyshroom-production.up.railway.app/button_solid.png" alt="" style="width:200px">
-                    <a href="https://capyshroom-production.up.railway.app"
-                        style="position:absolute; top:20%; left:25%; text-decoration: none; color:#FFF7EE; font-weight: bold;">RSVP
-                        HERE</a>
+                    <div
+                    style="position:relative; width: 200px; text-align: center; margin-left:auto;margin-right:auto; margin-top:30px; margin-bottom:30px;">
+                    <a href="https://capyshroom-production.up.railway.app" target="_blank"><img
+                            src="https://capyshroom-production.up.railway.app/button_solid.png" alt=""
+                            style="width:200px"></a>
+                </div>
                 </div>
                 <div style="font-size: 16px; font-weight: bold;">More info on our website</div>
                 <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
