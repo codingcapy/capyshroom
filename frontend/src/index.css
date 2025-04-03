@@ -31,19 +31,30 @@ html {
   background: #637CC6;
 }
 
-div.scroller {
-  width: 300px;
-  height: 100px;
-  overflow-y: scroll;
-  scrollbar-color: #FFF7EE #637CC6;
+::-webkit-scrollbar {
+  width: 8px
 }
 
-.scroller {
-  --scrollbar-color-thumb: #FFF7EE;
-  --scrollbar-color-track: #637CC6;
-  --scrollbar-width: thin;
-  --scrollbar-width-legacy: 10px;
+::-webkit-scrollbar-track {
+  background: #FFF7EE
 }
+
+::-webkit-scrollbar-thumb {
+  background: #637CC6;
+  border-radius: 10px
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFF7EE
+}
+
+/*! Firefox */
+html {
+  scrollbar-color: #637CC6 #FFF7EE;
+  --scrollbarBG: #FFF7EE;
+  --thumbBG: #d52457
+}
+
 
 /* Modern browsers with `scrollbar-*` support */
 @supports (scrollbar-width: auto) {
