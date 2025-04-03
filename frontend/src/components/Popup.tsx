@@ -29,8 +29,8 @@ export default function Popup(props: any) {
     return (
         <div className="overflow-hidden">
             <div className="absolute top-[-75px] left-[-75px] w-[102vw] xxl:w-[101vw] h-[102vh] bg-black opacity-75 text-center"></div>
-            <div className="absolute top-0 sm:top-[10%] md:top-[20%] left-[-5%] sm:left-[7%] md:left-[9%] lg:left-[30%] w-auto sm:w-[80%] lg:w-[60%] xl:w-[40%] bg-[#FFF7EE] p-2">
-                <div className="border border-[#637CC6] p-5">
+            <div className="absolute top-0 sm:top-[10%] xxl:top-[20%] left-[-5%] sm:left-[7%] md:left-[9%] lg:left-[30%] w-auto sm:w-[80%] lg:w-[60%] xl:w-[40%] bg-[#FFF7EE] p-2 shadow-[0_35px_35px_rgba(0,0,0,0.15)]">
+                <div className="p-5">
                     <div className="header-font text-center pt-5 sm:pt-16 pb-5 text-4xl xl:text-6xl">
                         Almost done!
                     </div>
@@ -45,15 +45,15 @@ export default function Popup(props: any) {
                     <div className="font-bold text-center text-2xl">
                         {invitee.email}
                     </div>
-                    <div className="xl:pb-2 pt-9">
+                    <div className="xl:pb-2 pt-2">
                         <form
                             onSubmit={handleSubmit2}
                             className="flex flex-col"
                         >
-                            <div className="md:flex mx-auto items-center">
+                            <div className="hidden sm:flex mx-auto items-center">
                                 <div
                                     onClick={() => props.setShowPopup(false)}
-                                    className="w-[170px] h-[54px] px-5 font-bold sm:mx-2 text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300
+                                    className="w-[200px] h-[47px] px-5 font-bold sm:mx-2 text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300
                                     cursor-pointer text-center mx-auto"
                                     id="borderbutton"
                                 >
@@ -68,6 +68,26 @@ export default function Popup(props: any) {
                                     <button className="absolute w-[100%] h-[100%] text-[#FFFBF6]">
                                         Submit RSVP
                                     </button>
+                                </div>
+                            </div>
+                            <div className="sm:hidden ">
+                                <div className="relative w-[200px] h-[75px] mx-auto">
+                                    <img
+                                        src={buttonSolid}
+                                        alt=""
+                                        className="absolute w-[100%] h-[100%]"
+                                    />
+                                    <button className="absolute w-[100%] h-[100%] text-[#FFFBF6]">
+                                        Submit RSVP
+                                    </button>
+                                </div>
+                                <div
+                                    onClick={() => props.setShowPopup(false)}
+                                    className="w-[200px] h-[47px] px-5 font-bold sm:mx-2 text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300
+                                    cursor-pointer text-center mx-auto"
+                                    id="borderbutton"
+                                >
+                                    Review
                                 </div>
                             </div>
                         </form>

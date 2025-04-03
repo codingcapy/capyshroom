@@ -52,9 +52,9 @@ export default function DietaryPage() {
                             value={dietaryContent}
                             placeholder="Enter any dietary requirements"
                             onChange={(e) => setDietaryContent(e.target.value)}
-                            className="bg-[#FFFBF6] m-5 md:w-[500px] h-[58px] border-b-[#637CC6] border-dotted border-b-2 mx-auto focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
+                            className="bg-[#FFFBF6] m-5 xs:w-[275px] md:w-[500px] h-[58px] border-b-[#637CC6] border-dotted border-b-2 mx-auto focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                         ></textarea>
-                        <div className="flex flex-col sm:flex-row mx-auto">
+                        <div className="hidden sm:flex flex-col sm:flex-row mx-auto">
                             <NavLink
                                 to="/rsvp"
                                 className="w-[175px] px-5 py-2 sm:my-2 font-bold mx-2 xxl:mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
@@ -68,6 +68,21 @@ export default function DietaryPage() {
                             >
                                 Next
                             </button>
+                        </div>
+                        <div className="sm:hidden flex flex-col mx-auto">
+                            <button
+                                className="w-[175px] px-5 py-2 sm:my-2 font-bold mx-2 xxl:mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                id="borderbutton"
+                            >
+                                Next
+                            </button>
+                            <NavLink
+                                to="/rsvp"
+                                className="w-[175px] px-5 py-2 sm:my-2 font-bold mx-2 mt-5 xxl:mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                id="borderbutton"
+                            >
+                                Go Back
+                            </NavLink>
                         </div>
                     </form>
                     <div>
