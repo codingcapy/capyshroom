@@ -249,7 +249,7 @@ export async function sendFirstEmail(req: Request, res: Response) {
                     style="position:relative; width: 200px; text-align: center; margin-left:auto;margin-right:auto; margin-top:30px; margin-bottom:30px;">
                     <div
                     style="position:relative; width: 200px; text-align: center; margin-left:auto;margin-right:auto; margin-top:30px; margin-bottom:30px;">
-                    <a href="https://capyshroom-production.up.railway.app" target="_blank"><img
+                    <a href="https://stephandpaul.ca/" target="_blank"><img
                             src="https://capyshroom-production.up.railway.app/button_solid.png" alt=""
                             style="width:200px"></a>
                 </div>
