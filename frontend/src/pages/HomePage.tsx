@@ -7,7 +7,7 @@ import imgTitle from "/image_title.png";
 import subtitle from "/subtitle.png";
 import doubleHappy from "/icon_email_doublehappy.png";
 import Header from "../components/Header";
-import star from "/icon_star.svg";
+import star from "/icon_star.png";
 
 export default function HomePage() {
     const navigate = useNavigate();
