@@ -2,7 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 
 export default function Layout() {
     const location = useLocation();
-    const isStephAndPaul = location.pathname === "/stephandpaul";
+    const isStephAndPaul = location.pathname === "/home";
 
     return (
         <div className="bg-[#FFF7EE] xxl:p-10 min-h-screen">

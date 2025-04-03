@@ -4,7 +4,7 @@ import iconItinerary from "/icon_itinerary.svg";
 export default function Header() {
     return (
         <header className="mx-auto text-center">
-            <h1 className="header-font text-4xl sm:text-4xl md:text-5xl xxl:text-7xl mt-5 md:mb-10">
+            <h1 className="header-font text-4xl sm:text-4xl md:text-5xl xxl:text-7xl mt-5 xxl:mt-16 md:mb-10">
                 Steph & Paul
             </h1>
             <div className="relative flex italic mt-10 tracking-wide border-b border-[#637CC6] justify-center text-xs md:w-[450px] mx-auto">

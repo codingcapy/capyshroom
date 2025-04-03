@@ -29,7 +29,7 @@ export function Router() {
                 <Route path="/guests" element={<GuestsPage />} />
                 <Route path="/confirmation" element={<ConfirmationPage />} />
                 <Route path="/thankyou" element={<DeclinePage />} />
-                <Route path="/stephandpaul" element={<WebsitePage />} />
+                <Route path="/home" element={<WebsitePage />} />
                 <Route path="/*" element={<HomePage />} />
             </Route>
         )
