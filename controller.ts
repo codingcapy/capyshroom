@@ -254,7 +254,8 @@ export async function sendFirstEmail(req: Request, res: Response) {
                             style="width:200px"></a>
                 </div>
                 </div>
-                <div style="font-size: 16px; font-weight: bold;">More info on our website</div>
+                <div style="font-size: 16px; font-weight: bold;"><a href="https://stephandpaul.ca/home"
+                        target="_blank">More info on our website</a></div>
                 <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
                     style="width: 75px; padding: 40px 0; display: block; margin: 0 auto;">
             </div>
