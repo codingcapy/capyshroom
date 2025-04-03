@@ -96,7 +96,7 @@ html {
   #frame {
     border: 50px solid transparent;
     padding: 0px;
-    border-image: url(frame.svg) stretch;
+    border-image: url(/frame.svg) stretch;
     border-image-slice: 37% 37%;
     min-height: auto;
     /* Will allow the frame to extend with content */
@@ -107,7 +107,7 @@ html {
     #frame {
       border: 35px solid transparent;
       padding: 10px;
-      border-image: url(frame.svg) stretch;
+      border-image: url(/frame.svg) stretch;
       border-image-slice: 37% 37%;
       min-height: auto;
       /* Will allow the frame to extend with content */
@@ -119,7 +119,7 @@ html {
     #frame {
       border: 49px solid transparent;
       padding: 10px;
-      border-image: url(frame.svg) stretch;
+      border-image: url(/frame.svg) stretch;
       border-image-slice: 37% 37%;
       min-height: auto;
       /* Will allow the frame to extend with content */
