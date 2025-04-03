@@ -225,29 +225,36 @@ export async function sendFirstEmail(req: Request, res: Response) {
     <title>👩‍❤️‍👨 Steph & Paul are getting married AND YOU’RE INVITED!</title>
 </head>
 
-<body style="margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', Times, serif; text-align: center;">
+<body
+    style="margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing:1px; line-height: 25px; text-align: center;">
     <div style="max-width: 500px; margin: 20px auto; background-color: #FFF7EE; padding: 16px; border-radius: 5000px;">
-        <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 16px; border-radius: 5000px;">
+        <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 6px; border-radius: 5000px;">
             <div
-                style="margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: center;">
+                style="position:relative; margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: center;">
+                <img src="https://capyshroom-production.up.railway.app/icon_star.svg" alt="Wedding Image"
+                    style="position:absolute; width: 30px; left:-19px; top:48%">
+                <img src="https://capyshroom-production.up.railway.app/icon_star.svg" alt="Wedding Image"
+                    style="position:absolute; width: 30px; right:-19px; top:48%">
                 <img src="https://capyshroom-production.up.railway.app/wedding_img.png" alt="Wedding Image"
                     style="width: 200px; display: block; margin: 0 auto;">
-                <div style="padding-top: 20px; font-size: 18px; font-weight: bold;">YOU ARE INVITED</div>
+                <div style="padding-top: 20px; font-size: 18px; ">YOU ARE INVITED</div>
                 <div style="font-size: 16px;">to share in the wedding of</div>
                 <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
                     style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
                 <div style="font-size: 16px;">MONDAY, SEPTEMBER 29, 2025</div>
                 <div style="padding-bottom: 20px; font-size: 16px;">at two in the afternoon</div>
-                <div style="font-size: 16px; font-weight: bold;">ST. AUGUSTINE BY THE SEA</div>
+                <div style="font-size: 16px; ">ST. AUGUSTINE BY THE SEA</div>
                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
                 <img src="https://capyshroom-production.up.railway.app/subtitle.png" alt="Reception & Dinner"
                     style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
-                <div style="font-size: 16px; font-weight: bold;">MOANA SURFRIDER</div>
+                <div style="font-size: 16px; ">MOANA SURFRIDER</div>
                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
                 <div
-                    style="background-color: #637CC6; color: #FFF7EE; padding: 10px; margin: 20px auto; border-radius: 8px; width: 200px; text-align: center; font-weight: bold;">
+                    style="position:relative; width: 200px; text-align: center; margin-left:auto;margin-right:auto; margin-top:30px; margin-bottom:30px;">
+                    <img src="https://capyshroom-production.up.railway.app/button_solid.svg" alt="" style="width:200px">
                     <a href="https://capyshroom-production.up.railway.app"
-                        style="text-decoration: none; color:#FFF7EE;">RSVP</a>
+                        style="position:absolute; top:20%; left:25%; text-decoration: none; color:#FFF7EE; font-weight: bold;">RSVP
+                        HERE</a>
                 </div>
                 <div style="font-size: 16px; font-weight: bold;">More info on our website</div>
                 <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
