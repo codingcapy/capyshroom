@@ -40,11 +40,11 @@ export default function HomePage() {
         <div className="p-2 bg-[#FFF7EE]">
             <Header />
             <main className="flex-1 mx-auto text-center text-base tracking-[0.5px] pt-5">
-                <div className="text-sm xxl:text-base">
+                <div className="text-sm lg:text-base md:w-[600px] mx-auto">
                     We’re getting married and you’re invited! Come listen to us
-                    tell each other repeatedly how
+                    tell each other repeatedly how much we love each other, for
+                    two hours, IN HAWAII!!
                 </div>
-                <div>much we love each other, for two hours, IN HAWAII!!</div>
                 <div className="my-5 font-bold text-sm xxl:text-2xl">
                     Enter your name and email to RSVP.
                 </div>

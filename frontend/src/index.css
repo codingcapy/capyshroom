@@ -55,7 +55,6 @@ html {
   --thumbBG: #d52457
 }
 
-
 /* Modern browsers with `scrollbar-*` support */
 @supports (scrollbar-width: auto) {
   .scroller {
