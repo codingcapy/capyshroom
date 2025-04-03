@@ -71,11 +71,11 @@ export default function DietaryPage() {
                         </div>
                     </form>
                     <div>
-                        <div className="mr-[150px] sm:mr-[350px] lg:mr-[500px] mb-[-5px] md:mb-[0px] animate-smooth-bounce">
+                        <div className="mr-[100px] sm:mr-[250px] lg:mr-[400px] md:mb-[0px] animate-smooth-bounce">
                             <img
                                 src={ship}
                                 alt="ship"
-                                className="w-[30px] md:w-[40px] xxl:w-auto mx-auto mt-5 mb-[-2px] md:mb-[-5px]"
+                                className="w-[30px] md:w-[40px] 2xl:w-auto mx-auto mt-5 mb-[-2px] md:mb-[-5px]"
                             />
                         </div>
                         <img

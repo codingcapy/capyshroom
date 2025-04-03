@@ -293,7 +293,7 @@ export default function GuestsPage() {
                         <div className="mx-auto md:flex">
                             <NavLink to="/dietary">
                                 <div
-                                    className="w-[175px] px-5 py-2 my-2 font-bold mx-2 sm:mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                    className="w-[175px] px-5 py-2 my-2 font-bold mx-2 text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
                                     id="borderbutton"
                                 >
                                     Go Back
@@ -301,7 +301,7 @@ export default function GuestsPage() {
                             </NavLink>
                             <button
                                 onClick={handleMultiSubmit}
-                                className="w-[175px] px-5 py-2 my-2 font-bold mx-2 sm:mt-10  text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
+                                className="w-[175px] px-5 py-2 my-2 font-bold mx-2 text-[#637CC6] text-center hover:text-opacity-50 transition-all ease-in-out duration-300"
                                 id="borderbutton"
                             >
                                 Next
