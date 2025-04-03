@@ -7,6 +7,7 @@ import imgTitle from "/image_title.png";
 import subtitle from "/subtitle.png";
 import doubleHappy from "/icon_email_doublehappy.png";
 import Header from "../components/Header";
+import star from "/icon_star.svg";
 
 export default function HomePage() {
     const navigate = useNavigate();
@@ -88,6 +89,7 @@ export default function HomePage() {
                 <img src={imgTitle} alt="" className="hidden" />
                 <img src={subtitle} alt="" className="hidden" />
                 <img src={doubleHappy} alt="" className="hidden" />
+                <img src={star} alt="" className="hidden" />
             </main>
         </div>
     );
