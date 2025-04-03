@@ -231,9 +231,9 @@ export async function sendFirstEmail(req: Request, res: Response) {
         <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 6px; border-radius: 5000px;">
             <div
                 style="position:relative; margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: center;">
-                <img src="https://capyshroom-production.up.railway.app/icon_star.svg" alt="Wedding Image"
+                <img src="https://capyshroom-production.up.railway.app/icon_star.png" alt="Wedding Image"
                     style="position:absolute; width: 30px; left:-19px; top:48%">
-                <img src="https://capyshroom-production.up.railway.app/icon_star.svg" alt="Wedding Image"
+                <img src="https://capyshroom-production.up.railway.app/icon_star.png" alt="Wedding Image"
                     style="position:absolute; width: 30px; right:-19px; top:48%">
                 <img src="https://capyshroom-production.up.railway.app/wedding_img.png" alt="Wedding Image"
                     style="width: 200px; display: block; margin: 0 auto;">
