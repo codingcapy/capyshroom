@@ -242,7 +242,7 @@ export async function sendFirstEmail(req: Request, res: Response) {
                 <div style="font-size: 16px; ">ST. AUGUSTINE BY THE SEA</div>
                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
                 <img src="https://capyshroom-production.up.railway.app/subtitle.png" alt="Reception & Dinner"
-                    style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
+                    style="max-width: 300px; width: 80%; padding-top: 38px; padding-bottom: 20px; display: block; margin: 0 auto;">
                 <div style="font-size: 16px; ">MOANA SURFRIDER</div>
                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
                 <div
