@@ -27,11 +27,11 @@ export default function Popup(props: any) {
     }
 
     return (
-        <div>
-            <div className="absolute top-[-75px] left-[-75px] w-[100vw] h-screen bg-black opacity-75"></div>
-            <div className="absolute top-[20%] left-[5%] md:left-[30%] w-[90%] md:w-[40%] lg:top-[0%] h-[69%] bg-[#FFF7EE] p-2">
+        <div className="overflow-hidden">
+            <div className="absolute top-[-75px] left-[-75px] w-[102vw] xxl:w-[101vw] h-[102vh] bg-black opacity-75 text-center"></div>
+            <div className="absolute top-0 sm:top-[10%] md:top-[20%] left-[-5%] sm:left-[7%] md:left-[9%] lg:left-[30%] w-auto sm:w-[80%] lg:w-[60%] xl:w-[40%] bg-[#FFF7EE] p-2">
                 <div className="border border-[#637CC6] p-5">
-                    <div className="header-font text-center pt-16 pb-5 text-4xl xl:text-6xl">
+                    <div className="header-font text-center pt-5 sm:pt-16 pb-5 text-4xl xl:text-6xl">
                         Almost done!
                     </div>
                     <div className="xl:px-5 text-base">
@@ -50,16 +50,16 @@ export default function Popup(props: any) {
                             onSubmit={handleSubmit2}
                             className="flex flex-col"
                         >
-                            <div className="flex mx-auto items-center">
+                            <div className="md:flex mx-auto items-center">
                                 <div
                                     onClick={() => props.setShowPopup(false)}
-                                    className="w-[170px] h-[54px] px-5 font-bold mx-2 text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300
-                                    cursor-pointer text-center"
+                                    className="w-[170px] h-[54px] px-5 font-bold sm:mx-2 text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300
+                                    cursor-pointer text-center mx-auto"
                                     id="borderbutton"
                                 >
                                     Review
                                 </div>
-                                <div className="relative w-[200px] h-[100px]">
+                                <div className="relative w-[200px] h-[100px] mx-auto md:mx-0">
                                     <img
                                         src={buttonSolid}
                                         alt=""

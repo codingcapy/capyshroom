@@ -38,12 +38,12 @@ export default function HomePage() {
         <div className="p-2 bg-[#FFF7EE]">
             <Header />
             <main className="flex-1 mx-auto text-center text-base tracking-[0.5px] pt-5">
-                <div className="text-sm min-[1537]:text-base">
+                <div className="text-sm xxl:text-base">
                     We’re getting married and you’re invited! Come listen to us
                     tell each other repeatedly how
                 </div>
                 <div>much we love each other, for two hours, IN HAWAII!!</div>
-                <div className="my-5 font-bold text-sm min-[1537px]:text-2xl">
+                <div className="my-5 font-bold text-sm xxl:text-2xl">
                     Enter your name and email to RSVP.
                 </div>
                 <form
@@ -54,14 +54,14 @@ export default function HomePage() {
                         <input
                             type="text"
                             placeholder="First Name"
-                            className="border sm:mr-2 w-[100%] bg-[#FFFBF6] p-1 pb-3 min-[1537px]:pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
+                            className="border sm:mr-2 w-[100%] bg-[#FFFBF6] p-1 pb-3 xxl:pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                             name="firstname"
                             required
                         />
                         <input
                             type="text"
                             placeholder="Last Name"
-                            className="border sm:ml-2 w-[100%] bg-[#FFFBF6] p-1 pb-3 mt-4 sm:mt-0 min-[1537px]:pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
+                            className="border sm:ml-2 w-[100%] bg-[#FFFBF6] p-1 pb-3 mt-4 sm:mt-0 xxl:pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                             name="lastname"
                             required
                         />
@@ -72,7 +72,7 @@ export default function HomePage() {
                     <input
                         type="email"
                         placeholder="Email"
-                        className="border w-[100%] bg-[#FFFBF6] p-1 pb-3 min-[1537px]:pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200 max-w-[375px] mx-auto"
+                        className="border w-[100%] bg-[#FFFBF6] p-1 pb-3 xxl:pb-5 border-b-[#637CC6] border-dotted border-b-2 focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200 max-w-[375px] mx-auto"
                         name="email"
                         required
                     />

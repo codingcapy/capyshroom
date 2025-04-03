@@ -117,7 +117,7 @@ html {
 
   @media(min-width:1920px) {
     #frame {
-      border: 70px solid transparent;
+      border: 49px solid transparent;
       padding: 10px;
       border-image: url(frame.svg) stretch;
       border-image-slice: 37% 37%;

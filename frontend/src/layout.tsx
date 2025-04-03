@@ -5,13 +5,13 @@ export default function Layout() {
     const isStephAndPaul = location.pathname === "/stephandpaul";
 
     return (
-        <div className="bg-[#FFF7EE] min-[1537px]:p-10 min-h-screen">
+        <div className="bg-[#FFF7EE] xxl:p-10 min-h-screen">
             {!isStephAndPaul ? (
                 <div
                     className="absolute top-0 left-0 md:w-[100vw] flex flex-col"
                     id="frame"
                 >
-                    <div className="flex flex-col min-h-[87vh] text-[#637CC6] main-font text-sm min-[1537px]:text-lg min-[1537px]:p-5">
+                    <div className="flex flex-col min-h-[87vh] text-[#637CC6] main-font text-sm xxl:text-lg xxl:p-5">
                         <Outlet />
                     </div>
                 </div>
