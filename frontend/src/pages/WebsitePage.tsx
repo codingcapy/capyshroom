@@ -88,10 +88,10 @@ export default function WebsitePage() {
                 </div>
                 <p className="text-center italic pt-5 pb-10 text-lg">
                     {" "}
-                    <Countdown />
+                    <Countdown />{" "}
                 </p>
                 <div className="flex flex-col max-w-[1000px] mx-auto">
-                    <div className="md:flex mx-auto font-bold text-lg pb-10">
+                    <div className="hidden md:flex mx-auto font-bold text-lg pb-10">
                         {[
                             "Our Story",
                             "Itinerary",
