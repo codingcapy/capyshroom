@@ -13,7 +13,7 @@ import GoogleMap from "../components/GoogleMap";
 
 export default function WebsitePage() {
     return (
-        <div>
+        <div className="p-2 sm:p-0">
             <img src={weddingImg} alt="" className="mx-auto pt-10" id="top" />
             <div className="md:w-[600px] mx-auto">
                 <Header />

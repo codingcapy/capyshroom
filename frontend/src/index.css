@@ -80,7 +80,7 @@ html {
 
   #borderbutton {
     border: 10px solid transparent;
-    padding: 5px;
+    padding: 0px;
     border-image: url(/button_outlined.svg) stretch;
     border-image-slice: 20% 5.5%;
   }
@@ -101,6 +101,7 @@ html {
     /* Will allow the frame to extend with content */
     height: auto;
     max-width: 96vw;
+    box-sizing: border-box;
   }
 
   @media(min-width:640px) {
@@ -113,10 +114,11 @@ html {
       /* Will allow the frame to extend with content */
       height: auto;
       max-width: 98vw;
+      box-sizing: border-box;
     }
   }
 
-  @media(min-width:1920px) {
+  @media(min-width:1500px) {
     #frame {
       border: 49px solid transparent;
       padding: 10px;
@@ -126,6 +128,7 @@ html {
       /* Will allow the frame to extend with content */
       height: auto;
       max-width: 99vw;
+      box-sizing: border-box;
     }
   }
 }
