@@ -118,7 +118,21 @@ html {
     }
   }
 
-  @media(min-width:1500px) {
+  @media(min-width:1536px) {
+    #frame {
+      border: 35px solid transparent;
+      padding: 10px;
+      border-image: url(/frame.svg) stretch;
+      border-image-slice: 37% 37%;
+      min-height: auto;
+      /* Will allow the frame to extend with content */
+      height: auto;
+      max-width: 99vw;
+      box-sizing: border-box;
+    }
+  }
+
+  @media(min-width:1920px) {
     #frame {
       border: 49px solid transparent;
       padding: 10px;
