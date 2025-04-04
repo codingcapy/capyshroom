@@ -30,10 +30,10 @@ export default function Popup(props: any) {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
             <div className="bg-[#FFF7EE] p-2 shadow-[0_35px_35px_rgba(0,0,0,0.15)] w-[80%] lg:w-[60%] xl:w-[40%] relative">
                 <div className="p-5">
-                    <div className="header-font text-center pt-5 sm:pt-16 pb-5 text-4xl xl:text-6xl">
+                    <div className="header-font text-center pt-5 sm:pt-10 pb-5 text-4xl xl:text-5xl">
                         Almost done!
                     </div>
-                    <div className="xl:px-5 text-base">
+                    <div className="xl:px-5 text-base text-center">
                         Submit your RSVP to share your responses with Stephanie
                         and Paul, or take a minute to review. Come back to edit
                         and resubmit your response at any time.
