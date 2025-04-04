@@ -18,6 +18,7 @@ import GuestsPage from "./pages/GuestsPage";
 import ConfirmationPage from "./pages/ConfirmationPage";
 import DeclinePage from "./pages/DeclinePage";
 import WebsitePage from "./pages/WebsitePage";
+import Countdown from "./components/countdown";
 
 export function Router() {
     const router = createBrowserRouter(
@@ -30,6 +31,8 @@ export function Router() {
                 <Route path="/confirmation" element={<ConfirmationPage />} />
                 <Route path="/thankyou" element={<DeclinePage />} />
                 <Route path="/home" element={<WebsitePage />} />
+                <Route path="/countdown" element={<Countdown />} />{" "}
+                {/* new countdown route */}
                 <Route path="/*" element={<HomePage />} />
             </Route>
         )

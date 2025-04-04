@@ -1,4 +1,4 @@
-import weddingImg from "/wedding_img.png";
+import weddingImg from "/wedding_img.svg";
 import Header from "../components/Header";
 import itinary from "/website_itinerary.svg";
 import timeline from "/website_timeline.svg";
@@ -10,16 +10,24 @@ import photos from "/image_photos.svg";
 import imageUnderline from "/image_underline.svg";
 import React from "react";
 import GoogleMap from "../components/GoogleMap";
+import countdown from "../components/countdown";
+import Countdown from "../components/countdown";
 
 export default function WebsitePage() {
     return (
         <div className="p-2 sm:p-0">
-            <img src={weddingImg} alt="" className="mx-auto pt-10" id="top" />
+            <img
+                src={weddingImg}
+                alt=""
+                className="mx-auto pt-10 pb-5 w-[225px]"
+                id="top"
+            />
             <div className="md:w-[600px] mx-auto">
                 <Header />
             </div>
             <p className="text-center italic pt-5 pb-10 text-lg">
-                8888 days to go!
+                {" "}
+                <Countdown />
             </p>
             <div className="flex flex-col max-w-[1000px] mx-auto">
                 <div className="md:flex mx-auto font-bold text-lg pb-10">
