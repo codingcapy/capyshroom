@@ -12,6 +12,7 @@ import React, { useEffect, useState } from "react";
 import GoogleMap from "../components/GoogleMap";
 import countdown from "../components/countdown";
 import Countdown from "../components/countdown";
+import MyIcon from "../components/MyIcon";
 
 export default function WebsitePage() {
     const [navVisible, setNavVisible] = useState(false);
@@ -81,17 +82,6 @@ export default function WebsitePage() {
                                 className="px-5 cursor-pointer group inline-flex items-center hover:text-[#637CC6] transition-colors mx-auto py-2"
                             >
                                 {text}
-                                {}
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth="2"
-                                    className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                                >
-                                    <path d="M5 12h14M12 5l7 7-7 7" />
-                                </svg>
                             </div>
                         );
                     })}
@@ -120,7 +110,6 @@ export default function WebsitePage() {
                             "Things to do",
                             "Photo Gallery",
                         ].map((text) => {
-                            // Custom ID mapping
                             let id;
                             if (text === "Photo Gallery") id = "photos";
                             else if (text === "Things to do") id = "things";
@@ -136,20 +125,13 @@ export default function WebsitePage() {
                                                 behavior: "smooth",
                                             })
                                     }
-                                    className="px-5 cursor-pointer group inline-flex items-center hover:text-[#637CC6] transition-colors"
+                                    className="px-5 cursor-pointer group flex flex-col items-center hover:text-[#637CC6] transition-colors"
                                 >
-                                    {text}
-                                    {}
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                                    >
-                                        <path d="M5 12h14M12 5l7 7-7 7" />
-                                    </svg>
+                                    <span>{text}</span>
+                                    <span className="h-[24px] mt-0 flex items-center justify-center transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                                        {" "}
+                                        <MyIcon />
+                                    </span>
                                 </div>
                             );
                         })}
@@ -157,19 +139,13 @@ export default function WebsitePage() {
                             href="https://rsvplinkhere.com"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-5 cursor-pointer group relative inline-flex items-center hover:text-[#637CC6] transition-colors"
+                            className="px-5 cursor-pointer group flex flex-col items-center hover:text-[#637CC6] transition-colors"
                         >
                             RSVP
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="2"
-                                className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                            >
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
+                            <span className="h-[24px] mt-0 flex items-center justify-center transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                                {" "}
+                                <MyIcon />
+                            </span>
                         </a>
                     </div>
                     <div className="text-xl font-bold py-5" id="story">
