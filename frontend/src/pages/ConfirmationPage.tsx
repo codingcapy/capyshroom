@@ -25,7 +25,7 @@ export default function ConfirmationPage() {
                 <div className="px-2 text-center pb-10">
                     Take a look at{" "}
                     <a
-                        href="https:https://paulandsteph.ca/home"
+                        href="https://stephandpaul.ca/home"
                         className="font-bold underline"
                         target="_blank"
                     >
