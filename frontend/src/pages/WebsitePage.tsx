@@ -53,27 +53,48 @@ export default function WebsitePage() {
                         navVisible ? "visible" : ""
                     } flex flex-col mx-auto text-center`}
                 >
-                    <div
-                        onClick={() =>
-                            document
-                                .getElementById("story")
-                                ?.scrollIntoView({ behavior: "smooth" })
-                        }
-                        className="px-5 cursor-pointer group inline-flex items-center hover:text-[#637CC6] transition-colors text-center mx-auto"
-                    >
-                        Our Story
-                        {}
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                        >
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </div>
+                    {[
+                        "Our Story",
+                        "Itinerary",
+                        "Travel",
+                        "Things to do",
+                        "Photo Gallery",
+                    ].map((text) => {
+                        // Custom ID mapping
+                        let id;
+                        if (text === "Photo Gallery") id = "photos";
+                        else if (text === "Things to do") id = "things";
+                        else if (text === "Our Story") id = "story";
+                        else id = text.toLowerCase().replace(/\s+/g, "-");
+
+                        return (
+                            <div
+                                key={text}
+                                onClick={() => {
+                                    document
+                                        .getElementById(id)
+                                        ?.scrollIntoView({
+                                            behavior: "smooth",
+                                        });
+                                    setNavVisible(false);
+                                }}
+                                className="px-5 cursor-pointer group inline-flex items-center hover:text-[#637CC6] transition-colors mx-auto py-2"
+                            >
+                                {text}
+                                {}
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2"
+                                    className="w-4 h-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                                >
+                                    <path d="M5 12h14M12 5l7 7-7 7" />
+                                </svg>
+                            </div>
+                        );
+                    })}
                 </div>
             </header>
             <div className="p-10 sm:p-0">
