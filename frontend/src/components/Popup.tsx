@@ -27,9 +27,8 @@ export default function Popup(props: any) {
     }
 
     return (
-        <div className="overflow-hidden">
-            <div className="absolute top-[-75px] left-[-75px] w-[102vw] xxl:w-[101vw] h-[102vh] bg-black opacity-75 text-center"></div>
-            <div className="absolute top-0 sm:top-[10%] xxl:top-[20%] left-[-5%] sm:left-[7%] md:left-[9%] lg:left-[30%] w-auto sm:w-[80%] lg:w-[60%] xl:w-[40%] bg-[#FFF7EE] p-2 shadow-[0_35px_35px_rgba(0,0,0,0.15)]">
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+            <div className="bg-[#FFF7EE] p-2 shadow-[0_35px_35px_rgba(0,0,0,0.15)] w-[80%] lg:w-[60%] xl:w-[40%] relative">
                 <div className="p-5">
                     <div className="header-font text-center pt-5 sm:pt-16 pb-5 text-4xl xl:text-6xl">
                         Almost done!
@@ -53,8 +52,7 @@ export default function Popup(props: any) {
                             <div className="hidden sm:flex mx-auto items-center">
                                 <div
                                     onClick={() => props.setShowPopup(false)}
-                                    className="w-[200px] h-[47px] px-5 font-bold sm:mx-2 text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300
-                                    cursor-pointer text-center mx-auto"
+                                    className="w-[200px] h-[47px] px-5 font-bold sm:mx-2 text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300 cursor-pointer text-center mx-auto"
                                     id="borderbutton"
                                 >
                                     Review
@@ -70,7 +68,7 @@ export default function Popup(props: any) {
                                     </button>
                                 </div>
                             </div>
-                            <div className="sm:hidden ">
+                            <div className="sm:hidden">
                                 <div className="relative w-[200px] h-[75px] mx-auto">
                                     <img
                                         src={buttonSolid}
@@ -83,8 +81,7 @@ export default function Popup(props: any) {
                                 </div>
                                 <div
                                     onClick={() => props.setShowPopup(false)}
-                                    className="w-[200px] h-[47px] px-5 font-bold sm:mx-2 text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300
-                                    cursor-pointer text-center mx-auto"
+                                    className="w-[200px] h-[47px] px-5 font-bold sm:mx-2 text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300 cursor-pointer text-center mx-auto"
                                     id="borderbutton"
                                 >
                                     Review
