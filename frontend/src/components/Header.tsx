@@ -8,10 +8,10 @@ export default function Header() {
                 Steph & Paul
             </h1>
             <div className="relative flex italic mt-10 tracking-wide border-b border-[#637CC6] justify-center text-xs md:w-[450px] mx-auto">
-                <div className="border-r border-[#637CC6] py-2 pt-2 md:pt-2 px-2 sm:px-10">
+                <div className="border-r border-[#637CC6] py-2 pt-2 md:pt-2 px-2 sm:px-10 lg:w-[200px]">
                     <div className="absolute left-0 bottom-[-2px] rounded-full h-[4px] w-[4px] bg-[#637CC6]"></div>
                     <div className="absolute right-0 bottom-[-2px] rounded-full h-[4px] w-[4px] bg-[#637CC6]"></div>
-                    <div className="absolute sm:left-[47%] md:left-[46.7%] 2xl:left-[46%] xxl:left-[46.2%] top-0 rounded-full h-[4px] w-[4px] bg-[#637CC6] hidden sm:block"></div>
+                    {/* <div className="absolute left-[49.4%] top-0 rounded-full h-[4px] w-[4px] bg-[#637CC6] hidden sm:block"></div>  */}
                     <div className="h-[40px] xxl:h-auto">
                         <img
                             src={iconCalendar}
@@ -24,7 +24,7 @@ export default function Header() {
                     </div>
                     <div>14:00</div>
                 </div>
-                <div className="py-2 px-2 sm:px-10">
+                <div className="py-2 px-2 sm:px-10 lg:w-[200px]">
                     <div className="h-[40px] xxl:h-auto">
                         <img
                             src={iconItinerary}

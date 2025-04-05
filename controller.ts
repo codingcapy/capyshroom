@@ -461,7 +461,7 @@ export async function sendSorryEmail(req: Request, res: Response) {
                     style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
                 <div style="font-size: 14px; ">Dear <span style="font-weight: bold;">${first_name}</span>, we’re sorry you can’t make it to our ceremony! We hope to catch up with you when we’re
                     in town. </div>
-                    <div style="font-size: 14px; margin-top:10px; font-style: italic;">- Steph & Paul</div>
+                    <div style="font-size: 14px; margin-top:10px; font-style: italic; color:#637CC6">- Steph & Paul</div>
                 <a href="https://stephandpaul.ca/home" target="_blank">
                 <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
                     style="width: 75px; padding: 40px 0; display: block; margin: 0 auto;">
