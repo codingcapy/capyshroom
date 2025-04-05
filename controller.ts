@@ -317,65 +317,73 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
 </head>
 
 <body
-    style="margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing:1px; line-height: 25px; text-align: center;">
-    <div style="max-width: 500px; margin: 20px auto; background-color: #FFF7EE; padding: 16px; border-radius: 5000px;">
-        <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 6px; border-radius: 5000px;">
-            <div
-                style="position:relative; margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: center;">
-                <img src="https://capyshroom-production.up.railway.app/wedding_img.png" alt="Wedding Image"
-                    style="width: 200px; display: block; margin: 0 auto;">
-                <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
-                    style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
-                <div style="padding-top: 20px; font-size: 16px; ">Dear <span
-                        style="font-weight: bold;">${
-                            invitee.first_name
-                        }</span>, thank you for your response to our
-                    invitation.
-                    We’re constantly updating our site with new content as the big day approaches, so <a
-                        href="https://stephandpaul.ca" target="_blank" style="color: #637CC6; font-weight: bold;">visit
-                        it</a> to keep
-                    updated!</div>
-                <div style="font-size: 16px; margin-top: 20px; margin-bottom: 20px;">Keep this email for your reference
+    style="margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px; letter-spacing: 0.2px; line-height: 25px; text-align: center;">
+    <div style="max-width: 500px; margin: 20px auto; background-color: #FFF7EE; padding: 16px; border-radius: 5000px; position: relative;">
+    
+      <!-- Border layer 1 (contains BOTH stars) -->
+      <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 6px; border-radius: 5000px; position: relative;">
+    
+        <!-- Border layer 2 and content -->
+        <div style="position: relative; margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: center;">
+                <!-- Your content starts here -->
+                <img src="https://capyshroom-production.up.railway.app/wedding_img_02.png" alt="Wedding Image" style="width: 200px; display: block; margin: 0 auto;">
+                <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul" style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
+  
+                <div style="padding-top: 0;">Dear <strong>${
+                    invitee.first_name
+                }</strong>, thank you for your response to our invitation.  
+                  We’re constantly updating our site with new content as the big day approaches, so  
+                  <a href="https://stephandpaul.ca" target="_blank" style="color: #637CC6; font-weight: bold;">visit it</a> to keep updated!
                 </div>
-                <div style="font-size: 16px; font-weight: bold;">Will you be joining us at our wedding?</div>
-                <div style="padding-bottom: 40px; font-size: 16px;">${
+  
+                <div style="margin: 20px 0;">Keep this email for your reference.</div>
+                    <hr style="border: none; border-top: 1px solid #637CC6; width: 80%; margin: 0; display: inline-block;" />   
+                <div style="font-weight: bold; margin-top: 20px;">Will you be joining us at our wedding?</div>
+                <div style="padding-bottom: 20px;">${
                     invitee.rsvp ? "Yes" : "No"
                 }</div>
-                <div style="font-size: 16px; font-weight: bold;">Do you have dietary restrictions or food allergies?
+  
+                <div style="font-weight: bold;">Do you have dietary restrictions or food allergies?</div>
+                <div>${invitee.dietary ? invitee.dietary : "no response"}</div>
+  
+                <div style="font-weight: bold; margin-top: 20px;">How many guests are you bringing?</div>
+                <div>
+                  ${
+                      invitee.guests && invitee.guests > 0
+                          ? inviteeGuests.map((guest, idx) => {
+                                guest.invitee_id === invitee.invitee_id &&
+                                    `<div style="display:flex; justify-content: center; gap: 8px;">
+                                <div>Guest ${idx}:</div>
+                                <div>${guest.firstname}</div>
+                                <div>${guest.lastname}</div>
+                            </div>`;
+                            })
+                          : "None"
+                  }
                 </div>
-                <div style="font-size: 16px;">${
-                    invitee.dietary ? invitee.dietary : "no response"
-                }</div>
-                <div style="font-size: 16px; font-weight: bold; margin-top: 20px;">How many guests are you bringing?
-                </div>
-                <div style="font-size: 16px;">${
-                    invitee.guests && invitee.guests > 0
-                        ? inviteeGuests.map((guest) => {
-                              guest.invitee_id === invitee.invitee_id &&
-                                  `<div style="display:flex;"><div style="font-size: 16px;">${guest.firstname}</div>
-                              <div style="font-size: 16px;">${guest.lastname}</div></div>`;
-                          })
-                        : "None"
-                }</div>
+  
                 ${
-                    invitee.guests &&
-                    invitee.guests > 0 &&
-                    `<div style="font-size: 16px; font-weight: bold; margin-top: 20px;">Do your
-                    guests have dietary
-                    restrictions or food
-                    allergies?</div>`
+                    invitee.guests && invitee.guests > 0
+                        ? `<div style="font-weight: bold; margin-top: 20px;">Do your guests have dietary restrictions or food allergies?</div>`
+                        : ""
                 }
+  
                 ${inviteeGuests.map((guest) => {
                     guest.invitee_id === invitee.invitee_id &&
-                        `<div style="display:flex;"><div style="font-size: 16px;">${guest.firstname}</div>
-                    <div style="font-size: 16px;">${guest.dietary}</div></div>`;
+                        `<div style="display:flex; justify-content: center; gap: 8px;">
+                          <div>${guest.firstname}</div>
+                          <div>${guest.dietary || "no response"}</div>
+                      </div>`;
                 })}
-                <div style="font-size: 16px; font-weight: bold;"><a href="https://stephandpaul.ca/home"
-                        target="_blank"><img src="https://capyshroom-production.up.railway.app/button_oursite.png"
-                            alt="" style="width:200px"></a>
+                        <hr style="border: none; border-top: 1px solid #637CC6; width: 80%; margin: 0; display: inline-block;" />
+                <div style="font-weight: bold; margin-top: 20px;">
+                  <a href="https://stephandpaul.ca/home" target="_blank">
+                    <img src="https://capyshroom-production.up.railway.app/button_oursite.png" alt="" style="width: 200px;">
+                  </a>
                 </div>
-                <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
-                    style="width: 75px; padding: 40px 0; display: block; margin: 0 auto;">
+  
+                <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy" style="width: 75px; padding: 20px 0; display: block; margin: 0 auto;">
+                <!-- End content -->
             </div>
         </div>
     </div>
