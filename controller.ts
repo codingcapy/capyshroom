@@ -3,6 +3,13 @@ import { db, guests, invitees } from "./connect";
 import { eq } from "drizzle-orm";
 import nodemailer from "nodemailer";
 
+const emails = [
+    "stephology@gmail.com",
+    "spkim0921@gmail.com",
+    "paulkim89.dev@gmail.com",
+    "stephanie.f.louie@gmail.com",
+];
+
 export async function createInvitee(req: Request, res: Response) {
     const first_name = req.body.first_name;
     const last_name = req.body.last_name;
@@ -195,11 +202,7 @@ export async function updateSubmitted(req: Request, res: Response) {
 
 export async function sendFirstEmail(req: Request, res: Response) {
     try {
-        const confirmedInvitees = await db
-            .select()
-            .from(invitees)
-            .where(eq(invitees.submitted, true));
-        confirmedInvitees.forEach((invitee) => {
+        emails.forEach((email) => {
             return new Promise((resolve, reject) => {
                 var transporter = nodemailer.createTransport({
                     service: "gmail",
@@ -213,8 +216,8 @@ export async function sendFirstEmail(req: Request, res: Response) {
                 });
 
                 const mail_configs = {
-                    from: "spkim0921@gmail.com",
-                    to: invitee.email?.toString(),
+                    from: '"Steph and Paul" <spkim0921@gmail.com>',
+                    to: email.toString(),
                     subject:
                         "👩‍❤️‍👨 Steph & Paul are getting married AND YOU’RE INVITED!",
                     html: `<!DOCTYPE html>
@@ -305,7 +308,7 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                 });
 
                 const mail_configs = {
-                    from: "spkim0921@gmail.com",
+                    from: '"Steph and Paul" <spkim0921@gmail.com>',
                     to: invitee.email?.toString(),
                     subject: "Next stop: Aloha 🌺",
                     html: `<!DOCTYPE html>
@@ -317,7 +320,7 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
 </head>
 
 <body
-    style="margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 16px; letter-spacing: 0.2px; line-height: 25px; text-align: center;">
+    style="margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', Times, serif; font-size: 14px; letter-spacing: 0.2px; line-height: 25px; text-align: center;">
     <div style="max-width: 500px; margin: 20px auto; background-color: #FFF7EE; padding: 16px; border-radius: 5000px; position: relative;">
     
       <!-- Border layer 1 (contains BOTH stars) -->
@@ -344,37 +347,43 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                 }</div>
   
                 <div style="font-weight: bold;">Do you have dietary restrictions or food allergies?</div>
-                <div>${invitee.dietary ? invitee.dietary : "no response"}</div>
+                ${
+                    invitee.dietary
+                        ? `<div>invitee.dietary</div>`
+                        : '<div style="font-style:italic">no response</div>'
+                }
   
                 <div style="font-weight: bold; margin-top: 20px;">How many guests are you bringing?</div>
-                <div>
-                  ${
-                      invitee.guests && invitee.guests > 0
-                          ? inviteeGuests.map((guest, idx) => {
-                                guest.invitee_id === invitee.invitee_id &&
-                                    `<div style="display:flex; justify-content: center; gap: 8px;">
-                                <div>Guest ${idx}:</div>
-                                <div>${guest.firstname}</div>
-                                <div>${guest.lastname}</div>
-                            </div>`;
-                            })
-                          : "None"
-                  }
-                </div>
-  
+                ${
+                    invitee.guests && invitee.guests > 0
+                        ? inviteeGuests
+                              .filter(
+                                  (guest) =>
+                                      guest.invitee_id === invitee.invitee_id
+                              )
+                              .map((guest, idx) => {
+                                  return `
+                              <div>Guest ${idx + 1}: ${guest.firstname} ${
+                                      guest.lastname
+                                  }</div>`;
+                              })
+                              .join("")
+                        : "<div>None</div>"
+                }
                 ${
                     invitee.guests && invitee.guests > 0
                         ? `<div style="font-weight: bold; margin-top: 20px;">Do your guests have dietary restrictions or food allergies?</div>`
                         : ""
                 }
-  
-                ${inviteeGuests.map((guest) => {
-                    guest.invitee_id === invitee.invitee_id &&
-                        `<div style="display:flex; justify-content: center; gap: 8px;">
-                          <div>${guest.firstname}</div>
-                          <div>${guest.dietary || "no response"}</div>
-                      </div>`;
-                })}
+                ${inviteeGuests
+                    .filter((guest) => guest.invitee_id === invitee.invitee_id)
+                    .map((guest, idx) => {
+                        return `
+                          <div>Guest ${idx + 1}: ${
+                            guest.dietary || "no response"
+                        }</div>`;
+                    })
+                    .join("")}
                         <hr style="border: none; border-top: 1px solid #637CC6; width: 80%; margin: 0; display: inline-block;" />
                 <div style="font-weight: bold; margin-top: 20px;">
                   <a href="https://stephandpaul.ca/home" target="_blank">
@@ -430,7 +439,7 @@ export async function sendSorryEmail(req: Request, res: Response) {
                 });
 
                 const mail_configs = {
-                    from: "spkim0921@gmail.com",
+                    from: '"Steph and Paul" <spkim0921@gmail.com>',
                     to: invitee.email?.toString(),
                     subject: "👩‍❤️‍👨 Thanks for responding to our RSVP!",
                     html: `<!DOCTYPE html>
@@ -442,7 +451,7 @@ export async function sendSorryEmail(req: Request, res: Response) {
 </head>
 
 <body
-    style="margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing:1px; line-height: 25px; text-align: center;">
+    style="margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing:0.2px; line-height: 25px; text-align: center;">
     <div style="max-width: 500px; margin: 20px auto; background-color: #FFF7EE; padding: 16px; border-radius: 5000px;">
         <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 6px; border-radius: 5000px;">
             <div
@@ -451,11 +460,13 @@ export async function sendSorryEmail(req: Request, res: Response) {
                     style="width: 200px; display: block; margin: 0 auto;">
                 <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
                     style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
-                <div style="padding-top: 20px; font-size: 16px; ">Dear <span style="font-weight: bold;">${invitee.first_name}</span>, we’re sorry you can’t make it to our ceremony! We hope to catch up with you when we’re
+                <div style="font-size: 14px; ">Dear <span style="font-weight: bold;">${invitee.first_name}</span>, we’re sorry you can’t make it to our ceremony! We hope to catch up with you when we’re
                     in town. </div>
-
+                    <div style="font-size: 14px; margin-top:10px; font-style: italic;">- Steph & Paul</div>
+                <a href="https://stephandpaul.ca/home" target="_blank">
                 <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
                     style="width: 75px; padding: 40px 0; display: block; margin: 0 auto;">
+                    </a>
             </div>
         </div>
     </div>
