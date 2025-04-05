@@ -10,7 +10,7 @@ import {
     createInvitee,
     sendFirstEmail,
     sendFourthEmail,
-    sendSecondEmail,
+    sendConfirmationEmail,
     sendThirdEmail,
     updateDietary,
     updateGuests,
@@ -26,7 +26,7 @@ invitees.route("/dietary").patch(updateDietary);
 invitees.route("/guests").patch(updateGuests);
 invitees.route("/submitted").patch(updateSubmitted);
 invitees.route("/sendfirst").post(sendFirstEmail);
-invitees.route("/sendsecond").post(sendSecondEmail);
+invitees.route("/sendsecond").post(sendConfirmationEmail);
 invitees.route("/sendthird").post(sendThirdEmail);
 invitees.route("/sendfourth").post(sendFourthEmail);
 
