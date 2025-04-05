@@ -152,7 +152,7 @@ export default function GuestsPage() {
                                     onChange={(e) =>
                                         setFirstName1(e.target.value)
                                     }
-                                    className="w-[190px] md:w-auto mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
+                                    className="xs:w-[300px] sm:w-[190px] md:w-auto mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200 mx-auto"
                                     required
                                 />
@@ -164,7 +164,7 @@ export default function GuestsPage() {
                                     onChange={(e) =>
                                         setLastName1(e.target.value)
                                     }
-                                    className="w-[190px] md:w-auto mr-20 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
+                                    className="xs:w-[300px] sm:w-[190px] md:w-auto mr-20 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
@@ -176,7 +176,7 @@ export default function GuestsPage() {
                                     onChange={(e) =>
                                         setDietary1(e.target.value)
                                     }
-                                    className="w-[190px] mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
+                                    className="xs:w-[300px] mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
@@ -199,7 +199,7 @@ export default function GuestsPage() {
                                     onChange={(e) =>
                                         setFirstName2(e.target.value)
                                     }
-                                    className="w-[190px] md:w-auto mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
+                                    className="xs:w-[300px] sm:w-[190px] md:w-auto mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
@@ -211,7 +211,7 @@ export default function GuestsPage() {
                                     onChange={(e) =>
                                         setLastName2(e.target.value)
                                     }
-                                    className="w-[190px] md:w-auto mr-20 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
+                                    className="xs:w-[300px] sm:w-[190px] md:w-auto mr-20 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
@@ -223,7 +223,7 @@ export default function GuestsPage() {
                                     onChange={(e) =>
                                         setDietary2(e.target.value)
                                     }
-                                    className="w-[190px] mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
+                                    className="xs:w-[300px] mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
@@ -246,7 +246,7 @@ export default function GuestsPage() {
                                     onChange={(e) =>
                                         setFirstName3(e.target.value)
                                     }
-                                    className="w-[190px] md:w-auto mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
+                                    className="xs:w-[300px] sm:w-[190px] md:w-auto mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
@@ -258,7 +258,7 @@ export default function GuestsPage() {
                                     onChange={(e) =>
                                         setLastName3(e.target.value)
                                     }
-                                    className="w-[190px] md:w-auto mr-20 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
+                                    className="xs:w-[300px] sm:w-[190px] md:w-auto mr-20 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
@@ -270,7 +270,7 @@ export default function GuestsPage() {
                                     onChange={(e) =>
                                         setDietary3(e.target.value)
                                     }
-                                    className="w-[190px] mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
+                                    className="xs:w-[300px] mr-2 bg-[#FFFBF6] p-1 pb-5 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
@@ -293,7 +293,7 @@ export default function GuestsPage() {
                                     onChange={(e) =>
                                         setFirstName4(e.target.value)
                                     }
-                                    className="w-[250px] md:w-auto mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
+                                    className="xs:w-[300px] sm:w-[190px] md:w-auto mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
@@ -305,7 +305,7 @@ export default function GuestsPage() {
                                     onChange={(e) =>
                                         setLastName4(e.target.value)
                                     }
-                                    className="w-[250px] md:w-auto mr-20 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
+                                    className="xs:w-[300px] sm:w-[190px] md:w-auto mr-20 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />
@@ -317,7 +317,7 @@ export default function GuestsPage() {
                                     onChange={(e) =>
                                         setDietary4(e.target.value)
                                     }
-                                    className="w-[190px] mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
+                                    className="xs:w-[300px] mr-2 bg-[#FFFBF6] p-1 pb-3 xl:pb-5 my-2 border-b-[#637CC6] border-dotted border-b-2 
                                     focus:placeholder:opacity-0 focus:placeholder:transition-opacity focus:placeholder:duration-200"
                                     required
                                 />

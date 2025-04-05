@@ -80,7 +80,7 @@ html {
 
   #borderbutton {
     border: 10px solid transparent;
-    padding: 0px;
+    padding: 5px;
     border-image: url(/button_outlined.svg) stretch;
     border-image-slice: 20% 5.5%;
   }

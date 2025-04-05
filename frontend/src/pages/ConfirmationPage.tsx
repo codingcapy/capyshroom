@@ -22,7 +22,7 @@ export default function ConfirmationPage() {
                 <div className="font-bold text-center py-5 text-2xl">
                     What’s next?
                 </div>
-                <div className="px-2 text-center pb-10">
+                <div className="px-2 text-center text-base pb-10">
                     Take a look at{" "}
                     <a
                         href="https://stephandpaul.ca/home"
