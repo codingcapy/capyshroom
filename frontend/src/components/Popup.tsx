@@ -22,6 +22,9 @@ export default function Popup(props: any) {
             const res = await axios.patch(`${DOMAIN}/api/invitees/submitted`, {
                 invitee_id,
             });
+            const res2 = await axios.post(`${DOMAIN}/api/invitees/sendsecond`, {
+                invitee_id,
+            });
             if (res.data?.success) {
                 setInvitee(res.data.content);
                 navigate("/confirmation");

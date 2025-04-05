@@ -37,6 +37,10 @@ export default function RsvpPage() {
                 invitee_id,
                 rsvp,
             });
+            const res2 = await axios.post(`${DOMAIN}/api/invitees/sendthird`, {
+                email: invitee.email,
+                first_name: invitee.first_name,
+            });
             if (res.data?.success) {
                 setInvitee(res.data.content);
                 navigate("/thankyou");

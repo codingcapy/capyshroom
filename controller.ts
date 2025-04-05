@@ -288,11 +288,12 @@ export async function sendFirstEmail(req: Request, res: Response) {
 }
 
 export async function sendConfirmationEmail(req: Request, res: Response) {
+    const invitee_id = req.body.invitee_id;
     try {
         const confirmedInvitees = await db
             .select()
             .from(invitees)
-            .where(eq(invitees.rsvp, true));
+            .where(eq(invitees.invitee_id, invitee_id));
         const inviteeGuests = await db.select().from(guests);
         confirmedInvitees.forEach((invitee) => {
             return new Promise((resolve, reject) => {
@@ -421,28 +422,26 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
 
 export async function sendSorryEmail(req: Request, res: Response) {
     try {
-        const confirmedInvitees = await db
-            .select()
-            .from(invitees)
-            .where(eq(invitees.rsvp, false));
-        confirmedInvitees.forEach((invitee) => {
-            return new Promise((resolve, reject) => {
-                var transporter = nodemailer.createTransport({
-                    service: "gmail",
-                    host: "smtp.gmail.com",
-                    port: 465,
-                    secure: true,
-                    auth: {
-                        user: "spkim0921@gmail.com",
-                        pass: process.env.EMAIL_PASSWORD,
-                    },
-                });
+        const first_name = req.body.first_name;
+        const email = req.body.email;
 
-                const mail_configs = {
-                    from: '"Steph and Paul" <spkim0921@gmail.com>',
-                    to: invitee.email?.toString(),
-                    subject: "👩‍❤️‍👨 Thanks for responding to our RSVP!",
-                    html: `<!DOCTYPE html>
+        return new Promise((resolve, reject) => {
+            var transporter = nodemailer.createTransport({
+                service: "gmail",
+                host: "smtp.gmail.com",
+                port: 465,
+                secure: true,
+                auth: {
+                    user: "spkim0921@gmail.com",
+                    pass: process.env.EMAIL_PASSWORD,
+                },
+            });
+
+            const mail_configs = {
+                from: '"Steph and Paul" <spkim0921@gmail.com>',
+                to: email.toString(),
+                subject: "👩‍❤️‍👨 Thanks for responding to our RSVP!",
+                html: `<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -460,7 +459,7 @@ export async function sendSorryEmail(req: Request, res: Response) {
                     style="width: 200px; display: block; margin: 0 auto;">
                 <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
                     style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
-                <div style="font-size: 14px; ">Dear <span style="font-weight: bold;">${invitee.first_name}</span>, we’re sorry you can’t make it to our ceremony! We hope to catch up with you when we’re
+                <div style="font-size: 14px; ">Dear <span style="font-weight: bold;">${first_name}</span>, we’re sorry you can’t make it to our ceremony! We hope to catch up with you when we’re
                     in town. </div>
                     <div style="font-size: 14px; margin-top:10px; font-style: italic;">- Steph & Paul</div>
                 <a href="https://stephandpaul.ca/home" target="_blank">
@@ -473,16 +472,16 @@ export async function sendSorryEmail(req: Request, res: Response) {
 </body>
 
 </html>`,
-                };
-                transporter.sendMail(mail_configs, function (error, info) {
-                    if (error) {
-                        console.log(error);
-                        return reject({ message: `An error has occured` });
-                    }
-                    return resolve({ message: "Email sent succesfuly" });
-                });
+            };
+            transporter.sendMail(mail_configs, function (error, info) {
+                if (error) {
+                    console.log(error);
+                    return reject({ message: `An error has occured` });
+                }
+                return resolve({ message: "Email sent succesfuly" });
             });
         });
+
         res.status(200).json({ success: true });
     } catch (err) {
         console.error("Error getting inviteees:", err);
