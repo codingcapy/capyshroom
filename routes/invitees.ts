@@ -11,7 +11,7 @@ import {
     sendFirstEmail,
     sendFourthEmail,
     sendConfirmationEmail,
-    sendThirdEmail,
+    sendSorryEmail,
     updateDietary,
     updateGuests,
     updateRsvp,
@@ -27,7 +27,7 @@ invitees.route("/guests").patch(updateGuests);
 invitees.route("/submitted").patch(updateSubmitted);
 invitees.route("/sendfirst").post(sendFirstEmail);
 invitees.route("/sendsecond").post(sendConfirmationEmail);
-invitees.route("/sendthird").post(sendThirdEmail);
+invitees.route("/sendthird").post(sendSorryEmail);
 invitees.route("/sendfourth").post(sendFourthEmail);
 
 export default invitees;
