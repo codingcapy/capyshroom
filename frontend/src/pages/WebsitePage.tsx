@@ -42,7 +42,7 @@ export default function WebsitePage() {
                     <div></div>
                     <button
                         id="hamburger-menu"
-                        className="text-3xl text-[#637CC6] md:hidden"
+                        className="text-3xl text-[#637CC6] p-5 md:hidden"
                         onClick={slideToggle}
                     >
                         &#x2630;
