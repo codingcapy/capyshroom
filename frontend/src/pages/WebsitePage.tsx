@@ -13,6 +13,9 @@ import GoogleMap from "../components/GoogleMap";
 import countdown from "../components/countdown";
 import Countdown from "../components/countdown";
 import MyIcon from "../components/MyIcon";
+import food1 from "/food1.jpg";
+import food2 from "/food2.jpg";
+import food3 from "/food3.jpg";
 
 export default function WebsitePage() {
     const [navVisible, setNavVisible] = useState(false);
@@ -55,7 +58,6 @@ export default function WebsitePage() {
                     } flex flex-col mx-auto text-center`}
                 >
                     {[
-                        "Our Story",
                         "Itinerary",
                         "Travel",
                         "Things to do",
@@ -104,7 +106,6 @@ export default function WebsitePage() {
                 <div className="flex flex-col max-w-[1000px] mx-auto">
                     <div className="hidden md:flex mx-auto font-bold text-lg pb-10">
                         {[
-                            "Our Story",
                             "Itinerary",
                             "Travel",
                             "Things to do",
@@ -136,7 +137,7 @@ export default function WebsitePage() {
                             );
                         })}
                         <a
-                            href="https://rsvplinkhere.com"
+                            href="https://stephandpaul.ca/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="px-5 cursor-pointer group flex flex-col items-center hover:text-[#637CC6] transition-colors"
@@ -187,10 +188,23 @@ export default function WebsitePage() {
                         What's the best meal you have eaten together?
                     </div>
                     <p className="pb-10">
-                        Shake Shack, we're simple folk. Or anything after a 24
-                        hour fast together, because EVERYTHING tastes great
-                        after not eating for 24 hours. But we never say no to
-                        Korean food, either.
+                        <div className="flex gap-4">
+                            <img
+                                src={food1}
+                                alt=""
+                                className="rounded-xl w-[325px] h-[200px] object-cover object-center"
+                            />
+                            <img
+                                src={food2}
+                                alt=""
+                                className="rounded-xl  w-[325px] h-[200px] object-cover object-center"
+                            />
+                            <img
+                                src={food3}
+                                alt=""
+                                className="rounded-xl  w-[325px] h-[200px] object-cover object-center"
+                            />
+                        </div>
                     </p>
                     <div className="text-xl font-bold py-5 italic">
                         What's the most memorable trip you have taken together?
