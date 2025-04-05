@@ -16,6 +16,8 @@ import food2 from "/food2.jpg";
 import food3 from "/food3.jpg";
 import "yet-another-react-lightbox/styles.css";
 import Lightbox from "yet-another-react-lightbox";
+import mobileSchedule1 from "/mobile_schedule_01.svg";
+import mobileSchedule2 from "/mobile_schedule_02.svg";
 
 function ImageGallery() {
     const [open, setOpen] = useState(false);
@@ -267,7 +269,7 @@ export default function WebsitePage() {
                             2365 Kalākaua Ave, Honolulu, HI 96815
                         </p>
                     </div>
-                    <div className="flex justify-between text-center py-5">
+                    <div className="hidden sm:flex justify-between text-center py-5">
                         <div>
                             <div className="font-bold">THE WEDDING DAY</div>
                             <div>
@@ -282,7 +284,24 @@ export default function WebsitePage() {
                             <div>Hike Makapu’u point</div>
                         </div>
                     </div>
-                    <img src={timeline} alt="" />
+                    <img src={timeline} alt="" className="hidden sm:block" />
+                    <div className="sm:hidden text-center">
+                        <div className="mb-2">
+                            <div className="font-bold">THE WEDDING DAY</div>
+                            <div>
+                                St. Augustine by the Sea, Reception at Moana
+                                Surfrider
+                            </div>
+                        </div>
+                        <img src={mobileSchedule1} alt="" />
+                        <div className="my-2">
+                            <div className="font-bold">
+                                THE DAY AFTER (OPTIONAL)
+                            </div>
+                            <div>Hike Makapu’u point</div>
+                        </div>
+                        <img src={mobileSchedule2} alt="" />
+                    </div>
                     <img
                         src={travel}
                         alt=""
