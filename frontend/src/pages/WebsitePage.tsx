@@ -25,13 +25,13 @@ function ImageGallery() {
 
     return (
         <div className="pb-10">
-            <div className="flex gap-4">
+            <div className="md:flex gap-4">
                 {images.map((src, i) => (
                     <img
                         key={i}
                         src={src}
                         alt=""
-                        className="rounded-xl w-[325px] h-[200px] object-cover object-center cursor-pointer hover:scale-105 transition-all ease-in-out duration-300"
+                        className="rounded-xl w-[325px] h-[200px] object-cover object-center cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 my-2 md:my-0"
                         onClick={() => {
                             setIndex(i);
                             setOpen(true);
