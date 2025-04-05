@@ -7,15 +7,48 @@ import activities from "/icon_activities.svg";
 import toTopIcon from "/icon_to_top.svg";
 import eat from "/website_eat.svg";
 import photos from "/image_photos.svg";
-import imageUnderline from "/image_underline.svg";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import GoogleMap from "../components/GoogleMap";
-import countdown from "../components/countdown";
 import Countdown from "../components/countdown";
 import MyIcon from "../components/MyIcon";
 import food1 from "/food1.jpg";
 import food2 from "/food2.jpg";
 import food3 from "/food3.jpg";
+import "yet-another-react-lightbox/styles.css";
+import Lightbox from "yet-another-react-lightbox";
+
+function ImageGallery() {
+    const [open, setOpen] = useState(false);
+    const [index, setIndex] = useState(0);
+
+    const images = [food1, food2, food3];
+
+    return (
+        <div className="pb-10">
+            <div className="flex gap-4">
+                {images.map((src, i) => (
+                    <img
+                        key={i}
+                        src={src}
+                        alt=""
+                        className="rounded-xl w-[325px] h-[200px] object-cover object-center cursor-pointer hover:scale-105 transition-all ease-in-out duration-300"
+                        onClick={() => {
+                            setIndex(i);
+                            setOpen(true);
+                        }}
+                    />
+                ))}
+            </div>
+
+            <Lightbox
+                open={open}
+                close={() => setOpen(false)}
+                index={index}
+                slides={images.map((src) => ({ src }))}
+            />
+        </div>
+    );
+}
 
 export default function WebsitePage() {
     const [navVisible, setNavVisible] = useState(false);
@@ -187,25 +220,10 @@ export default function WebsitePage() {
                     <div className="text-xl font-bold py-5 italic">
                         What's the best meal you have eaten together?
                     </div>
-                    <p className="pb-10">
-                        <div className="flex gap-4">
-                            <img
-                                src={food1}
-                                alt=""
-                                className="rounded-xl w-[325px] h-[200px] object-cover object-center"
-                            />
-                            <img
-                                src={food2}
-                                alt=""
-                                className="rounded-xl  w-[325px] h-[200px] object-cover object-center"
-                            />
-                            <img
-                                src={food3}
-                                alt=""
-                                className="rounded-xl  w-[325px] h-[200px] object-cover object-center"
-                            />
-                        </div>
-                    </p>
+                    <div className="pb-10">
+                        <ImageGallery />
+                    </div>
+
                     <div className="text-xl font-bold py-5 italic">
                         What's the most memorable trip you have taken together?
                     </div>

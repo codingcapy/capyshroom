@@ -38,7 +38,9 @@ export default function ConfirmationPage() {
                     className="sm:w-[200px] px-5 py-2 my-2 font-bold mx-auto text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300 text-center"
                     id="borderbutton"
                 >
-                    <Link to={"/home"}>MORE INFO</Link>
+                    <Link to={"/home"} target="_blank">
+                        MORE INFO
+                    </Link>
                 </div>
                 <div className="pt-0">
                     <div className="ml-[175px] sm:ml-[400px] md:ml-[550px] lg:ml-[600px] animate-smooth-bounce">
