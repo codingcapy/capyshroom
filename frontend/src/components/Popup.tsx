@@ -102,7 +102,7 @@ export default function Popup(props: any) {
                     <div className="font-bold text-center text-base py-5">
                         A copy of your response will be sent to:
                     </div>
-                    <div className="font-bold text-center text-2xl">
+                    <div className="font-bold text-center md:text-2xl">
                         {invitee.email}
                     </div>
                     <div className="xl:pb-2 pt-2">
