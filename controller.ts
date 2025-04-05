@@ -366,8 +366,14 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                     restrictions or food
                     allergies?</div>`
                 }
+                ${inviteeGuests.map(
+                    (guest) =>
+                        `<div style="display:flex;"><div style="font-size: 16px;">${guest.firstname}</div>
+                    <div style="font-size: 16px;">${guest.dietary}</div></div>`
+                )}
                 <div style="font-size: 16px; font-weight: bold;"><a href="https://stephandpaul.ca/home"
-                        target="_blank">OUR SITE</a>
+                        target="_blank"><img src="https://capyshroom-production.up.railway.app/button_oursite.png"
+                            alt="" style="width:200px"></a>
                 </div>
                 <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
                     style="width: 75px; padding: 40px 0; display: block; margin: 0 auto;">
