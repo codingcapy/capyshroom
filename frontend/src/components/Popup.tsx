@@ -8,6 +8,8 @@ import confetti1 from "/confetti1.png";
 import confetti2 from "/confetti2.png";
 import confetti3 from "/confetti3.png";
 import confetti4 from "/confetti4.png";
+import confetti5 from "/confetti5.png";
+import confetti6 from "/confetti6.png";
 
 export default function Popup(props: any) {
     const navigate = useNavigate();
@@ -33,13 +35,13 @@ export default function Popup(props: any) {
 
     function fireConfetti() {
         confetti({
-            spread: 360,
-            ticks: 200,
+            spread: 500,
+            ticks: 350,
             gravity: 1,
             decay: 1,
-            startVelocity: 40,
-            particleCount: 100,
-            scalar: 3,
+            startVelocity: 15,
+            particleCount: 80,
+            scalar: 6,
             shapes: ["image"],
             shapeOptions: {
                 image: [
@@ -62,6 +64,16 @@ export default function Popup(props: any) {
                         src: confetti4,
                         width: 50,
                         height: 65,
+                    },
+                    {
+                        src: confetti5,
+                        width: 50,
+                        height: 63,
+                    },
+                    {
+                        src: confetti6,
+                        width: 50,
+                        height: 42,
                     },
                 ],
             },
