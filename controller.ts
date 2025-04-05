@@ -289,7 +289,7 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
         const confirmedInvitees = await db
             .select()
             .from(invitees)
-            .where(eq(invitees.submitted, true));
+            .where(eq(invitees.rsvp, true));
         const inviteeGuests = await db.select().from(guests);
         confirmedInvitees.forEach((invitee) => {
             return new Promise((resolve, reject) => {
@@ -307,7 +307,7 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                 const mail_configs = {
                     from: "spkim0921@gmail.com",
                     to: invitee.email?.toString(),
-                    subject: "🏝️ HECK YEAH! Get ready for Hawaii!",
+                    subject: "Next stop: Aloha 🌺",
                     html: `<!DOCTYPE html>
 <html lang="en">
 
@@ -439,7 +439,7 @@ export async function sendSorryEmail(req: Request, res: Response) {
         <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 6px; border-radius: 5000px;">
             <div
                 style="position:relative; margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: center;">
-                <img src="https://capyshroom-production.up.railway.app/wedding_img_02.png" alt="Wedding Image"
+                <img src="https://capyshroom-production.up.railway.app/wedding_img.png" alt="Wedding Image"
                     style="width: 200px; display: block; margin: 0 auto;">
                 <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
                     style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
