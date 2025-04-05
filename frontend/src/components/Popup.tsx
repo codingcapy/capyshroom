@@ -25,6 +25,7 @@ export default function Popup(props: any) {
             const res2 = await axios.post(`${DOMAIN}/api/invitees/sendsecond`, {
                 invitee_id,
             });
+            console.log("Send email response", res2.data);
             if (res.data?.success) {
                 setInvitee(res.data.content);
                 navigate("/confirmation");

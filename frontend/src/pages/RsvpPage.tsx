@@ -41,6 +41,7 @@ export default function RsvpPage() {
                 email: invitee.email,
                 first_name: invitee.first_name,
             });
+            console.log("Send email response", res2.data);
             if (res.data?.success) {
                 setInvitee(res.data.content);
                 navigate("/thankyou");

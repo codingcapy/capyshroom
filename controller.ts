@@ -424,6 +424,7 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
 export async function sendSorryEmail(req: Request, res: Response) {
     try {
         const { first_name, email } = req.body;
+        console.log("Sending sorry email to", req.body);
 
         const transporter = nodemailer.createTransport({
             service: "gmail",

@@ -1,10 +1,3 @@
-/*
-author: Paul Kim
-date: February 14, 2024
-Version: 1.0.0
-description: messages route for CapyChat API server
- */
-
 import express from "express";
 import {
     createInvitee,
@@ -26,6 +19,7 @@ invitees.route("/guests").patch(updateGuests);
 invitees.route("/submitted").patch(updateSubmitted);
 invitees.route("/sendfirst").post(sendFirstEmail);
 invitees.route("/sendsecond").post(sendConfirmationEmail);
+//@ts-ignore
 invitees.route("/sendthird").post(sendSorryEmail);
 
 export default invitees;
