@@ -412,14 +412,22 @@ export default function WebsitePage() {
                                     Surfrider
                                 </div>
                             </div>
-                            <img src={mobileSchedule1} alt="" />
+                            <img
+                                src={mobileSchedule1}
+                                alt=""
+                                className="w-full sm:max-w-[400px] max-w-[290px] h-auto mx-auto"
+                            />
                             <div className="my-2">
                                 <div className="font-bold">
                                     THE DAY AFTER (OPTIONAL)
                                 </div>
                                 <div>Hike Makapu’u point</div>
                             </div>
-                            <img src={mobileSchedule2} alt="" />
+                            <img
+                                src={mobileSchedule2}
+                                alt=""
+                                className="w-full sm:max-w-[400px] max-w-[290px] h-auto mx-auto"
+                            />
                         </div>
                     </AnimatedText>
                     <AnimatedText id="nav">

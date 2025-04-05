@@ -38,7 +38,7 @@ export default function ConfirmationPage() {
                     className="sm:w-[200px] px-5 py-2 my-2 font-bold mx-auto text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300 text-center"
                     id="borderbutton"
                 >
-                    <Link to={"/home"} target="_blank">
+                    <Link to={"https://stephandpaul.ca/home"} target="_blank">
                         MORE INFO
                     </Link>
                 </div>
