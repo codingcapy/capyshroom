@@ -9,7 +9,6 @@ import express from "express";
 import {
     createInvitee,
     sendFirstEmail,
-    sendFourthEmail,
     sendConfirmationEmail,
     sendSorryEmail,
     updateDietary,
@@ -28,6 +27,5 @@ invitees.route("/submitted").patch(updateSubmitted);
 invitees.route("/sendfirst").post(sendFirstEmail);
 invitees.route("/sendsecond").post(sendConfirmationEmail);
 invitees.route("/sendthird").post(sendSorryEmail);
-invitees.route("/sendfourth").post(sendFourthEmail);
 
 export default invitees;

@@ -423,26 +423,24 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
 
 export async function sendSorryEmail(req: Request, res: Response) {
     try {
-        const first_name = req.body.first_name;
-        const email = req.body.email;
+        const { first_name, email } = req.body;
 
-        return new Promise((resolve, reject) => {
-            var transporter = nodemailer.createTransport({
-                service: "gmail",
-                host: "smtp.gmail.com",
-                port: 465,
-                secure: true,
-                auth: {
-                    user: "spkim0921@gmail.com",
-                    pass: process.env.EMAIL_PASSWORD,
-                },
-            });
+        const transporter = nodemailer.createTransport({
+            service: "gmail",
+            host: "smtp.gmail.com",
+            port: 465,
+            secure: true,
+            auth: {
+                user: "spkim0921@gmail.com",
+                pass: process.env.EMAIL_PASSWORD,
+            },
+        });
 
-            const mail_configs = {
-                from: '"Steph and Paul" <spkim0921@gmail.com>',
-                to: email.toString(),
-                subject: "👩‍❤️‍👨 Thanks for responding to our RSVP!",
-                html: `<!DOCTYPE html>
+        const mail_configs = {
+            from: '"Steph and Paul" <spkim0921@gmail.com>',
+            to: email.toString(),
+            subject: "👩‍❤️‍👨 Thanks for responding to our RSVP!",
+            html: `<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -473,24 +471,17 @@ export async function sendSorryEmail(req: Request, res: Response) {
 </body>
 
 </html>`,
-            };
-            transporter.sendMail(mail_configs, function (error, info) {
-                if (error) {
-                    console.log(error);
-                    return reject({ message: `An error has occured` });
-                }
-                return resolve({ message: "Email sent succesfuly" });
-            });
-        });
+        };
 
-        res.status(200).json({ success: true });
+        await transporter.sendMail(mail_configs);
+
+        // ✅ Send success response
+        return res.status(200).json({ success: true, message: "Email sent" });
     } catch (err) {
-        console.error("Error getting inviteees:", err);
-        res.status(500).json({
+        console.error("Error sending email:", err);
+        return res.status(500).json({
             success: false,
-            message: "Error getting inviteees",
+            message: "Failed to send email",
         });
     }
 }
-
-export async function sendFourthEmail() {}
