@@ -284,7 +284,118 @@ export async function sendFirstEmail(req: Request, res: Response) {
     }
 }
 
-export async function sendSecondEmail() {}
+export async function sendConfirmationEmail(req: Request, res: Response) {
+    try {
+        const confirmedInvitees = await db
+            .select()
+            .from(invitees)
+            .where(eq(invitees.submitted, true));
+        const inviteeGuests = await db.select().from(guests);
+        confirmedInvitees.forEach((invitee) => {
+            return new Promise((resolve, reject) => {
+                var transporter = nodemailer.createTransport({
+                    service: "gmail",
+                    host: "smtp.gmail.com",
+                    port: 465,
+                    secure: true,
+                    auth: {
+                        user: "spkim0921@gmail.com",
+                        pass: process.env.EMAIL_PASSWORD,
+                    },
+                });
+
+                const mail_configs = {
+                    from: "spkim0921@gmail.com",
+                    to: invitee.email?.toString(),
+                    subject:
+                        "👩‍❤️‍👨 Steph & Paul are getting married AND YOU’RE INVITED!",
+                    html: `<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>👩‍❤️‍👨 Steph & Paul are getting married AND YOU’RE INVITED!</title>
+</head>
+
+<body
+    style="margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing:1px; line-height: 25px; text-align: center;">
+    <div style="max-width: 500px; margin: 20px auto; background-color: #FFF7EE; padding: 16px; border-radius: 5000px;">
+        <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 6px; border-radius: 5000px;">
+            <div
+                style="position:relative; margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: center;">
+                <img src="https://capyshroom-production.up.railway.app/wedding_img.png" alt="Wedding Image"
+                    style="width: 200px; display: block; margin: 0 auto;">
+                <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
+                    style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
+                <div style="padding-top: 20px; font-size: 16px; ">Dear <span
+                        style="font-weight: bold;">${
+                            invitee.first_name
+                        }</span>, thank you for your response to our
+                    invitation.
+                    We’re constantly updating our site with new content as the big day approaches, so <a
+                        href="https://stephandpaul.ca" target="_blank" style="color: #637CC6; font-weight: bold;">visit
+                        it</a> to keep
+                    updated!</div>
+                <div style="font-size: 16px; margin-top: 20px; margin-bottom: 20px;">Keep this email for your reference
+                </div>
+                <div style="font-size: 16px; font-weight: bold;">Will you be joining us at our wedding?</div>
+                <div style="padding-bottom: 40px; font-size: 16px;">${
+                    invitee.rsvp ? "Yes" : "No"
+                }</div>
+                <div style="font-size: 16px; font-weight: bold;">Do you have dietary restrictions or food allergies?
+                </div>
+                <div style="font-size: 16px;">${
+                    invitee.dietary ? invitee.dietary : "no response"
+                }</div>
+                <div style="font-size: 16px; font-weight: bold; margin-top: 20px;">How many guests are you bringing?
+                </div>
+                <div style="font-size: 16px;">${
+                    invitee.guests && invitee.guests > 0
+                        ? inviteeGuests.map(
+                              (guest) =>
+                                  `<div style="display:flex;"><div style="font-size: 16px;">${guest.firstname}</div>
+                              <div style="font-size: 16px;">${guest.lastname}</div></div>`
+                          )
+                        : "None"
+                }</div>
+                ${
+                    invitee.guests &&
+                    invitee.guests > 0 &&
+                    `<div style="font-size: 16px; font-weight: bold; margin-top: 20px;">Do your
+                    guests have dietary
+                    restrictions or food
+                    allergies?</div>`
+                }
+                <div style="font-size: 16px; font-weight: bold;"><a href="https://stephandpaul.ca/home"
+                        target="_blank">OUR SITE</a>
+                </div>
+                <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
+                    style="width: 75px; padding: 40px 0; display: block; margin: 0 auto;">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>`,
+                };
+                transporter.sendMail(mail_configs, function (error, info) {
+                    if (error) {
+                        console.log(error);
+                        return reject({ message: `An error has occured` });
+                    }
+                    return resolve({ message: "Email sent succesfuly" });
+                });
+            });
+        });
+        res.status(200).json({ success: true });
+    } catch (err) {
+        console.error("Error getting inviteees:", err);
+        res.status(500).json({
+            success: false,
+            message: "Error getting inviteees",
+        });
+    }
+}
 
 export async function sendThirdEmail() {}
 

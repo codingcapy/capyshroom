@@ -9,6 +9,7 @@ import doubleHappy from "/icon_email_doublehappy.png";
 import Header from "../components/Header";
 import star from "/icon_star.png";
 import rsvpButton from "/button_solid.png";
+import ourSite from "/button_oursite.png";
 
 export default function HomePage() {
     const navigate = useNavigate();
@@ -92,6 +93,7 @@ export default function HomePage() {
                 <img src={doubleHappy} alt="" className="hidden" />
                 <img src={star} alt="" className="hidden" />
                 <img src={rsvpButton} alt="" className="hidden" />
+                <img src={ourSite} alt="" className="hidden" />
             </main>
         </div>
     );
