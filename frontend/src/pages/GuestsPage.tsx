@@ -114,6 +114,7 @@ export default function GuestsPage() {
                                 onChange={(e) =>
                                     setGuests(Number(e.target.value))
                                 }
+                                value={guests}
                             >
                                 <option value="0">Just me myself and I </option>
                                 <option value="1">+1</option>
