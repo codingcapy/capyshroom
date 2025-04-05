@@ -33,8 +33,8 @@ export default function Popup(props: any) {
         }
     }
 
-    function fireConfetti() {
-        confetti({
+    async function fireConfetti() {
+        const confettiInstance = await confetti({
             spread: 500,
             ticks: 350,
             gravity: 1,
@@ -78,6 +78,9 @@ export default function Popup(props: any) {
                 ],
             },
         });
+        setTimeout(() => {
+            confettiInstance && confettiInstance.destroy(); // This will stop the confetti animation and remove it from the DOM
+        }, 3000);
     }
 
     return (
