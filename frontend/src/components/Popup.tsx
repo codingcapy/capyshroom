@@ -3,6 +3,11 @@ import useInviteeStore from "../store/InviteeStore";
 import axios from "axios";
 import DOMAIN from "../services/endpoint";
 import buttonSolid from "/button_solid.svg";
+import { confetti } from "@tsparticles/confetti";
+import confetti1 from "/confetti1.png";
+import confetti2 from "/confetti2.png";
+import confetti3 from "/confetti3.png";
+import confetti4 from "/confetti4.png";
 
 export default function Popup(props: any) {
     const navigate = useNavigate();
@@ -24,6 +29,43 @@ export default function Popup(props: any) {
         } catch (err) {
             console.log(err);
         }
+    }
+
+    function fireConfetti() {
+        confetti({
+            spread: 360,
+            ticks: 200,
+            gravity: 1,
+            decay: 1,
+            startVelocity: 40,
+            particleCount: 100,
+            scalar: 3,
+            shapes: ["image"],
+            shapeOptions: {
+                image: [
+                    {
+                        src: confetti1,
+                        width: 50,
+                        height: 67,
+                    },
+                    {
+                        src: confetti2,
+                        width: 50,
+                        height: 62,
+                    },
+                    {
+                        src: confetti3,
+                        width: 50,
+                        height: 63,
+                    },
+                    {
+                        src: confetti4,
+                        width: 50,
+                        height: 65,
+                    },
+                ],
+            },
+        });
     }
 
     return (
@@ -63,7 +105,10 @@ export default function Popup(props: any) {
                                         alt=""
                                         className="absolute w-[100%] h-[100%]"
                                     />
-                                    <button className="absolute w-[100%] h-[100%] text-[#FFFBF6]">
+                                    <button
+                                        onClick={fireConfetti}
+                                        className="absolute w-[100%] h-[100%] text-[#FFFBF6]"
+                                    >
                                         Submit RSVP
                                     </button>
                                 </div>
