@@ -8,6 +8,7 @@ const emails = [
     "spkim0921@gmail.com",
     "paulkim89.dev@gmail.com",
     "stephanie.f.louie@gmail.com",
+    "tinsel_queen@hotmail.com",
 ];
 
 export async function createInvitee(req: Request, res: Response) {
@@ -229,7 +230,7 @@ export async function sendFirstEmail(req: Request, res: Response) {
 </head>
 
 <body
-    style="margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing:1px; line-height: 25px; text-align: center;">
+    style="margin: 0; padding: 0; font-family: Georgia, 'Times New Roman', Times, serif; letter-spacing:0.2px; line-height: 25px; text-align: center;">
     <div style="max-width: 500px; margin: 20px auto; background-color: #FFF7EE; padding: 16px; border-radius: 5000px;">
         <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 6px; border-radius: 5000px;">
             <div
