@@ -217,7 +217,7 @@ export async function sendFirstEmail(req: Request, res: Response) {
                 });
 
                 const mail_configs = {
-                    from: '"Steph and Paul" <spkim0921@gmail.com>',
+                    from: '"Steph & Paul" <spkim0921@gmail.com>',
                     to: email.toString(),
                     subject:
                         "👩‍❤️‍👨 Steph & Paul are getting married AND YOU’RE INVITED!",
@@ -310,7 +310,7 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                 });
 
                 const mail_configs = {
-                    from: '"Steph and Paul" <spkim0921@gmail.com>',
+                    from: '"Steph & Paul" <spkim0921@gmail.com>',
                     to: invitee.email?.toString(),
                     subject: "Next stop: Aloha 🌺",
                     html: `<!DOCTYPE html>
@@ -438,7 +438,7 @@ export async function sendSorryEmail(req: Request, res: Response) {
         });
 
         const mail_configs = {
-            from: '"Steph and Paul" <spkim0921@gmail.com>',
+            from: '"Steph & Paul" <spkim0921@gmail.com>',
             to: email.toString(),
             subject: "👩‍❤️‍👨 Thanks for responding to our RSVP!",
             html: `<!DOCTYPE html>
