@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import DOMAIN from "../services/endpoint";
 import useInviteeStore from "../store/InviteeStore";
 import weddingImg from "/wedding_img.png";
+import weddingImg2 from "/wedding_img_02.png";
 import imgTitle from "/image_title.png";
 import subtitle from "/subtitle.png";
 import doubleHappy from "/icon_email_doublehappy.png";
@@ -87,7 +88,8 @@ export default function HomePage() {
                         NEXT
                     </button>
                 </form>
-                <img src={weddingImg} alt="" className="hidden" />
+                <img src={weddingImg} alt="" className="hidden" />{" "}
+                <img src={weddingImg2} alt="" className="hidden" />
                 <img src={imgTitle} alt="" className="hidden" />
                 <img src={subtitle} alt="" className="hidden" />
                 <img src={doubleHappy} alt="" className="hidden" />
