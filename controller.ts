@@ -9,6 +9,7 @@ const emails = [
     "paulkim89.dev@gmail.com",
     "stephanie.f.louie@gmail.com",
     "tinsel_queen@hotmail.com",
+    "stepandpail@gmail.com",
 ];
 
 export async function createInvitee(req: Request, res: Response) {
