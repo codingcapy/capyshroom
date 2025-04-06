@@ -391,7 +391,7 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                               <div>${guest.firstname} ${guest.lastname}</div>`;
                               })
                               .join("")
-                        : "<div>None</div>"
+                        : "<div>Me, myself and I</div>"
                 }
                 ${
                     invitee.guests && invitee.guests > 0
