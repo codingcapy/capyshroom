@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
 import { db, guests, invitees } from "./connect";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import nodemailer from "nodemailer";
 
 const emails = [
@@ -159,6 +159,23 @@ export async function createGuests(req: Request, res: Response) {
     const now = new Date();
     const timestamp = now.toISOString();
     try {
+        const existingGuest = await db
+            .select()
+            .from(guests)
+            .where(
+                and(
+                    eq(guests.firstname, firstname),
+                    eq(guests.lastname, lastname),
+                    eq(guests.invitee_id, invitee_id)
+                )
+            )
+            .limit(1);
+        if (existingGuest.length > 0) {
+            return res.json({
+                success: false,
+                message: "This guest has already been added.",
+            });
+        }
         const [InsertedNewGuest] = await db
             .insert(guests)
             .values({
@@ -179,7 +196,7 @@ export async function createGuests(req: Request, res: Response) {
         console.log(err);
         res.status(500).json({
             success: false,
-            message: "Error creating invitee",
+            message: "Error creating guest",
         });
     }
 }
@@ -371,9 +388,7 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                               )
                               .map((guest, idx) => {
                                   return `
-                              <div>Guest ${idx + 1}: ${guest.firstname} ${
-                                      guest.lastname
-                                  }</div>`;
+                              <div>${guest.firstname} ${guest.lastname}</div>`;
                               })
                               .join("")
                         : "<div>None</div>"
@@ -392,7 +407,7 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                     )
                     .map((guest, idx) => {
                         return `
-                          <div>Guest ${idx + 1}: ${
+                          <div>${guest.firstname}: ${
                             guest.dietary || "no response"
                         }</div>`;
                     })
