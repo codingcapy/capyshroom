@@ -45,7 +45,7 @@ export default function HomePage() {
                 <div className="text-sm lg:text-base md:w-[600px] mx-auto">
                     We’re getting married and you’re invited! Come listen to us
                     tell each other repeatedly how much we love each other, for
-                    two hours, IN HAWAII!!
+                    an hour, IN HAWAII!!
                 </div>
                 <div className="my-5 font-bold text-sm xxl:text-2xl">
                     Enter your name and email to RSVP.
