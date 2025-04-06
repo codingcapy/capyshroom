@@ -803,6 +803,18 @@ export default function WebsitePage() {
                                 area. Lots of shops and restaurants to check
                                 out.
                             </li>
+                            <li className="list-disc">
+                                <a
+                                    href="https://abcstores.com/"
+                                    className="font-bold underline"
+                                    target="_blank"
+                                >
+                                    ABC Stores{" "}
+                                </a>
+                                : Staple convenience store with many locations
+                                on the island. They carry plenty of local
+                                products, souvenirs, food, and essential items.
+                            </li>
                         </ul>
                     </AnimatedText>
                 </div>
