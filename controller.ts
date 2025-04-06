@@ -369,7 +369,7 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                 <div style="font-weight: bold;">Do you have dietary restrictions or food allergies?</div>
                 ${
                     invitee.dietary
-                        ? `<div>invitee.dietary</div>`
+                        ? `<div>${invitee.dietary}</div>`
                         : '<div style="font-style:italic">no response</div>'
                 }
   
@@ -383,7 +383,9 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                               )
                               .sort(
                                   (a, b) =>
+                                      //@ts-ignore
                                       new Date(a.created_at).getTime() -
+                                      //@ts-ignore
                                       new Date(b.created_at).getTime()
                               )
                               .map((guest, idx) => {
@@ -402,7 +404,9 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                     .filter((guest) => guest.invitee_id === invitee.invitee_id)
                     .sort(
                         (a, b) =>
+                            //@ts-ignore
                             new Date(a.created_at).getTime() -
+                            //@ts-ignore
                             new Date(b.created_at).getTime()
                     )
                     .map((guest, idx) => {
