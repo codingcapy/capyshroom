@@ -412,7 +412,8 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                     .map((guest, idx) => {
                         return `
                           <div>${guest.firstname}: ${
-                            guest.dietary || "no response"
+                            guest.dietary ||
+                            '<span style="font-style:italic">no response</span>'
                         }</div>`;
                     })
                     .join("")}
