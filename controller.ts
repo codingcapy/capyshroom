@@ -356,7 +356,7 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                         : '<div style="font-style:italic">no response</div>'
                 }
   
-                <div style="font-weight: bold; margin-top: 20px;">How many guests are you bringing?</div>
+                <div style="font-weight: bold; margin-top: 20px;">Who else is coming?</div>
                 ${
                     invitee.guests && invitee.guests > 0
                         ? inviteeGuests
