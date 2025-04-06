@@ -488,8 +488,8 @@ export default function WebsitePage() {
                         </AnimatedText>
                         <AnimatedText id="nav">
                             <div className="font-bold italic underline pb-10">
-                                Without a visa, non-Canadians cannot enter the
-                                US.{" "}
+                                ‼️Without a visa, non-Canadians cannot enter the
+                                US. ‼️{" "}
                             </div>
                         </AnimatedText>
                         <AnimatedText id="nav">
