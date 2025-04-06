@@ -364,6 +364,11 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                                   (guest) =>
                                       guest.invitee_id === invitee.invitee_id
                               )
+                              .sort(
+                                  (a, b) =>
+                                      new Date(a.created_at).getTime() -
+                                      new Date(b.created_at).getTime()
+                              )
                               .map((guest, idx) => {
                                   return `
                               <div>Guest ${idx + 1}: ${guest.firstname} ${
@@ -380,6 +385,11 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                 }
                 ${inviteeGuests
                     .filter((guest) => guest.invitee_id === invitee.invitee_id)
+                    .sort(
+                        (a, b) =>
+                            new Date(a.created_at).getTime() -
+                            new Date(b.created_at).getTime()
+                    )
                     .map((guest, idx) => {
                         return `
                           <div>Guest ${idx + 1}: ${
