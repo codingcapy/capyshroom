@@ -339,7 +339,7 @@ export async function sendConfirmationEmail(req: Request, res: Response) {
                     invitee.first_name
                 }</strong>, thank you for your response to our invitation.  
                   We’re constantly updating our site with new content as the big day approaches, so  
-                  <a href="https://stephandpaul.ca" target="_blank" style="color: #637CC6; font-weight: bold;">visit it</a> to keep updated!
+                  <a href="https://stephandpaul.ca/home" target="_blank" style="color: #637CC6; font-weight: bold;">visit it</a> to keep updated!
                 </div>
   
                 <div style="margin: 20px 0;">Keep this email for your reference.</div>
