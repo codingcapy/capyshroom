@@ -34,9 +34,6 @@ const sentEmails = [
     "cecilekim07@gmail.com",
     "apaffaro2@gmail.com",
     "sion.lee.arts@gmail.com",
-];
-
-const emails = [
     "kinsonyung@gmail.com",
     "midorikaga@gmail.com",
     "katherine.mason@gmail.com",
@@ -46,6 +43,8 @@ const emails = [
     "tyronne.salto@gmail.com",
     "tinsel_queen@hotmail.com",
 ];
+
+const emails = ["ujon94@gmail.com"];
 
 export async function createInvitee(req: Request, res: Response) {
     const first_name = req.body.first_name;

@@ -508,7 +508,7 @@ export default function WebsitePage() {
                                 </a>{" "}
                                 is the most budget friendly option on the
                                 island, but there are plenty of hotels too. A
-                                quick search or{" "}
+                                quick search on{" "}
                                 <a
                                     href="https://hotels.com/"
                                     className="font-bold underline"
