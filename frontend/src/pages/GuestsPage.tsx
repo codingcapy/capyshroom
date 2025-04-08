@@ -110,7 +110,7 @@ export default function GuestsPage() {
                             <select
                                 name="guests"
                                 id="guests"
-                                className="mx-auto border md:p-3 text-sm md:text-base"
+                                className="mx-auto border p-3 text-base"
                                 onChange={(e) =>
                                     setGuests(Number(e.target.value))
                                 }
