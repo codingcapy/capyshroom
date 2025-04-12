@@ -70,7 +70,9 @@ export default function RsvpPage() {
                                 Will you be able to join us at our wedding? We
                                 understand if you cannot make it! Please reply
                                 no later than{" "}
-                                <span className="font-bold">May 1st, 2025</span>
+                                <span className="font-bold">
+                                    May 15th, 2025
+                                </span>
                                 . If you do not reply by May 15th, please bring
                                 a chair and sandwich.
                             </div>
