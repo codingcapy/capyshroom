@@ -48,7 +48,7 @@ export default function HomePage() {
                     an hour, IN HAWAII!!
                 </div>
                 <div className="my-5 font-bold text-sm xxl:text-2xl">
-                    Enter your name and email to RSVP.
+                    Enter your name and email to RSVP yes or no.
                 </div>
                 <form
                     onSubmit={handleSubmit}

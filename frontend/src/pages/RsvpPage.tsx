@@ -71,8 +71,8 @@ export default function RsvpPage() {
                                 understand if you cannot make it! Please reply
                                 no later than{" "}
                                 <span className="font-bold">May 1st, 2025</span>
-                                . If you do not reply by May 1st, please bring a
-                                chair and sandwich.
+                                . If you do not reply by May 15th, please bring
+                                a chair and sandwich.
                             </div>
                             <button
                                 className="w-[259px] px-5 py-2 my-2 font-bold mx-auto mt-10  text-[#637CC6] hover:text-opacity-50 transition-all ease-in-out duration-300"
