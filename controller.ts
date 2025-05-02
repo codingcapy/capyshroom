@@ -43,12 +43,6 @@ const sentEmails = [
     "tyronne.salto@gmail.com",
     "tinsel_queen@hotmail.com",
     "ujon94@gmail.com",
-];
-
-const emails = [
-    "stephology@gmail.com",
-    "spkim0921@gmail.com",
-    "paulkim89.dev@gmail.com",
     "kithlin@gmail.com",
     "yinniewong@hotmail.com",
     "skao0421@gmail.com",
@@ -62,6 +56,19 @@ const emails = [
     "fisherdana@ymail.com",
     "yinanlinda@gmail.com",
     "ryanlmwong@gmail.com",
+    "puppy579@naver.com",
+    "loveandtea_@naver.com",
+    "jyunnn116@naver.com",
+    "maribia95@naver.com",
+    "serroo98@hanmail.net",
+    "yerroo28@naver.com",
+];
+
+const emails = [
+    "stephology@gmail.com",
+    "spkim0921@gmail.com",
+    "paulkim89.dev@gmail.com",
+    "byrondray8@gmail.com",
 ];
 
 export async function createInvitee(req: Request, res: Response) {
@@ -281,13 +288,13 @@ export async function sendFirstEmail(req: Request, res: Response) {
                     port: 465,
                     secure: true,
                     auth: {
-                        user: "stephology@gmail.com",
-                        pass: process.env.EMAIL_PASSWORD3,
+                        user: "spkim0921@gmail.com",
+                        pass: process.env.PAUL_EMAIL_PASSWORD,
                     },
                 });
 
                 const mail_configs = {
-                    from: '"Steph & Paul" <stephology@gmail.com>',
+                    from: '"Steph & Paul" <spkim0921@gmail.com>',
                     to: email.toString(),
                     subject:
                         "👩‍❤️‍👨 Steph & Paul are getting married AND YOU’RE INVITED!",
