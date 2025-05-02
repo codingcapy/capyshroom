@@ -62,13 +62,14 @@ const sentEmails = [
     "maribia95@naver.com",
     "serroo98@hanmail.net",
     "yerroo28@naver.com",
+    "byrondray8@gmail.com",
 ];
 
 const emails = [
     "stephology@gmail.com",
     "spkim0921@gmail.com",
     "paulkim89.dev@gmail.com",
-    "byrondray8@gmail.com",
+    "Randall.herd@me.com",
 ];
 
 export async function createInvitee(req: Request, res: Response) {
