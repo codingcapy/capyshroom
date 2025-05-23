@@ -63,13 +63,14 @@ const sentEmails = [
     "serroo98@hanmail.net",
     "yerroo28@naver.com",
     "byrondray8@gmail.com",
+    "Randall.herd@me.com",
 ];
 
 const emails = [
     "stephology@gmail.com",
     "spkim0921@gmail.com",
     "paulkim89.dev@gmail.com",
-    "Randall.herd@me.com",
+    "swh0503@hotmail.com",
 ];
 
 export async function createInvitee(req: Request, res: Response) {
@@ -290,7 +291,7 @@ export async function sendFirstEmail(req: Request, res: Response) {
                     secure: true,
                     auth: {
                         user: "spkim0921@gmail.com",
-                        pass: process.env.PAUL_EMAIL_PASSWORD,
+                        pass: process.env.EMAIL_PASSWORD,
                     },
                 });
 
