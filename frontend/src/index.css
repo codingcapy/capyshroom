@@ -171,3 +171,21 @@ html {
   opacity: 1;
   transform: translateY(0);
 }
+
+.my-masonry-grid {
+  display: flex;
+  margin-left: -0px;
+  /* gutter size offset */
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 0px;
+  /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your images if needed */
+.my-masonry-grid_column>img {
+  margin-bottom: 0px;
+}

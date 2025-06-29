@@ -18,12 +18,20 @@ import "yet-another-react-lightbox/styles.css";
 import Lightbox from "yet-another-react-lightbox";
 import mobileSchedule1 from "/mobile_schedule_01.svg";
 import mobileSchedule2 from "/mobile_schedule_02.svg";
+import image1 from "/JEJ_1653.jpg";
+import image2 from "/HTS02197.jpg";
+import image3 from "/JEJ_0344.jpg";
+import image4 from "/HTS00171.jpg";
+import image5 from "/HTS00124.jpg";
+import image6 from "/HTS02515.jpg";
+import Masonry from "react-masonry-css";
 
-function ImageGallery() {
+const galleryImages = [image1, image2, image3, image4, image5, image6];
+
+function ImageGallery(props: { images: string[] }) {
+    const { images } = props;
     const [open, setOpen] = useState(false);
     const [index, setIndex] = useState(0);
-
-    const images = [food1, food2, food3];
 
     return (
         <div className="pb-10">
@@ -117,6 +125,14 @@ const AnimatedText = ({
 
 export default function WebsitePage() {
     const [navVisible, setNavVisible] = useState(false);
+    const breakpointColumnsObj = {
+        default: 3,
+        1100: 3,
+        700: 2,
+        500: 1,
+    };
+    const [open, setOpen] = useState(false);
+    const [index, setIndex] = useState(0);
 
     useEffect(() => {
         function handleResize() {
@@ -314,7 +330,7 @@ export default function WebsitePage() {
                     </AnimatedText>
                     <AnimatedText id="nav">
                         <div className="pb-10">
-                            <ImageGallery />
+                            <ImageGallery images={[food1, food2, food3]} />
                         </div>
                     </AnimatedText>
                     <AnimatedText id="nav">
@@ -903,15 +919,26 @@ export default function WebsitePage() {
                         className="mx-auto w-[100px] pt-30"
                         id="photos"
                     />
-                    <div className=" photos header-font text-center text-2xl pt-10">
+                    <div className="photos header-font text-center text-2xl py-10">
                         photo gallery
                     </div>
-                    <div className="flex flex-col max-w-[1000px] mx-auto pt-10 pb-60">
+                    {/* <div className="flex flex-col max-w-[1000px] mx-auto pt-10 pb-60">
                         <div className="align-content: text-center">
                             Coming soon ʕ•ᴥ•ʔ
                         </div>
-                    </div>
+                    </div> */}
                 </AnimatedText>
+                <div className="w-[75%] mx-auto">
+                    <Masonry
+                        breakpointCols={breakpointColumnsObj}
+                        className="my-masonry-grid"
+                        columnClassName="my-masonry-grid_column"
+                    >
+                        {galleryImages.map((src, idx) => (
+                            <img key={idx} src={src} className="w-full" />
+                        ))}
+                    </Masonry>
+                </div>
                 <img
                     src={toTopIcon}
                     alt=""
