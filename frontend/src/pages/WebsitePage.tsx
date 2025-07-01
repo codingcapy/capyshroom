@@ -91,6 +91,75 @@ function ImageGallery(props: { images: string[] }) {
     );
 }
 
+function Gallery({
+    images,
+    layout = "grid", // "grid" or "masonry"
+    breakpointColumnsObj,
+}: {
+    images: string[];
+    layout?: string;
+    breakpointColumnsObj?: Record<string, number>;
+}) {
+    const [open, setOpen] = useState(false);
+    const [index, setIndex] = useState(0);
+
+    const handleClick = (i: number) => {
+        setIndex(i);
+        setOpen(true);
+    };
+
+    if (layout === "masonry") {
+        return (
+            <div>
+                <Masonry
+                    breakpointCols={breakpointColumnsObj}
+                    className="my-masonry-grid"
+                    columnClassName="my-masonry-grid_column"
+                >
+                    {images.map((src, i) => (
+                        <AnimatedText id="nav">
+                            <img
+                                key={i}
+                                src={src}
+                                onClick={() => handleClick(i)}
+                                className="w-full hover:cursor-pointer"
+                            />
+                        </AnimatedText>
+                    ))}
+                </Masonry>
+
+                <Lightbox
+                    open={open}
+                    close={() => setOpen(false)}
+                    index={index}
+                    slides={images.map((src) => ({ src }))}
+                />
+            </div>
+        );
+    }
+
+    return (
+        <div className="md:flex gap-4">
+            {images.map((src, i) => (
+                <img
+                    key={i}
+                    src={src}
+                    alt=""
+                    className="rounded-xl w-[325px] h-[200px] object-cover object-center cursor-pointer hover:scale-105 transition-all ease-in-out duration-300 my-2 md:my-0"
+                    onClick={() => handleClick(i)}
+                />
+            ))}
+
+            <Lightbox
+                open={open}
+                close={() => setOpen(false)}
+                index={index}
+                slides={images.map((src) => ({ src }))}
+            />
+        </div>
+    );
+}
+
 const useFadeInOnScroll = () => {
     const [visibleElements, setVisibleElements] = useState(
         new Set<HTMLElement>()
@@ -162,8 +231,6 @@ export default function WebsitePage() {
         700: 2,
         500: 1,
     };
-    const [open, setOpen] = useState(false);
-    const [index, setIndex] = useState(0);
 
     useEffect(() => {
         function handleResize() {
@@ -361,7 +428,10 @@ export default function WebsitePage() {
                     </AnimatedText>
                     <AnimatedText id="nav">
                         <div className="pb-10">
-                            <ImageGallery images={[food1, food2, food3]} />
+                            <Gallery
+                                images={[food1, food2, food3]}
+                                layout="grid"
+                            />
                         </div>
                     </AnimatedText>
                     <AnimatedText id="nav">
@@ -959,18 +1029,12 @@ export default function WebsitePage() {
                         </div>
                     </div> */}
                 </AnimatedText>
-                <div className="w-[75%] mx-auto">
-                    <Masonry
-                        breakpointCols={breakpointColumnsObj}
-                        className="my-masonry-grid"
-                        columnClassName="my-masonry-grid_column"
-                    >
-                        {galleryImages.map((src, idx) => (
-                            <AnimatedText id="nav">
-                                <img key={idx} src={src} className="w-full" />
-                            </AnimatedText>
-                        ))}
-                    </Masonry>
+                <div className="w-[75%] mx-auto pb-20">
+                    <Gallery
+                        images={galleryImages}
+                        layout="masonry"
+                        breakpointColumnsObj={breakpointColumnsObj}
+                    />
                 </div>
                 <img
                     src={toTopIcon}
