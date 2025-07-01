@@ -966,7 +966,9 @@ export default function WebsitePage() {
                         columnClassName="my-masonry-grid_column"
                     >
                         {galleryImages.map((src, idx) => (
-                            <img key={idx} src={src} className="w-full" />
+                            <AnimatedText id="nav">
+                                <img key={idx} src={src} className="w-full" />
+                            </AnimatedText>
                         ))}
                     </Masonry>
                 </div>
