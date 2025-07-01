@@ -24,9 +24,40 @@ import image3 from "/JEJ_0344.jpg";
 import image4 from "/HTS00171.jpg";
 import image5 from "/HTS00124.jpg";
 import image6 from "/HTS02515.jpg";
+import image7 from "/JEJ_0197 1.png";
+import image8 from "/JEJ_2347 1.png";
+import image9 from "/JEJ_1505 1.png";
+import image10 from "/JEJ_1576 1.png";
+import image11 from "/HTS02269 1.png";
+import image12 from "/HTS00219 1.png";
+import image13 from "/JEJ_0932 1.png";
+import image14 from "/JEJ_2223 1.png";
+import image15 from "/HTS01964 1.png";
+import image16 from "/HTS00256 1.png";
+import image17 from "/JEJ_1517 1.png";
+import image18 from "/HTS00031 1.png";
 import Masonry from "react-masonry-css";
 
-const galleryImages = [image1, image2, image3, image4, image5, image6];
+const galleryImages = [
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
+    image10,
+    image11,
+    image12,
+    image13,
+    image14,
+    image15,
+    image16,
+    image17,
+    image18,
+];
 
 function ImageGallery(props: { images: string[] }) {
     const { images } = props;
