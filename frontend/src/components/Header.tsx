@@ -22,7 +22,7 @@ export default function Header() {
                     <div className="text-center xxl:text-base">
                         September 29,2025
                     </div>
-                    <div>14:00</div>
+                    <div>17:30</div>
                 </div>
                 <div className="py-2 px-2 sm:px-10 lg:w-[200px]">
                     <div className="h-[40px] xxl:h-auto">
@@ -32,9 +32,7 @@ export default function Header() {
                             className="mx-auto w-[20px] xxl:w-auto mb-3"
                         />
                     </div>
-                    <div className="xxl:text-base">
-                        St. Augustine by the Sea
-                    </div>
+                    <div className="xxl:text-base">Moana Surfrider</div>
                     <div className="xxl:text-base">Honolulu, HI, USA</div>
                 </div>
             </div>

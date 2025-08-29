@@ -482,28 +482,18 @@ export default function WebsitePage() {
                     <AnimatedText id="nav">
                         <div className="p-5 text-center pb-20">
                             <p className="italic">Monday, September 29, 2025</p>
-                            <p className="pt-5 italic">Ceremony at:</p>
-                            <p className="font-bold py-0">
-                                St. Augustine by the Sea
+                            <p className="pt-5 italic">
+                                Ceremony & Reception at:
                             </p>
-                            <p className="pt-0">
-                                130 ʻŌhua Ave, Honolulu, HI 96815
-                            </p>
-                            <p className="pt-10 italic">Reception at:</p>
                             <p className="font-bold py-0">Moana Surfrider</p>
-                            <p className="pt-0">
-                                2365 Kalākaua Ave, Honolulu, HI 96815
-                            </p>
+                            <p className="pt-0">Diamond Lawn & Terrace</p>
                         </div>
                     </AnimatedText>
                     <AnimatedText id="nav">
-                        <div className="hidden sm:flex justify-between text-center py-5">
-                            <div>
+                        <div className="hidden sm:flex  text-center py-5">
+                            <div className="flex-1">
                                 <div className="font-bold">THE WEDDING DAY</div>
-                                <div>
-                                    St. Augustine by the Sea, Reception at Moana
-                                    Surfrider
-                                </div>
+                                <div>Moana Surfrider </div>
                             </div>
                             <div>
                                 <div className="font-bold">
@@ -524,10 +514,7 @@ export default function WebsitePage() {
                         <div className="sm:hidden text-center">
                             <div className="mb-2">
                                 <div className="font-bold">THE WEDDING DAY</div>
-                                <div>
-                                    St. Augustine by the Sea, Reception at Moana
-                                    Surfrider
-                                </div>
+                                <div>Moana Surfrider</div>
                             </div>
                             <img
                                 src={mobileSchedule1}
@@ -656,43 +643,21 @@ export default function WebsitePage() {
                                 How to get to the venue?
                             </div>
                         </AnimatedText>
-                        <AnimatedText id="nav">
-                            <p className="py-2">
-                                <a
-                                    href="https://staugustinebythesea.com/"
-                                    className="font-bold underline"
-                                    target="_blank"
-                                >
-                                    St. Augustine by the Sea
-                                </a>{" "}
-                                is within walking distance of most of the
-                                Waikīkī area. Access to the church is located
-                                through the Brown Gate in the Church Parking
-                                Lot. Free parking is located through the black
-                                iron gates before the brown two story building
-                                on Ohua Avenue, behind the church.
-                            </p>
-                        </AnimatedText>
-                        <AnimatedText id="nav">
-                            <div>
-                                <main className="p-4 pb-10">
-                                    <GoogleMap mapSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3717.944117963187!2d-157.8230905!3d21.2736795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c007277363c0cb5%3A0xf722baa0bc4ce421!2sSt.%20Augustine%20by%20the%20Sea!5e0!3m2!1sen!2sca!4v1743219927198!5m2!1sen!2sca&output=embed&hl=en" />{" "}
-                                </main>
-                            </div>
-                        </AnimatedText>
+
                         <AnimatedText id="nav">
                             <p>
-                                The reception is being held at{" "}
+                                The ceremony and reception is being held at the{" "}
                                 <a
                                     href="https://www.marriott.com/en-us/hotels/hnlwi-moana-surfrider-a-westin-resort-and-spa-waikiki-beach/overview/"
                                     className="font-bold underline"
                                     target="_blank"
                                 >
-                                    Moana Surfrider
+                                    Diamond Lawn & Terrace, at Moana Surfrider
                                 </a>
-                                , which is also within walking distance of the
-                                Waikīkī area. There is paid parking available
-                                on-site
+                                , within walking distance of Waikīkī. The lawn
+                                and terrace are located at the back of the
+                                hotel. Paid parking is available on-site. The
+                                venue is outdoors, so please dress accordingly.
                             </p>
                         </AnimatedText>
                         <AnimatedText id="nav">
