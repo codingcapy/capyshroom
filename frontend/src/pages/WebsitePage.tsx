@@ -485,8 +485,12 @@ export default function WebsitePage() {
                             <p className="pt-5 italic">
                                 Ceremony & Reception at:
                             </p>
-                            <p className="font-bold py-0">Moana Surfrider</p>
-                            <p className="pt-0">Diamond Lawn & Terrace</p>
+                            <p className="font-bold py-0">
+                                Diamond Lawn & Terrace, Moana Surfrider
+                            </p>
+                            <p className="pt-0">
+                                2365 Kalākaua Ave, Honolulu, HI 96815
+                            </p>
                         </div>
                     </AnimatedText>
                     <AnimatedText id="nav">
