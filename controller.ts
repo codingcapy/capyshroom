@@ -624,7 +624,7 @@ export async function sendSecondEmail(req: Request, res: Response) {
                             day:</b></u>
                     The ceremony is now taking place at the <b>Moana Surfrider, at 17:30</b>. Reception will start
                     after, at
-                    18:00. So ceremony and dinner will now be taking place at the same location</div>
+                    18:00. So ceremony and dinner will now be taking place at the same location.</div>
                 <div style="font-size: 16px; padding-bottom: 20px;">We also added <a
                         href="https://capyshroom-production.up.railway.app/home/#photos" target="_blank"
                         style="font-weight: bold; font-style: underline; color: #637CC6;">PHOTOS!</a></div>
