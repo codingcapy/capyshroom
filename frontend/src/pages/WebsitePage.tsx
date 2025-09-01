@@ -37,6 +37,7 @@ import image16 from "/HTS00256 1.png";
 import image17 from "/JEJ_1517 1.jpg";
 import image18 from "/HTS00031 1.png";
 import Masonry from "react-masonry-css";
+import { useLocation } from "react-router-dom";
 
 const galleryImages = [
     image1,
@@ -231,6 +232,17 @@ export default function WebsitePage() {
         700: 2,
         500: 1,
     };
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash === "#photos") {
+            const el = document.getElementById("photos");
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, [location]);
 
     useEffect(() => {
         function handleResize() {
