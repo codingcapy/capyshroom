@@ -4,73 +4,37 @@ import { and, eq } from "drizzle-orm";
 import nodemailer from "nodemailer";
 
 const sentEmails = [
-    "stephology@gmail.com",
-    "spkim0921@gmail.com",
-    "paulkim89.dev@gmail.com",
     "stepandpail@gmail.com",
-    "yinanlinda@gmail.com",
-    "ryanlmwong@gmail.com",
+    "j.ryan.louie@gmail.com",
     "elainetehart@gmail.com",
-    "cherryxoa@gmail.com",
     "derickgroves@gmail.com",
-    "Jesus.a.tostado@gmail.com",
+    "midorikaga@gmail.com",
+    "katherine.mason@gmail.com",
     "fisherdana@ymail.com",
     "astha.dalakoti@gmail.com",
-    "skao0421@gmail.com",
-    "binybani@gmail.com",
-    "jessie.kim117@gmail.com",
-    "lsn9652@gmail.com",
-    "zachflentgewong@gmail.com",
-    "kyoung.ho446@gmail.com",
-    "byunsaboos@gmail.com",
-    "rootingpoison@gmail.com",
-    "nth.ngai@gmail.com",
-    "j.ryan.louie@gmail.com",
-    "john@bouissou.ch",
-    "jika0584@gmail.com",
-    "isabelle@bouissou.ch",
-    "rabi.sun91@gmail.com ",
-    "Dongjunshin91@gmail.com",
-    "cecilekim07@gmail.com",
-    "apaffaro2@gmail.com",
-    "sion.lee.arts@gmail.com",
-    "kinsonyung@gmail.com",
-    "midorikaga@gmail.com",
-    "katherine.mason@gmail.com",
-    "yinniewong@hotmail.com",
     "kithlin@gmail.com",
     "leungwynne@gmail.com",
-    "tyronne.salto@gmail.com",
-    "tinsel_queen@hotmail.com",
-    "ujon94@gmail.com",
-    "kithlin@gmail.com",
-    "yinniewong@hotmail.com",
-    "skao0421@gmail.com",
-    "apaffaro2@gmail.com",
-    "midorikaga@gmail.com",
-    "sion.lee.arts@gmail.com",
-    "katherine.mason@gmail.com",
-    "Jesus.a.tostado@gmail.com",
-    "derickgroves@gmail.com",
-    "cherryxoa@gmail.com",
-    "fisherdana@ymail.com",
-    "yinanlinda@gmail.com",
-    "ryanlmwong@gmail.com",
-    "puppy579@naver.com",
-    "loveandtea_@naver.com",
-    "jyunnn116@naver.com",
-    "maribia95@naver.com",
-    "serroo98@hanmail.net",
-    "yerroo28@naver.com",
-    "byrondray8@gmail.com",
-    "Randall.herd@me.com",
+    "cecilekim07@gmail.com",
+    "john@bouissou.ch",
+    "jika0584@gmail.com",
     "swh0503@hotmail.com",
+    "rabi.sun91@gmail.com ",
+    "rootingpoison@gmail.com",
+    "nth.ngai@gmail.com",
+    "Randall.herd@me.com",
+    "byrondray8@gmail.com",
+    "maribia95@naver.com",
+    "tinsel_queen@hotmail.com",
 ];
 
 const emails = [
     "stephology@gmail.com",
     "spkim0921@gmail.com",
     "paulkim89.dev@gmail.com",
+    "j.ryan.louie@gmail.com",
+    "elainetehart@gmail.com",
+    "derickgroves@gmail.com",
+    "midorikaga@gmail.com",
 ];
 
 export async function createInvitee(req: Request, res: Response) {
@@ -617,26 +581,31 @@ export async function sendSecondEmail(req: Request, res: Response) {
 
                 <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
                     style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
-                <div style="font-size: 16px; padding-bottom: 20px;">We’re less than a month away, and we can’t wait to
+                <div style="font-size: 16px; padding-bottom: 20px; ">We’re less than a month away, and we
+                    can’t wait to
                     see you! </div>
-                <div style="padding-bottom: 20px; font-size: 16px;"><b><u>We have an
+                <div style="padding-bottom: 20px; font-size: 16px; "><b style="color: #F73B47;"><i>We have an
                             important change of schedule for the big
-                            day:</b></u>
+                            day:</i></b>
                     The ceremony is now taking place at the <b>Moana Surfrider, at 17:30</b>. Reception will start
                     after, at
                     18:00. So ceremony and dinner will now be taking place at the same location.</div>
                 <div style="font-size: 16px; padding-bottom: 20px;">We also added <a
-                        href="https://capyshroom-production.up.railway.app/home/#photos" target="_blank"
-                        style="font-weight: bold; font-style: underline; color: #637CC6;">PHOTOS!</a></div>
+                        href="https://stephandpaul.ca/home/#photos" target="_blank"
+                        style="font-weight: bold; color: #637CC6;">PHOTOS!</a></div>
+                <div style="font-size: 16px; padding-bottom: 20px;">Some of you have been asking us about dress code,
+                    there isn’t one.
+                    Just don’t show up naked, that’s
+                    all we ask.</div>
                 <div style="font-size: 16px; padding-bottom: 20px;">All the details for the big day can be found on our
-                    <a href="https://capyshroom-production.up.railway.app/home" target="_blank"
+                    <a href="https://stephandpaul.ca/home" target="_blank"
                         style="font-weight: bold; font-style: underline; color: #637CC6;">website</a>!
                 </div>
                 <div style="font-size: 16px; padding-bottom: 30px; ">If you have any questions, you know how to contact
                     us.</div>
                 <div>
                     <div style="width: 200px; margin: auto;">
-                        <a href="https://capyshroom-production.up.railway.app/home"
+                        <a href="https://stephandpaul.ca/home"
                             style="display: block; margin: 0 auto;" target="_blank"><img
                                 src="https://capyshroom-production.up.railway.app/button_oursite.png" alt=""
                                 style="width: 200px; "></a>
