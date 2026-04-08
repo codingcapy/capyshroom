@@ -278,17 +278,17 @@ export async function updateSubmitted(req: Request, res: Response) {
 //         <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 6px; border-radius: 5000px;">
 //             <div
 //                 style="position:relative; margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: center;">
-//                 <img src="https://capyshroom-production.up.railway.app/wedding_img.png" alt="Wedding Image"
+//                 <img src="https://stephandpaul.up.railway.app/wedding_img.png" alt="Wedding Image"
 //                     style="width: 200px; display: block; margin: 0 auto;">
 //                 <div style="padding-top: 20px; font-size: 18px; ">YOU ARE INVITED</div>
 //                 <div style="font-size: 16px;">to share in the wedding of</div>
-//                 <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
+//                 <img src="https://stephandpaul.up.railway.app/image_title.png" alt="Steph & Paul"
 //                     style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
 //                 <div style="font-size: 16px;">MONDAY, SEPTEMBER 29, 2025</div>
 //                 <div style="padding-bottom: 20px; font-size: 16px;">at two in the afternoon</div>
 //                 <div style="font-size: 16px; ">ST. AUGUSTINE BY THE SEA</div>
 //                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
-//                 <img src="https://capyshroom-production.up.railway.app/subtitle.png" alt="Reception & Dinner"
+//                 <img src="https://stephandpaul.up.railway.app/subtitle.png" alt="Reception & Dinner"
 //                     style="max-width: 300px; width: 80%; padding-top: 38px; padding-bottom: 20px; display: block; margin: 0 auto;">
 //                 <div style="font-size: 16px; ">MOANA SURFRIDER</div>
 //                 <div style="font-size: 16px;">Honolulu, Hawaii, USA</div>
@@ -297,13 +297,13 @@ export async function updateSubmitted(req: Request, res: Response) {
 //                     <div
 //                     style="position:relative; width: 200px; text-align: center; margin-left:auto;margin-right:auto; margin-top:30px; margin-bottom:30px;">
 //                     <a href="https://stephandpaul.ca/" target="_blank"><img
-//                             src="https://capyshroom-production.up.railway.app/button_solid.png" alt=""
+//                             src="https://stephandpaul.up.railway.app/button_solid.png" alt=""
 //                             style="width:200px"></a>
 //                 </div>
 //                 </div>
 //                 <div style="font-size: 16px; font-weight: bold;"><a href="https://stephandpaul.ca/home"
 //                         target="_blank">More info on our website</a></div>
-//                 <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
+//                 <img src="https://stephandpaul.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
 //                     style="width: 75px; padding: 40px 0; display: block; margin: 0 auto;">
 //             </div>
 //         </div>
@@ -374,8 +374,8 @@ export async function updateSubmitted(req: Request, res: Response) {
 //         <!-- Border layer 2 and content -->
 //         <div style="position: relative; margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: center;">
 //                 <!-- Your content starts here -->
-//                 <img src="https://capyshroom-production.up.railway.app/wedding_img_02.png" alt="Wedding Image" style="width: 200px; display: block; margin: 0 auto;">
-//                 <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul" style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
+//                 <img src="https://stephandpaul.up.railway.app/wedding_img_02.png" alt="Wedding Image" style="width: 200px; display: block; margin: 0 auto;">
+//                 <img src="https://stephandpaul.up.railway.app/image_title.png" alt="Steph & Paul" style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
 
 //                 <div style="padding-top: 0;">Dear <strong>${
 //                     invitee.first_name
@@ -445,11 +445,11 @@ export async function updateSubmitted(req: Request, res: Response) {
 //                         <hr style="border: none; border-top: 1px solid #637CC6; width: 80%; margin: 0; display: inline-block;" />
 //                 <div style="font-weight: bold; margin-top: 20px;">
 //                   <a href="https://stephandpaul.ca/home" target="_blank">
-//                     <img src="https://capyshroom-production.up.railway.app/button_oursite.png" alt="" style="width: 200px;">
+//                     <img src="https://stephandpaul.up.railway.app/button_oursite.png" alt="" style="width: 200px;">
 //                   </a>
 //                 </div>
 
-//                 <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy" style="width: 75px; padding: 20px 0; display: block; margin: 0 auto;">
+//                 <img src="https://stephandpaul.up.railway.app/icon_email_doublehappy.png" alt="Double Happy" style="width: 75px; padding: 20px 0; display: block; margin: 0 auto;">
 //                 <!-- End content -->
 //             </div>
 //         </div>
@@ -511,15 +511,15 @@ export async function updateSubmitted(req: Request, res: Response) {
 //         <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 6px; border-radius: 5000px;">
 //             <div
 //                 style="position:relative; margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: center;">
-//                 <img src="https://capyshroom-production.up.railway.app/wedding_img.png" alt="Wedding Image"
+//                 <img src="https://stephandpaul.up.railway.app/wedding_img.png" alt="Wedding Image"
 //                     style="width: 200px; display: block; margin: 0 auto;">
-//                 <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
+//                 <img src="https://stephandpaul.up.railway.app/image_title.png" alt="Steph & Paul"
 //                     style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
 //                 <div style="font-size: 14px; ">Dear <span style="font-weight: bold;">${first_name}</span>, we’re sorry you can’t make it to our ceremony! We hope to catch up with you when we’re
 //                     in town. </div>
 //                     <div style="font-size: 14px; margin-top:10px; font-style: italic; color:#637CC6">- Steph & Paul</div>
 //                 <a href="https://stephandpaul.ca/home" target="_blank">
-//                 <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
+//                 <img src="https://stephandpaul.up.railway.app/icon_email_doublehappy.png" alt="Double Happy"
 //                     style="width: 75px; padding: 40px 0; display: block; margin: 0 auto;">
 //                     </a>
 //             </div>
@@ -576,10 +576,10 @@ export async function sendSecondEmail(req: Request, res: Response) {
         <div style="margin: 0 auto; border: 2px solid #637CC6; padding: 6px; border-radius: 5000px;">
             <div
                 style="position:relative; margin: 0 auto; border: 1px solid #637CC6; padding: 10% 5%; border-radius: 5000px; color: #637CC6; text-align: left;">
-                <img src="https://capyshroom-production.up.railway.app/wedding_img_02.png" alt="Wedding Image"
+                <img src="https://stephandpaul.up.railway.app/wedding_img_02.png" alt="Wedding Image"
                     style="width: 200px; display: block; margin: 0 auto;">
 
-                <img src="https://capyshroom-production.up.railway.app/image_title.png" alt="Steph & Paul"
+                <img src="https://stephandpaul.up.railway.app/image_title.png" alt="Steph & Paul"
                     style="max-width: 300px; width: 80%; padding: 40px 0; display: block; margin: 0 auto;">
                 <div style="font-size: 16px; padding-bottom: 20px; ">We’re less than a month away, and we
                     can’t wait to
@@ -607,10 +607,10 @@ export async function sendSecondEmail(req: Request, res: Response) {
                     <div style="width: 200px; margin: auto;">
                         <a href="https://stephandpaul.ca/home"
                             style="display: block; margin: 0 auto;" target="_blank"><img
-                                src="https://capyshroom-production.up.railway.app/button_oursite.png" alt=""
+                                src="https://stephandpaul.up.railway.app/button_oursite.png" alt=""
                                 style="width: 200px; "></a>
                     </div>
-                    <img src="https://capyshroom-production.up.railway.app/icon_email_doublehappy.png"
+                    <img src="https://stephandpaul.up.railway.app/icon_email_doublehappy.png"
                         alt="Double Happy" style="width: 75px; padding: 40px 0; display: block; margin: 0 auto;">
                 </div>
             </div>
